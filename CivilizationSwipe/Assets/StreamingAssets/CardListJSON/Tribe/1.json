@@ -1,0 +1,18 @@
+{
+  "TextEvent": "Вождь, у нас закончились финансы для поддержания состояния бараков рабочих, можете выделить еще средств?",
+
+  "TextLeft": "Еще чего",
+  "MoneyL": 5,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": -7,
+
+  "TextRight": "Конечно",
+  "MoneyR": -5,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 5,
+
+  "Era": "Tribe",
+  "ImageHero": "Minister"
+}

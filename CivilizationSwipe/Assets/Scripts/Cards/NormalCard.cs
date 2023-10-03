@@ -1,26 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.IO;
+using System;
+using static JSONController;
 
-public class NormalCard : BaseCard
+public class NormalCard : BaseCard       //Это уже карточка со значениями и методами
 {
-    int Money { get; set; }
-    int Army { get; set; }
-    int Religion { get; set; }
-    int PeopleEffect { get; set; }
+    public int MoneyL;
+    public int ArmyL;
+    public int ReligionL;
+    public int PeopleEffectL;
 
-    string Era { get; set; }
-    string TextEvent {  get; set; }
-    string TextLeft { get; set; }
-    string TextRight { get; set; }
-    string Background { get; set; }
-    string Hero { get; set; }
+    public int MoneyR;
+    public int ArmyR;
+    public int ReligionR;
+    public int PeopleEffectR;
 
-    public override BaseCard CreateCard(int id)
+    public NormalCard(ReadingCard ReadCard)    //Конструктор карты, создающий ее из Считываемой JSON карты
     {
-        throw new System.NotImplementedException(); 
+        TextEvent = ReadCard.TextEvent; 
+
+        TextLeft = ReadCard.TextLeft;
+        MoneyL = ReadCard.MoneyL;
+        ArmyL = ReadCard.ArmyL;
+        ReligionL = ReadCard.ReligionL;
+        PeopleEffectL = ReadCard.PeopleEffectL;
+
+        TextRight = ReadCard.TextRight;
+        MoneyR = ReadCard.MoneyR;
+        ArmyR = ReadCard.ArmyR;
+        ReligionR = ReadCard.ReligionR;
+        PeopleEffectR = ReadCard.PeopleEffectR;
+
+        Era = ReadCard.Era;
+        Image = ReadCard.ImageHero;
     }
 
+    public void DownloadNormalCard(ReadingCard ReadCard)    //Устанавливаю этой карте значение в зависимосте от переданной карточки JSON
+    {
+        TextEvent = ReadCard.TextEvent;
+
+        TextLeft = ReadCard.TextLeft;
+        MoneyL = ReadCard.MoneyL;
+        ArmyL = ReadCard.ArmyL;
+        ReligionL = ReadCard.ReligionL;
+        PeopleEffectL = ReadCard.PeopleEffectL;
+
+        TextRight = ReadCard.TextRight;
+        MoneyR = ReadCard.MoneyR;
+        ArmyR = ReadCard.ArmyR;
+        ReligionR = ReadCard.ReligionR;
+        PeopleEffectR = ReadCard.PeopleEffectR;
+
+        Era = ReadCard.Era;
+        Image = ReadCard.ImageHero;
+    }
     public override void LeftSolution()
     {
         throw new System.NotImplementedException();
@@ -32,5 +68,9 @@ public class NormalCard : BaseCard
     }
 
 
-    
+
+    private void OnEnable()
+    {   //Когда объект с этим скриптом создается, то устанавливаю ей значения в зависимости от текущей карточки из массива и эры
+        DownloadNormalCard(GetCard(CardConstructor.countCard, CardConstructor.era));  
+    }
 }

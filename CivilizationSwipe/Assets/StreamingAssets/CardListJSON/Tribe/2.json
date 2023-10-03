@@ -1,0 +1,18 @@
+{
+  "TextEvent": "Господин, люди хотят развлечений, давайте устроим пляски вокруг огромного костра",
+
+  "TextLeft": "Мне не до этого",
+  "MoneyL": 2,
+  "ArmyL": -2,
+  "ReligionL": 0,
+  "PeopleEffectL": -5,
+
+  "TextRight": "Давай",
+  "MoneyR": -3,
+  "ArmyR": 3,
+  "ReligionR": 0,
+  "PeopleEffectR": 4,
+
+  "Era": "Tribe",
+  "ImageHero": "Culturolog"
+}
