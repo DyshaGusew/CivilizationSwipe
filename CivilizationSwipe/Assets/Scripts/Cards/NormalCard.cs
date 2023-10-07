@@ -18,7 +18,7 @@ public class NormalCard : BaseCard       //Это уже карточка со значениями и мето
     public int ReligionR;
     public int PeopleEffectR;
 
-    public NormalCard(ReadingCard ReadCard)    //Конструктор карты, создающий ее из Считываемой JSON карты
+    public NormalCard(ReadingCard ReadCard)    //Конструктор карты, создающий новую из Считываемой JSON карты
     {
         TextEvent = ReadCard.TextEvent; 
 
@@ -71,6 +71,6 @@ public class NormalCard : BaseCard       //Это уже карточка со значениями и мето
 
     private void OnEnable()
     {   //Когда объект с этим скриптом создается, то устанавливаю ей значения в зависимости от текущей карточки из массива и эры
-        DownloadNormalCard(GetCard(CardConstructor.countCard, CardConstructor.era));  
+        DownloadNormalCard(GetCard(MainStorage.counterCard, MainStorage.era));  
     }
 }

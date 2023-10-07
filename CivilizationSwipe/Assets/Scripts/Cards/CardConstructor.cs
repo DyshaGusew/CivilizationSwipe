@@ -9,9 +9,7 @@ using static JSONController;
 public class CardConstructor : MonoBehaviour
 {
     public GameObject gameCard;
-
-    public static int countCard = 0;     //Обший счетчик карточек             //Это должно быть в скрипте отвечающем за информацию о игре
-    public static string era = "Tribe";
+    
 
     public NormalCard[] CardMassive;          //Общий массив карточек данной эры
     public static NormalCard[] CardMassSet(string era)          //Получаю массив карточек данной эры
@@ -28,8 +26,8 @@ public class CardConstructor : MonoBehaviour
     public void CreatePlayCard() //Создание карточки как игрового объекта
     {
         //CardMassive = CardMassSet(era);
-        NormalCard infoCard = CardMassive[countCard] as NormalCard;     //Устонавливаю карточку через номер id
-        countCard++;   //Увеличиваю этот номер
+        NormalCard infoCard = CardMassive[MainStorage.counterCard] as NormalCard;     //Устонавливаю карточку через номер id
+        MainStorage.counterCard++;   //Увеличиваю этот номер
 
         GameObject newGameCard = Instantiate(gameCard, new Vector2(0, -0.2f), Quaternion.Euler(0, 0, 0)) as GameObject;  //Собственно создание
         newGameCard.GetComponent<SpriteRenderer>().sprite = LoadSprite(infoCard);
@@ -43,10 +41,10 @@ public class CardConstructor : MonoBehaviour
 
     void Start()
     {
-        CardMassive = CardMassSet(era);   //Устанавливаю значение массива с карточками, должно быть в общей информации о игре
+        CardMassive = CardMassSet(MainStorage.era);   //Устанавливаю значение массива с карточками, должно быть в общей информации о игре
 
-        CreatePlayCard();
-        CreatePlayCard();
+        //CreatePlayCard();
+       // CreatePlayCard();
     }
 }
 
