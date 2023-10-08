@@ -257,7 +257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.46313587, y: 0.17074896}
-  m_AnchoredPosition: {x: -211.69, y: -35.05}
+  m_AnchoredPosition: {x: -211.68994, y: -35.05005}
   m_SizeDelta: {x: -405.8245, y: -80.9189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &412637308
@@ -502,8 +502,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameCard: {fileID: 5676389771441446470, guid: f5fbc280cc4133848b203b9b03f2707f, type: 3}
-  CardMassive:
-  - {fileID: 0}
 --- !u!1 &908625353
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,10 +546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1296f6fca5acaaa4893329e761f455c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: {fileID: 263962533}
-  Army: {fileID: 2000250831}
-  Religion: {fileID: 1181808378}
-  People: {fileID: 1728622604}
 --- !u!1 &1181808378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,9 +1007,9 @@ Transform:
   m_GameObject: {fileID: 2000250831}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.36, y: 1.16, z: 0}
-  m_LocalScale: {x: 0.1796547, y: 0.184, z: 0.2076628}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -1.36, y: 1.159, z: 0}
+  m_LocalScale: {x: 0.19488, y: 0.19082639, z: 0.2076628}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

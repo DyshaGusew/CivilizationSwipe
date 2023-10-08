@@ -1,0 +1,18 @@
+{
+  "TextEvent": "Наш народ не молится, надо сделать публичные наказания за инокомыслие",
+
+  "TextLeft": "Это перебор",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": -4,
+  "PeopleEffectL": 5,
+
+  "TextRight": "Почему бы и нет",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 8,
+  "PeopleEffectR": -6,
+
+  "Era": "Tribe",
+  "ImageHero": "Religier"
+}

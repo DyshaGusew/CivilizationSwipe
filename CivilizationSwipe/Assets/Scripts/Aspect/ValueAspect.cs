@@ -5,6 +5,7 @@ using UnityEngine.U2D;
 
 public class ValueAspect : MonoBehaviour
 {
+    const float smecenie = 1.84f;  //Текущее смещение карточки
     public GameObject ThisAspect;
     public float Value;
     private Vector2 Position;
@@ -41,6 +42,6 @@ public class ValueAspect : MonoBehaviour
 
     void Update()
     {
-        ThisAspect.transform.position = new Vector2(Position.x, Position.y+(Value/100)*1.8f);
+        ThisAspect.transform.position = new Vector2(Position.x, Position.y+(Value/100)*smecenie);
     }
 }
