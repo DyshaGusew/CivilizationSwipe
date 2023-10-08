@@ -6,7 +6,7 @@ using UnityEngine;
 public class MainStorage : MonoBehaviour
 {
     public static float money = 50;         //Все эти значения будут приниматься из json файла при загрузке
-    public static float army = 90;
+    public static float army = 100;
     public static float religion = 80;
     public static float people = 20;
 

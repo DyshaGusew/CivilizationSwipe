@@ -41,6 +41,6 @@ public class ValueAspect : MonoBehaviour
 
     void Update()
     {
-        ThisAspect.transform.position = new Vector2(Position.x, Position.y-(Value/100));
+        ThisAspect.transform.position = new Vector2(Position.x, Position.y+(Value/100)*1.8f);
     }
 }
