@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-//Получение Данных из Json
-public class JSONController
+//Получение данных из Json
+public class JSONCardReader
 {
-    public class ReadingCard                //Создаю класс для указания того, что именно считывать Json
+    //Создаю класс для указания того, что именно считывать Json
+    public class ReadingCard                
     {
         public string TextEvent;
         public string TextLeft;
@@ -26,9 +27,10 @@ public class JSONController
         public string ImageHero;
     }
 
-    public static ReadingCard GetCard(int id, string era) //Получаю указанную карточку (по эре и id) по факту в виде просnого текста в классе 
+    //Получаю указанную карточку (по эре и id) по факту в виде просnого текста в классе 
+    public static ReadingCard GetCard(int id, string era) 
     {     
-        string path = Application.streamingAssetsPath + "/CardListJSON/" + era + "/" + id.ToString() + ".json";   //Путь зависит от эры и id
+        string path = Application.streamingAssetsPath + "/CardListJSON/" + era + "/" + id.ToString() + ".json";
         ReadingCard getCard = JsonUtility.FromJson<ReadingCard>(File.ReadAllText(path));
         return getCard;
     }

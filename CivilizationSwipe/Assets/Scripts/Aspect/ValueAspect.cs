@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
 
+//Работа с каждым отдельным аспектом
 public class ValueAspect : MonoBehaviour
 {
-    const float smecenie = 1.84f;  //Текущее смещение карточки
+    const float smecenie = 1.25f;  //Текущее смещение карточки
     public GameObject ThisAspect;
-    public float Value;
+    private float Value;
     private Vector2 Position;
 
     //В зависимости от названия ассета на котором этот скрипт, устанавливается значение(Value)
@@ -17,13 +18,13 @@ public class ValueAspect : MonoBehaviour
         {
             switch (ThisAspect.name)
             {
-                case "Деньги":
+                case "AtributMoney":
                     return MainStorage.money;
-                case "Военная мощь":
+                case "AtributArmy":
                     return MainStorage.army;
-                case "Религия":
+                case "AtributReligion":
                     return MainStorage.religion;
-                case "Люди":
+                case "AtributPeople":
                     return MainStorage.people;
             }
         }

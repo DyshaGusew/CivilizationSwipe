@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using System;
-using static JSONController;
+using static JSONCardReader;
+using Unity.VisualScripting;
 
 public class NormalCard : BaseCard       //Это уже карточка со значениями и методами
 {
@@ -57,6 +58,7 @@ public class NormalCard : BaseCard       //Это уже карточка со значениями и мето
         Era = ReadCard.Era;
         Image = ReadCard.ImageHero;
     }
+
     public override void LeftSolution()
     {
         throw new System.NotImplementedException();
@@ -68,9 +70,10 @@ public class NormalCard : BaseCard       //Это уже карточка со значениями и мето
     }
 
 
-
+    //Когда объект с этим скриптом создается, то устанавливаю ей значения в зависимости от текущей карточки из массива и эры
     private void OnEnable()
-    {   //Когда объект с этим скриптом создается, то устанавливаю ей значения в зависимости от текущей карточки из массива и эры
-        DownloadNormalCard(GetCard(MainStorage.counterCard, MainStorage.era));  
+    {   
+        DownloadNormalCard(GetCard(MainStorage.counterCard, MainStorage.era));
+        MainStorage.thisCard = GetCard(MainStorage.counterCard, MainStorage.era);
     }
 }
