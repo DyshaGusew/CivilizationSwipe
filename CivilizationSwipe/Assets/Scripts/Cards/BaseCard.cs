@@ -12,9 +12,4 @@ public abstract class BaseCard : MonoBehaviour    //Базовый класс от которого на
 
     public string Era;
     public string Image;
-
-    public abstract void LeftSolution();
-
-    public abstract void RightSolution();
-
 }

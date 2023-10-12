@@ -4,14 +4,14 @@
   "TextLeft": "Это перебор",
   "MoneyL": 0,
   "ArmyL": 0,
-  "ReligionL": -4,
-  "PeopleEffectL": 5,
+  "ReligionL": -10,
+  "PeopleEffectL": 15,
 
   "TextRight": "Почему бы и нет",
   "MoneyR": 0,
   "ArmyR": 0,
-  "ReligionR": 8,
-  "PeopleEffectR": -6,
+  "ReligionR": 20,
+  "PeopleEffectR": -10,
 
   "Era": "Tribe",
   "ImageHero": "Religier"

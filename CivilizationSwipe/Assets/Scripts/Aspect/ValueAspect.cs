@@ -41,8 +41,9 @@ public class ValueAspect : MonoBehaviour
         Position = ThisAspect.transform.position;
     }
 
+
     void Update()
     {
-        ThisAspect.transform.position = new Vector2(Position.x, Position.y+(Value/100)*smecenie);
+        ThisAspect.transform.position = new Vector2(Position.x, Position.y+(GetValueAspect(ThisAspect.name) / 100)*smecenie);
     }
 }

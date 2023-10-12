@@ -17,6 +17,7 @@ public class CardConstructor : MonoBehaviour
         newGameCard.GetComponent<SpriteRenderer>().sprite = LoadSprite(infoCard);
     }
 
+    //Удаление карточки с экрана
     static public void DeletePlayCard()
     {
         Destroy(GameObject.Find("NormalCard(Clone)"));
@@ -28,7 +29,6 @@ public class CardConstructor : MonoBehaviour
     {
         return Resources.Load<Sprite>(infoCard.Era + "/ProfessionIcon/" + infoCard.Image);       
     }
-
 
     //Создание массива карточек указанной эры
     public static NormalCard[] CardMassSet(string era)

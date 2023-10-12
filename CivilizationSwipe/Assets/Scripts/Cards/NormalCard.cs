@@ -59,17 +59,6 @@ public class NormalCard : BaseCard       //Это уже карточка со значениями и мето
         Image = ReadCard.ImageHero;
     }
 
-    public override void LeftSolution()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void RightSolution()
-    {
-        throw new System.NotImplementedException();
-    }
-
-
     //Когда объект с этим скриптом создается, то устанавливаю ей значения в зависимости от текущей карточки из массива и эры
     private void OnEnable()
     {   

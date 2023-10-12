@@ -6,41 +6,42 @@ using UnityEngine.UI;
 public class ButtonControle : MonoBehaviour
 {
     public GameObject gameCard;
-    [SerializeField] GameObject leftText;
-    [SerializeField] GameObject rightText;
+
     public void ButClick()
     {
+        if (name == "ButtonLeft")
+        {
+            AspectSetter.AspectLeftSolution();
+        }
+
+        else if(name == "ButtonRight")
+        {
+            AspectSetter.AspectRightSolution();
+        }
+
         CardConstructor.DeletePlayCard();
         CardConstructor.CreatePlayCard(gameCard);
+
+        TextSetter.SetTextEvent(MainStorage.thisCard.TextEvent);
+
         ButMove();
     }
 
     public void ButMove()
     {
-
         if (name == "ButtonLeft")
         {
-            leftText.GetComponent<Text>().text = MainStorage.thisCard.TextLeft;
-            leftText.SetActive(true);
+            TextSetter.SetTextLeft();
         }
 
         else if (name == "ButtonRight")
         {
-            rightText.GetComponent<Text>().text = MainStorage.thisCard.TextRight;
-            rightText.SetActive(true);
+            TextSetter.SetTextRight();
         }
     }
 
     public void ButNotMove()
     {
-        if (name == "ButtonLeft")
-        {
-            leftText.SetActive(false);
-        }
-
-        else if (name == "ButtonRight")
-        {
-            rightText.SetActive(false);
-        }
+        TextSetter.NullTextRightLeft();
     }
 }

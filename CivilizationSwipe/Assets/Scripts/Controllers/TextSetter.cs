@@ -1,22 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TextSetter : MonoBehaviour
 {
-    public Text myText;
-    public void SetTexEvent(string texName)
+    public static GameObject mainEventText;
+    public static GameObject leftEventText;
+    public static GameObject rightEventText;
+
+    public static void SetTextEvent(string texName)
     {
-        if(myText == null)
+        if(mainEventText == null)
         {
-            myText.text = "";
+            mainEventText.GetComponent<Text>().text = "";
         }
-        myText.text = texName;
+        mainEventText.GetComponent<Text>().text = texName;
     }
 
-    private void Update()
+    public static void SetTextLeft()
     {
-        SetTexEvent(MainStorage.thisCard.TextEvent);
+        leftEventText.GetComponent<Text>().text = MainStorage.thisCard.TextLeft;
+        leftEventText.SetActive(true);
+    }
+
+    public static void SetTextRight()
+    {
+        rightEventText.GetComponent<Text>().text = MainStorage.thisCard.TextRight;
+        rightEventText.SetActive(true);
+    }
+
+
+    public static void NullTextRightLeft()
+    {
+        rightEventText.SetActive(false);
+        leftEventText.SetActive(false);
     }
 }
