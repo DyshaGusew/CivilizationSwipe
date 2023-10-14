@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
+using UnityEngine.UI;
 
 //Работа с каждым отдельным аспектом
 public class ValueAspect : MonoBehaviour
 {
     const float smecenie = 1.25f;  //Текущее смещение карточки
-    public GameObject ThisAspect;
-    private float Value;
+    public GameObject ThisAspect = null;
+    public Image image;
+    public float Value = 0.5f;
     private Vector2 Position;
 
     //В зависимости от названия ассета на котором этот скрипт, устанавливается значение(Value)
     private float GetValueAspect(string name)
     {
-        if(ThisAspect != null)
+        if (ThisAspect != null)
         {
             switch (ThisAspect.name)
             {
@@ -44,6 +46,7 @@ public class ValueAspect : MonoBehaviour
 
     void Update()
     {
-        ThisAspect.transform.position = new Vector2(Position.x, Position.y+(GetValueAspect(ThisAspect.name) / 100)*smecenie);
+       //ThisAspect.transform.localScale = new Vector3(2, 2, 2);
+        image.transform.localScale = new Vector3(1, Value/100, 1);
     }
 }
