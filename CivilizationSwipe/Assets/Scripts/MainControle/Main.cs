@@ -10,26 +10,27 @@ public class Main : MonoBehaviour
     //Загрузка всего должна происходить здесь
     private void Awake()
     {
-        Initialize();
-        MainStorage.WriteSaves();
-    }
 
-    //Инициализирование нужных игровых объектов
-    private void Initialize()
-    {
-        TextSetter.mainEventText = GameObject.Find("EventCardText");
-        TextSetter.leftEventText = GameObject.Find("EventLeftText");
-        TextSetter.rightEventText = GameObject.Find("EventRightText");
+        //Инициализация объектов на сцене
+        TextSetter.InicializeText();
+        CardConstructor.gameCard = Resources.Load<GameObject>("NormalCard");
+        //Загрузка всех сохранений при загрузки
+        MainStorage.DownloadSaves();
+        MainStorage.CardMassive = CardConstructor.CardMassSet(MainStorage.era);
     }
 
     void Start()
     {
-        TextSetter.leftEventText.SetActive(false);
-        TextSetter.rightEventText.SetActive(false);
-
-        CardConstructor.CreatePlayCard(gameCard);
+        //Создаю карту и тут же указываю ее текста
+        CardConstructor.CreatePlayCard();
         TextSetter.SetTextEvent(MainStorage.thisCard.TextEvent);
-        //Загрузка сохранений при старте
-        MainStorage.DownloadSaves();
+    }
+
+    private void Update()
+    {
+        //Условие проигрыша
+        if(MainStorage.money <= 0 || MainStorage.army <= 0 || MainStorage.religion <= 0 || MainStorage.people <= 0) {
+
+        }
     }
 }

@@ -37,4 +37,14 @@ public class TextSetter : MonoBehaviour
         rightEventText.SetActive(false);
         leftEventText.SetActive(false);
     }
+
+    public static void InicializeText()
+    {
+        mainEventText = GameObject.Find("EventCardText");
+        leftEventText = GameObject.Find("EventLeftText");
+        rightEventText = GameObject.Find("EventRightText");
+
+        leftEventText.SetActive(false);
+        rightEventText.SetActive(false);
+    }
 }

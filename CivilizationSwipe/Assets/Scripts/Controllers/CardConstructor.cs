@@ -7,14 +7,18 @@ using UnityEngine.Windows;
 
 public class CardConstructor : MonoBehaviour
 {
+    public static GameObject gameCard;
     //Создание карточки как игрового объекта
-    static public void CreatePlayCard(GameObject gameCard) 
+    static public void CreatePlayCard() 
     {
-        NormalCard infoCard = MainStorage.CardMassive[MainStorage.counterCard];     //Устонавливаю карточку через номер id
-        MainStorage.counterCard++;   //Увеличиваю этот номер
+        Debug.Log(MainStorage.counterCard);
+        NormalCard infoCard = MainStorage.CardMassive[MainStorage.counterCard-1];     //Устанавливаю карточку через номер id
+        MainStorage.thisCard = infoCard;
 
         GameObject newGameCard = Instantiate(gameCard, gameCard.transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;  //Собственно создание
         newGameCard.GetComponent<SpriteRenderer>().sprite = LoadSprite(infoCard);
+
+        MainStorage.counterCard++;   //Увеличиваю этот номер
     }
 
     //Удаление карточки с экрана
@@ -38,6 +42,15 @@ public class CardConstructor : MonoBehaviour
         for (int i = 1; i <= coutCard; i++)
         {                               //Считываю все карточки и заношу уже как нормальные в массив
             CardMassive[i - 1] = new NormalCard(JSONCardReader.GetCard(i, era));  //Потом надо перемешать
+        }
+
+        //Перемешка массива
+        for(int i = CardMassive.Length - 1; i >= 1; i--)
+        {
+            int j = Random.RandomRange(1, 500000) % (i + 1);
+            NormalCard tmp = CardMassive[j];
+            CardMassive[j] = CardMassive[i];
+            CardMassive[i] = tmp;
         }
         return CardMassive;
     }

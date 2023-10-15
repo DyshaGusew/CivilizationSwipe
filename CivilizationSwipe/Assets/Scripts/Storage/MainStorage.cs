@@ -10,18 +10,15 @@ public class MainStorage : MonoBehaviour
     public static float religion;
     public static float people;
 
-    public static int counterCard = 0;
+    public static int counterCard = 1;
     public static string era;
     public static NormalCard[] CardMassive;          //Общий массив карточек данной эры
 
-    public static JSONCardReader.ReadingCard thisCard;
+    public static NormalCard thisCard;
 
-    //Здесь все загружается
-    public static void WriteSaves()
-    {
-        era = "Tribe";        //Здесь онда должна считываться из json
-        CardMassive = CardConstructor.CardMassSet(era);   //Устанавливаю значение массива с карточками, должно быть в общей информации о игре
-    }
+
+
+    //Здесь все загружается в хранилище
     public static void DownloadSaves()
     {
         money = PlayerPrefs.GetFloat("money");
@@ -29,7 +26,27 @@ public class MainStorage : MonoBehaviour
         religion = PlayerPrefs.GetFloat("religion");
         people = PlayerPrefs.GetFloat("people");
         counterCard = PlayerPrefs.GetInt("counterCard");
-        era = PlayerPrefs.GetString("era");
+        era = PlayerPrefs.GetString("era"); ;
+    }
+
+    //Все сохраняется из хранилищя
+    public static void Save()
+    {
+        PlayerPrefs.SetFloat("money", money);
+        PlayerPrefs.SetFloat("army", army);
+        PlayerPrefs.SetFloat("religion", religion);
+        PlayerPrefs.SetFloat("people", people);
+
+        if (counterCard != 1)
+        {
+            PlayerPrefs.SetInt("counterCard", counterCard - 1);  //Тк после создания карточки он прибавляет 1
+        }
+        else
+        {
+            PlayerPrefs.SetInt("counterCard", 1);
+        }
+
+        PlayerPrefs.SetString("era", era);
     }
 
 }

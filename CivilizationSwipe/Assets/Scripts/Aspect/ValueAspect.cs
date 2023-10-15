@@ -7,11 +7,9 @@ using UnityEngine.UI;
 //Работа с каждым отдельным аспектом
 public class ValueAspect : MonoBehaviour
 {
-    const float smecenie = 1.25f;  //Текущее смещение карточки
     public GameObject ThisAspect = null;
     public Image image;
-    public float Value = 0.5f;
-    private Vector2 Position;
+    private float Value;
 
     //В зависимости от названия ассета на котором этот скрипт, устанавливается значение(Value)
     private float GetValueAspect(string name)
@@ -37,16 +35,9 @@ public class ValueAspect : MonoBehaviour
         return 0;
     }
 
-    void Start()
-    {
-        //Value = GetValueAspect(ThisAspect.name);
-        //Position = ThisAspect.transform.position;
-    }
-
     void Update()
     {
         Value = GetValueAspect(ThisAspect.name);
-        //ThisAspect.transform.localScale = new Vector3(2, 2, 2);
         image.transform.localScale = new Vector3(1, Value/100, 1);
     }
 }
