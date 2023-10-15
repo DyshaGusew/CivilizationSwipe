@@ -39,14 +39,14 @@ public class ValueAspect : MonoBehaviour
 
     void Start()
     {
-        Value = GetValueAspect(ThisAspect.name);
-        Position = ThisAspect.transform.position;
+        //Value = GetValueAspect(ThisAspect.name);
+        //Position = ThisAspect.transform.position;
     }
-
 
     void Update()
     {
-       //ThisAspect.transform.localScale = new Vector3(2, 2, 2);
+        Value = GetValueAspect(ThisAspect.name);
+        //ThisAspect.transform.localScale = new Vector3(2, 2, 2);
         image.transform.localScale = new Vector3(1, Value/100, 1);
     }
 }
