@@ -22,12 +22,14 @@ public class MainStorage : MonoBehaviour
         era = "Tribe";        //Здесь онда должна считываться из json
         CardMassive = CardConstructor.CardMassSet(era);   //Устанавливаю значение массива с карточками, должно быть в общей информации о игре
     }
-    void Start()
+    public static void DownloadSaves()
     {
         money = PlayerPrefs.GetFloat("money");
         army = PlayerPrefs.GetFloat("army");
         religion = PlayerPrefs.GetFloat("religion");
         people = PlayerPrefs.GetFloat("people");
+        counterCard = PlayerPrefs.GetInt("counterCard");
+        era = PlayerPrefs.GetString("era");
     }
 
 }

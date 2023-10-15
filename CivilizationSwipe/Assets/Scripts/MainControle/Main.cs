@@ -29,5 +29,7 @@ public class Main : MonoBehaviour
 
         CardConstructor.CreatePlayCard(gameCard);
         TextSetter.SetTextEvent(MainStorage.thisCard.TextEvent);
+        //Загрузка сохранений при старте
+        MainStorage.DownloadSaves();
     }
 }
