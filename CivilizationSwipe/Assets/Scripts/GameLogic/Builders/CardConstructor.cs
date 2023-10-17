@@ -8,11 +8,11 @@ using UnityEngine.Windows;
 public class CardConstructor : MonoBehaviour
 {
     public static GameObject gameCard;
+
     //Создание карточки как игрового объекта
     static public void CreatePlayCard() 
     {
-        Debug.Log(MainStorage.counterCard);
-        NormalCard infoCard = MainStorage.CardMassive[MainStorage.counterCard-1];     //Устанавливаю карточку через номер id
+        NormalCard infoCard = MainStorage.ThisCardMassive[MainStorage.counterCard-1];     //Устанавливаю карточку через номер id
         MainStorage.thisCard = infoCard;
 
         GameObject newGameCard = Instantiate(gameCard, gameCard.transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;  //Собственно создание
@@ -37,21 +37,22 @@ public class CardConstructor : MonoBehaviour
     //Создание массива карточек указанной эры
     public static NormalCard[] CardMassSet(string era)
     {
-        int coutCard = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era).Length / 2;   //Считаю количество карточек исключая их meta дубли
-        NormalCard[] CardMassive = new NormalCard[coutCard];
-        for (int i = 1; i <= coutCard; i++)
+        MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era).Length / 2;   //Считаю количество карточек исключая их meta дубли
+        NormalCard[] CardMassive = new NormalCard[MainStorage.maxCountCardOfThisEra];
+        for (int i = 1; i <= MainStorage.maxCountCardOfThisEra; i++)
         {                               //Считываю все карточки и заношу уже как нормальные в массив
-            CardMassive[i - 1] = new NormalCard(JSONCardReader.GetCard(i, era));  //Потом надо перемешать
+            CardMassive[i - 1] = new NormalCard(JSONCardReader.GetCard(i, era));
         }
 
         //Перемешка массива
         for(int i = CardMassive.Length - 1; i >= 1; i--)
         {
-            int j = Random.RandomRange(1, 500000) % (i + 1);
+            int j = new System.Random().Next() % (i + 1);
             NormalCard tmp = CardMassive[j];
             CardMassive[j] = CardMassive[i];
             CardMassive[i] = tmp;
         }
+
         return CardMassive;
     }
 }

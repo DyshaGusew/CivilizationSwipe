@@ -4,7 +4,7 @@ using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextSetter : MonoBehaviour
+public class TextSetterView : MonoBehaviour
 {
     public static GameObject mainEventText;
     public static GameObject leftEventText;
@@ -12,10 +12,6 @@ public class TextSetter : MonoBehaviour
 
     public static void SetTextEvent(string texName)
     {
-        if(mainEventText == null)
-        {
-            mainEventText.GetComponent<Text>().text = "";
-        }
         mainEventText.GetComponent<Text>().text = texName;
     }
 

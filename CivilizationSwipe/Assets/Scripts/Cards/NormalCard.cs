@@ -41,8 +41,9 @@ public class NormalCard : BaseCard       //Это уже карточка со значениями и мето
         Image = ReadCard.ImageHero;
     }
 
-    public void DownloadNormalCard(NormalCard ReadCard)    //Устанавливаю этой карте значение в зависимосте от переданной карточки JSON
-    {
+    //Устанавливаю этой карте значение в зависимосте от переданной карточки
+    public void DownloadNormalCard(NormalCard ReadCard)
+    { 
         TextEvent = ReadCard.TextEvent;
 
         TextLeft = ReadCard.TextLeft;
@@ -65,6 +66,5 @@ public class NormalCard : BaseCard       //Это уже карточка со значениями и мето
     private void OnEnable()
     {   
         DownloadNormalCard(MainStorage.thisCard);
-      //  MainStorage.thisCard = GetCard(MainStorage.counterCard, MainStorage.era);
     }
 }

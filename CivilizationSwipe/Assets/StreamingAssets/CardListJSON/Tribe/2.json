@@ -5,7 +5,7 @@
   "MoneyL": 10,
   "ArmyL": -10,
   "ReligionL": 0,
-  "PeopleEffectL": -50,
+  "PeopleEffectL": -20,
 
   "TextRight": "Давай",
   "MoneyR": -7,

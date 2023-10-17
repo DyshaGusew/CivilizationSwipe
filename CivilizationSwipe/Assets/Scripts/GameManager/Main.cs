@@ -10,20 +10,20 @@ public class Main : MonoBehaviour
     //Загрузка всего должна происходить здесь
     private void Awake()
     {
-
         //Инициализация объектов на сцене
-        TextSetter.InicializeText();
-        CardConstructor.gameCard = Resources.Load<GameObject>("NormalCard");
-        //Загрузка всех сохранений при загрузки
+        TextSetterView.InicializeText();
+        CardConstructor.gameCard = Resources.Load<GameObject>("GameModels\\NormalCard");
+
+        //Загрузка всех сохранений при загрузки и установка нового массива карточек
         MainStorage.DownloadSaves();
-        MainStorage.CardMassive = CardConstructor.CardMassSet(MainStorage.era);
+        MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
     }
 
     void Start()
     {
         //Создаю карту и тут же указываю ее текста
         CardConstructor.CreatePlayCard();
-        TextSetter.SetTextEvent(MainStorage.thisCard.TextEvent);
+        TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent);
     }
 
     private void Update()

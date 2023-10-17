@@ -17,9 +17,9 @@ public class ReturnGame : MonoBehaviour
         MainStorage.Save();
 
         CardConstructor.DeletePlayCard();
-        MainStorage.CardMassive = CardConstructor.CardMassSet(MainStorage.era);
+        MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
         CardConstructor.CreatePlayCard();
-        TextSetter.SetTextEvent(MainStorage.thisCard.TextEvent);
+        TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent);
     }
 
 }
