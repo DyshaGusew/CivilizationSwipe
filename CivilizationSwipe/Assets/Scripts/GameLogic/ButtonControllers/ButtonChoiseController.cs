@@ -24,7 +24,7 @@ public class ButtonControle : MonoBehaviour
         //Проверка при нажатии на кнопку
         MainGameController.ControleAfterBut();
 
-
+        ButNotMove();
         ButMove();
     }
 
@@ -33,16 +33,19 @@ public class ButtonControle : MonoBehaviour
         if (name == "ButtonLeft")
         {
             TextSetterView.SetTextLeft();
+            LightMarkerMove.LightMarker("ButtonLeft");
         }
 
         else if (name == "ButtonRight")
         {
             TextSetterView.SetTextRight();
+            LightMarkerMove.LightMarker("ButtonRight");
         }
     }
 
     public void ButNotMove()
     {
         TextSetterView.NullTextRightLeft();
+        LightMarkerMove.LightMarkerNotMove();
     }
 }

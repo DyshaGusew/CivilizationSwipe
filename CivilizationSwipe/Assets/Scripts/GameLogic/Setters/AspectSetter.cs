@@ -22,4 +22,5 @@ public class AspectSetter : MonoBehaviour
         MainStorage.religion += MainStorage.thisCard.ReligionR;
         MainStorage.people += MainStorage.thisCard.PeopleEffectR;
     }
+
 }

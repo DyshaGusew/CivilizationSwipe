@@ -10,8 +10,9 @@ public class Main : MonoBehaviour
     //Загрузка всего должна происходить здесь
     private void Awake()
     {
-        //Инициализация объектов на сцене
+        //Инициализация объектов на сценеzcxv
         TextSetterView.InicializeText();
+        LightMarkerMove.InicializeLightMarker();
         CardConstructor.gameCard = Resources.Load<GameObject>("GameModels\\NormalCard");
 
         //Загрузка всех сохранений при загрузки и установка нового массива карточек
@@ -28,9 +29,6 @@ public class Main : MonoBehaviour
 
     private void Update()
     {
-        //Условие проигрыша
-        if(MainStorage.money <= 0 || MainStorage.army <= 0 || MainStorage.religion <= 0 || MainStorage.people <= 0) {
 
-        }
     }
 }
