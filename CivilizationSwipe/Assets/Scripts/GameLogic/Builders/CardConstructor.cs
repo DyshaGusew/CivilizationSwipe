@@ -37,7 +37,7 @@ public class CardConstructor : MonoBehaviour
     //—оздание массива карточек указанной эры
     public static NormalCard[] CardMassSet(string era)
     {
-        MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era).Length / 2;   //—читаю количество карточек исключа€ их meta дубли
+        //MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era).Length / 2;   //—читаю количество карточек исключа€ их meta дубли
         NormalCard[] CardMassive = new NormalCard[MainStorage.maxCountCardOfThisEra];
         for (int i = 1; i <= MainStorage.maxCountCardOfThisEra; i++)
         {                               //—читываю все карточки и заношу уже как нормальные в массив

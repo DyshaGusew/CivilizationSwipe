@@ -16,7 +16,7 @@ public class Main : MonoBehaviour
         CardConstructor.gameCard = Resources.Load<GameObject>("GameModels\\NormalCard");
 
         //Загрузка всех сохранений при загрузки и установка нового массива карточек
-        MainStorage.DownloadSaves();
+        MainStorage.LoadSaves();
         MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
     }
 

@@ -24,7 +24,8 @@ public class MainGameController : MonoBehaviour
                         break;
                     }
                 }
-                
+
+                MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era, "*.json").Length;
                 MainStorage.counterCard = 1;
 
                 MainStorage.Save();
