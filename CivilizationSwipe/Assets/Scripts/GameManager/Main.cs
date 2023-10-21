@@ -31,4 +31,8 @@ public class Main : MonoBehaviour
     {
 
     }
+    void OnApplicationQuit()
+    {
+        MainStorage.Save();
+    }
 }
