@@ -23,7 +23,7 @@ public class Main : MonoBehaviour
     void Start()
     {
         //Создаю карту и тут же указываю ее текста
-        CardConstructor.CreatePlayCard();
+        CardConstructor.CreatePlayCardOfBase();
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent);
     }
 
@@ -33,6 +33,14 @@ public class Main : MonoBehaviour
     }
     void OnApplicationQuit()
     {
-        MainStorage.Save();
+        if (MainStorage.money > 0 && MainStorage.army > 0 && MainStorage.religion > 0 && MainStorage.people > 0)
+        {
+            MainStorage.Save();
+        }
+        else
+        {
+            MainStorage.LoadNormalValue();
+            MainStorage.Save();
+        }
     }
 }

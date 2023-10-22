@@ -28,9 +28,9 @@ public class JSONCardReader
     }
 
     //Получаю указанную карточку (по эре и id) по факту в виде просnого текста в классе 
-    public static ReadingCard GetCard(int id, string era) 
+    public static ReadingCard GetCard(int id, string era, string typeCard) 
     {     
-        string path = Application.streamingAssetsPath + "/CardListJSON/" + era + "/" + id.ToString() + ".json";
+        string path = Application.streamingAssetsPath + "/CardListJSON/" + era + "/" + typeCard + "/" + id.ToString() + ".json";
         ReadingCard getCard = JsonUtility.FromJson<ReadingCard>(File.ReadAllText(path));
         return getCard;
     }

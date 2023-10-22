@@ -9,10 +9,12 @@ public class ReturnGame : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         MainStorage.LoadNormalValue();
+        MainGameController.gameOver = false;
+
 
         CardConstructor.DeletePlayCard();
         MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
-        CardConstructor.CreatePlayCard();
+        CardConstructor.CreatePlayCardOfBase();
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent);
     }
 
