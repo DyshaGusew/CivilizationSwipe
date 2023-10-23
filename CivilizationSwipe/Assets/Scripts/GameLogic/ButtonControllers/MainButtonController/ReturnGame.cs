@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ReturnGame : MonoBehaviour
 {
-    public GameObject gameCard;
     public void Return()
     {
         PlayerPrefs.DeleteAll();
