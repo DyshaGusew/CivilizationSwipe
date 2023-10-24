@@ -24,7 +24,7 @@ public class Main : MonoBehaviour
     {
         //Создаю карту и тут же указываю ее текста
         CardConstructor.CreatePlayCardOfBase();
-        TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent);
+        TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
     }
 
     private void Update()

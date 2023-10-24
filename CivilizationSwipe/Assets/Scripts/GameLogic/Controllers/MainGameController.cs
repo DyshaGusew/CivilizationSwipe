@@ -15,7 +15,7 @@ public class MainGameController : MonoBehaviour
                 if (MainStorage.counterCard != MainStorage.maxCountCardOfThisEra + 1)
                 {
                     CardConstructor.CreatePlayCardOfBase();
-                    TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent);
+                    TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
                 }
                 else
                 {
@@ -36,7 +36,7 @@ public class MainGameController : MonoBehaviour
 
                     MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
                     CardConstructor.CreatePlayCardOfBase();
-                    TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent);
+                    TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
                 }
             }
 
@@ -59,7 +59,7 @@ public class MainGameController : MonoBehaviour
                 {
                     CardConstructor.CreatePlayCardOfDied("people");
                 }
-                TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent);
+                TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
             }
         }
         else
@@ -85,6 +85,6 @@ public class MainGameController : MonoBehaviour
 
         MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
         CardConstructor.CreatePlayCardOfBase();
-        TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent);
+        TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
     }
 }

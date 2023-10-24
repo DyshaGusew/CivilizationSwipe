@@ -25,6 +25,7 @@ public class JSONCardReader
 
         public string Era;
         public string ImageHero;
+        public string TextHero;
     }
 
     //Получаю указанную карточку (по эре и id) по факту в виде просnого текста в классе 

@@ -14,5 +14,6 @@
   "PeopleEffectR": 0,
 
   "Era": "Tribe",
-  "ImageHero": "DiedPeople"
+  "ImageHero": "DiedPeople",
+  "TextHero": ""
 }

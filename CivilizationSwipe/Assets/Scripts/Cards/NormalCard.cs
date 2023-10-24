@@ -20,6 +20,7 @@ public class NormalCard : BaseCard       //Ёто уже карточка со значени€ми и мето
     public int PeopleEffectR;
 
     public string ImageHero;
+    public string TextHero;
 
     public NormalCard(ReadingCard ReadCard)    // онструктор карты, создающий новую из —читываемой JSON карты
     {
@@ -39,6 +40,7 @@ public class NormalCard : BaseCard       //Ёто уже карточка со значени€ми и мето
 
         Era = ReadCard.Era;
         Image = ReadCard.ImageHero;
+        TextHero = ReadCard.TextHero;
     }
 
     //”станавливаю этой карте значение в зависимосте от переданной карточки
@@ -60,6 +62,7 @@ public class NormalCard : BaseCard       //Ёто уже карточка со значени€ми и мето
 
         Era = ReadCard.Era;
         Image = ReadCard.ImageHero;
+        TextHero = ReadCard.TextHero;
     }
 
     // огда объект с этим скриптом создаетс€, то устанавливаю ей значени€ в зависимости от текущей карточки из массива и эры

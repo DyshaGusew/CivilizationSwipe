@@ -9,10 +9,12 @@ public class TextSetterView : MonoBehaviour
     public static GameObject mainEventText;
     public static GameObject leftEventText;
     public static GameObject rightEventText;
+    public static GameObject heroNameText;
 
-    public static void SetTextEvent(string texName)
+    public static void SetTextEvent(string eventText, string heroText)
     {
-        mainEventText.GetComponent<Text>().text = texName;
+        mainEventText.GetComponent<Text>().text = eventText;
+        heroNameText.GetComponent<Text>().text = heroText;
     }
 
     public static void SetTextLeft()
@@ -39,6 +41,7 @@ public class TextSetterView : MonoBehaviour
         mainEventText = GameObject.Find("EventCardText");
         leftEventText = GameObject.Find("EventLeftText");
         rightEventText = GameObject.Find("EventRightText");
+        heroNameText = GameObject.Find("NameHeroCardText");
 
         leftEventText.SetActive(false);
         rightEventText.SetActive(false);
