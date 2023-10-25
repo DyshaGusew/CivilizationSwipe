@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Началась новая эра, сученька, ты крут",
+  "TextEvent": "Покорми меня хозяин, я голоден, я умираю..",
 
-  "TextLeft": "Да, я знаю",
-  "MoneyL": 30,
-  "ArmyL": 30,
-  "ReligionL": 30,
-  "PeopleEffectL": 30,
+  "TextLeft": "Бедняга, ладно",
+  "MoneyL": -10,
+  "ArmyL": 10,
+  "ReligionL": 10,
+  "PeopleEffectL": 10,
 
-  "TextRight": "Я крут",
-  "MoneyR": 30,
-  "ArmyR": 30,
-  "ReligionR": 30,
-  "PeopleEffectR": 30,
+  "TextRight": "Нет, хы",
+  "MoneyR": 5,
+  "ArmyR": -10,
+  "ReligionR": -10,
+  "PeopleEffectR": -10,
 
   "Era": "MiddleAges",
-  "ImageHero": "Culturolog",
-  "TextHero": "Министр"
+  "ImageHero": "Cat",
+  "TextHero": "Ваш котик"
 }

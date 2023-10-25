@@ -35,4 +35,11 @@ public class JSONCardReader
         ReadingCard getCard = JsonUtility.FromJson<ReadingCard>(File.ReadAllText(path));
         return getCard;
     }
+
+    public static ReadingCard GetCard(string name, string era, string typeCard)
+    {
+        string path = Application.streamingAssetsPath + "/CardListJSON/" + era + "/" + typeCard + "/" + name + ".json";
+        ReadingCard getCard = JsonUtility.FromJson<ReadingCard>(File.ReadAllText(path));
+        return getCard;
+    }
 }

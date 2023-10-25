@@ -27,19 +27,19 @@ public class CardConstructor : MonoBehaviour
         switch (diedAspect)
         {
             case "money":
-                infoCard = new NormalCard(JSONCardReader.GetCard(1, MainStorage.era, "DiedIcon"));
+                infoCard = new NormalCard(JSONCardReader.GetCard("money", MainStorage.era, "DiedIcon"));
                 break;
 
             case "army":
-                infoCard = new NormalCard(JSONCardReader.GetCard(2, MainStorage.era, "DiedCard"));
+                infoCard = new NormalCard(JSONCardReader.GetCard("army", MainStorage.era, "DiedCard"));
                 break;
 
             case "religion":
-                infoCard = new NormalCard(JSONCardReader.GetCard(3, MainStorage.era, "DiedCard"));
+                infoCard = new NormalCard(JSONCardReader.GetCard("religion", MainStorage.era, "DiedCard"));
                 break;
 
             case "people":
-                infoCard = new NormalCard(JSONCardReader.GetCard(4, MainStorage.era, "DiedCard"));
+                infoCard = new NormalCard(JSONCardReader.GetCard("people", MainStorage.era, "DiedCard"));
                 break;
 
             default:
@@ -67,21 +67,44 @@ public class CardConstructor : MonoBehaviour
     //—оздание массива карточек указанной эры
     public static NormalCard[] CardMassSet(string era)
     {
+        int countAllCard = MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra;
         //MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era).Length / 2;   //—читаю количество карточек исключа€ их meta дубли
-        NormalCard[] CardMassive = new NormalCard[MainStorage.maxCountCardOfThisEra];
-        for (int i = 1; i <= MainStorage.maxCountCardOfThisEra; i++)
+        NormalCard[] CardMassive = new NormalCard[countAllCard];
+        NormalCard[] CardStart = new NormalCard[MainStorage.maxCountCardOfStartEra];
+        NormalCard[] CardBase = new NormalCard[MainStorage.maxCountCardOfThisEra];
+
+        for (int i = 0; i < MainStorage.maxCountCardOfStartEra; i++)
         {                               //—читываю все карточки и заношу уже как нормальные в массив
-            CardMassive[i - 1] = new NormalCard(JSONCardReader.GetCard(i, era, "BaseCard"));
+            CardStart[i] = new NormalCard(JSONCardReader.GetCard(i+1, era, "StartCard"));
         }
 
-        //ѕеремешка массива
-        for(int i = CardMassive.Length - 1; i >= 1; i--)
-        {
-            int j = new System.Random().Next() % (i + 1);
-            NormalCard tmp = CardMassive[j];
-            CardMassive[j] = CardMassive[i];
-            CardMassive[i] = tmp;
+        for (int i = 0; i < MainStorage.maxCountCardOfThisEra; i++)
+        {                               //—читываю все карточки и заношу уже как нормальные в массив
+            CardBase[i] = new NormalCard(JSONCardReader.GetCard(i+1, era, "BaseCard"));
         }
+
+        
+
+        //ѕеремешка массива
+        for (int g = CardBase.Length - 1; g >= 1; g--)
+        {
+            int j = new System.Random().Next() % (g + 1);
+            NormalCard tmp = CardBase[j];
+            CardBase[j] = CardBase[g];
+            CardBase[g] = tmp;
+        }
+
+        int f = 0;
+        for(; f < MainStorage.maxCountCardOfStartEra; f++)
+        {
+            CardMassive[f] = CardStart[f];
+        }
+
+        for (int i = 0; i < MainStorage.maxCountCardOfThisEra; f++, i++)
+        {
+            CardMassive[f] = CardBase[i];
+        }
+
 
         return CardMassive;
     }

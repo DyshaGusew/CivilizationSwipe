@@ -1,0 +1,19 @@
+{
+  "TextEvent": "О, вы проснулись, правитель, рад вас видеть",
+
+  "TextLeft": "Что?",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "И я вас тоже",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "Tribe",
+  "ImageHero": "Culturolog",
+  "TextHero": "Помощник главы поселения"
+}

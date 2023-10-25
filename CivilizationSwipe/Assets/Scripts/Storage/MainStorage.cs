@@ -13,6 +13,7 @@ public class MainStorage : MonoBehaviour
 
     public static int counterCard;
     public static int maxCountCardOfThisEra;
+    public static int maxCountCardOfStartEra;
 
     public static string[] eras = {"Tribe", "MiddleAges", "NewTime", "ModernTimes", "CyberTimes"};
     public static string era;
@@ -33,6 +34,7 @@ public class MainStorage : MonoBehaviour
             counterCard = PlayerPrefs.GetInt("counterCard");
             era = PlayerPrefs.GetString("era");
             maxCountCardOfThisEra = PlayerPrefs.GetInt("maxCountCardOfThisEra");
+            maxCountCardOfStartEra = PlayerPrefs.GetInt("maxCountCardOfStartEra");
         }
         else
         {
@@ -49,6 +51,7 @@ public class MainStorage : MonoBehaviour
         PlayerPrefs.SetFloat("people", people);
         PlayerPrefs.SetString("era", era);
         PlayerPrefs.SetInt("maxCountCardOfThisEra", maxCountCardOfThisEra);
+        PlayerPrefs.SetInt("maxCountCardOfStartEra", maxCountCardOfStartEra);
 
         //“к после создани€ карточки он прибавл€ет 1
         if (counterCard != 1)
@@ -66,6 +69,7 @@ public class MainStorage : MonoBehaviour
         counterCard = 1;
         era = eras[0];
         maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\BaseCard\\", "*.json").Length;
+        maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\StartCard\\", "*.json").Length;
         Save();
     }
 }
