@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class ValueAspectView : MonoBehaviour
 {
     private float Value;
-    [SerializeField] private float speed = 0.3f;
+    [SerializeField]static private float speed = 0.2f;
 
     //¬ зависимости от названи€ ассета на котором этот скрипт, устанавливаетс€ значение(Value)
     private float GetValueAspect(string name)
