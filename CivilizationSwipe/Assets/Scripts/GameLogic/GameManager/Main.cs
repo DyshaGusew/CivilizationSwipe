@@ -25,12 +25,9 @@ public class Main : MonoBehaviour
         //Создаю карту и тут же указываю ее текста
         CardConstructor.CreatePlayCardOfBase();
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
+        AspectGreenRed.AspectLightSol(0, 0, 0, 0);
     }
 
-    private void Update()
-    {
-
-    }
     void OnApplicationQuit()
     {
         if (MainStorage.money > 0 && MainStorage.army > 0 && MainStorage.religion > 0 && MainStorage.people > 0)

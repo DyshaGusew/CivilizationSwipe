@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
 using UnityEngine.Windows;
 
 public class AspectSetter : MonoBehaviour
@@ -13,6 +15,7 @@ public class AspectSetter : MonoBehaviour
         MainStorage.money += MainStorage.thisCard.MoneyL;
         MainStorage.religion += MainStorage.thisCard.ReligionL;
         MainStorage.people += MainStorage.thisCard.PeopleEffectL;
+        AspectGreenRed.AspectLightSol(MainStorage.thisCard.ArmyL, MainStorage.thisCard.MoneyL, MainStorage.thisCard.ReligionL, MainStorage.thisCard.PeopleEffectL);
     }
 
     static public void AspectRightSolution()
@@ -21,6 +24,10 @@ public class AspectSetter : MonoBehaviour
         MainStorage.money += MainStorage.thisCard.MoneyR;
         MainStorage.religion += MainStorage.thisCard.ReligionR;
         MainStorage.people += MainStorage.thisCard.PeopleEffectR;
+        AspectGreenRed.AspectLightSol(MainStorage.thisCard.ArmyR, MainStorage.thisCard.MoneyR, MainStorage.thisCard.ReligionR, MainStorage.thisCard.PeopleEffectR);
     }
+
+    
+
 
 }
