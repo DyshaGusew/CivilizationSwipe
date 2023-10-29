@@ -27,7 +27,7 @@ public class CardConstructor : MonoBehaviour
         switch (diedAspect)
         {
             case "money":
-                infoCard = new NormalCard(JSONCardReader.GetCard("money", MainStorage.era, "DiedIcon"));
+                infoCard = new NormalCard(JSONCardReader.GetCard("money", MainStorage.era, "DiedCard"));
                 break;
 
             case "army":

@@ -10,7 +10,7 @@ public class MainGameController : MonoBehaviour
     {
         if(gameOver == false)
         {
-            if (MainStorage.Money > 0 && MainStorage.Army > 0 && MainStorage.Religion > 0 && MainStorage.People > 0)
+            if (MainStorage.Money > 1 && MainStorage.Army > 1 && MainStorage.Religion > 1 && MainStorage.People > 1)
             {
                 if (MainStorage.counterCard != MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra + 1)
                 {

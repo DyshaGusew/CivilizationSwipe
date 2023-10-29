@@ -20,7 +20,11 @@ public class MainStorage : MonoBehaviour
             {
                 money = 100;
             }
-        
+            if (money <= 1)
+            {
+                money = 0;
+            }
+
         }  
     }
 
@@ -33,6 +37,10 @@ public class MainStorage : MonoBehaviour
             {
                 army = 100;
             }
+            if (army <= 1)
+            {
+                army = 0;
+            }
         }
     }
     public static float People
@@ -44,6 +52,10 @@ public class MainStorage : MonoBehaviour
             {
                 people = 100;
             }
+            if (people <= 1)
+            {
+                people = 0;
+            }
         }
     }
     public static float Religion
@@ -54,6 +66,10 @@ public class MainStorage : MonoBehaviour
             if (religion > 100)
             {
                 religion = 100;
+            }
+            if (religion <= 1)
+            {
+                religion = 0;
             }
         }
     }
