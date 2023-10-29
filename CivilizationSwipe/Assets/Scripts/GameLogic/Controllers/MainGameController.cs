@@ -10,7 +10,7 @@ public class MainGameController : MonoBehaviour
     {
         if(gameOver == false)
         {
-            if (MainStorage.money > 0 && MainStorage.army > 0 && MainStorage.religion > 0 && MainStorage.people > 0)
+            if (MainStorage.Money > 0 && MainStorage.Army > 0 && MainStorage.Religion > 0 && MainStorage.People > 0)
             {
                 if (MainStorage.counterCard != MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra + 1)
                 {
@@ -44,19 +44,19 @@ public class MainGameController : MonoBehaviour
             else
             {
                 gameOver = true;
-                if (MainStorage.money <= 0)
+                if (MainStorage.Money <= 0)
                 {
                     CardConstructor.CreatePlayCardOfDied("money");
                 }
-                else if (MainStorage.army <= 0)
+                else if (MainStorage.Army <= 0)
                 {
                     CardConstructor.CreatePlayCardOfDied("army");
                 }
-                else if (MainStorage.religion <= 0)
+                else if (MainStorage.Religion <= 0)
                 {
                     CardConstructor.CreatePlayCardOfDied("religion");
                 }
-                else if (MainStorage.people <= 0)
+                else if (MainStorage.People <= 0)
                 {
                     CardConstructor.CreatePlayCardOfDied("people");
                 }
@@ -74,10 +74,10 @@ public class MainGameController : MonoBehaviour
 
     static void GameOver()
     {
-        MainStorage.money = 50;
-        MainStorage.army = 50;
-        MainStorage.religion = 50;
-        MainStorage.people = 50;
+        MainStorage.Money = 50;
+        MainStorage.Army = 50;
+        MainStorage.Religion = 50;
+        MainStorage.People = 50;
         MainStorage.counterCard = 1;
         MainStorage.era = "Tribe";
         gameOver = false;

@@ -17,13 +17,13 @@ public class ValueAspectView : MonoBehaviour
         switch (name)
         {
             case "AtributMoney":
-                return MainStorage.money;
+                return MainStorage.Money;
             case "AtributArmy":
-                return MainStorage.army;
+                return MainStorage.Army;
             case "AtributReligion":
-                return MainStorage.religion;
+                return MainStorage.Religion;
             case "AtributPeople":
-                return MainStorage.people;
+                return MainStorage.People;
         }
         return 200;
     }

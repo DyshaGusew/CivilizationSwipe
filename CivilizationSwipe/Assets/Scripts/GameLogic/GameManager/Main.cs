@@ -30,7 +30,7 @@ public class Main : MonoBehaviour
 
     void OnApplicationQuit()
     {
-        if (MainStorage.money > 0 && MainStorage.army > 0 && MainStorage.religion > 0 && MainStorage.people > 0)
+        if (MainStorage.Money > 0 && MainStorage.Army > 0 && MainStorage.Religion > 0 && MainStorage.People > 0)
         {
             MainStorage.Save();
         }

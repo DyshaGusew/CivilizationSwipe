@@ -7,21 +7,21 @@ public class FixAspects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MainStorage.money > 100)
+        if (MainStorage.Money > 100)
         {
-            MainStorage.money = 100;
+            MainStorage.Money = 100;
         }
-        if (MainStorage.army > 100)
+        if (MainStorage.Army > 100)
         {
-            MainStorage.army = 100;
+            MainStorage.Army = 100;
         }
-        if (MainStorage.religion > 100)
+        if (MainStorage.Religion > 100)
         {
-            MainStorage.religion = 100;
+            MainStorage.Religion = 100;
         }
-        if (MainStorage.people > 100)
+        if (MainStorage.People > 100)
         {
-            MainStorage.people = 100;
+            MainStorage.People = 100;
         }
     }
 }

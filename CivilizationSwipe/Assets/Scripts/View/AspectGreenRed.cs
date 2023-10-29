@@ -7,7 +7,7 @@ public class AspectGreenRed : MonoBehaviour
     [SerializeField] static private Color green = new Color(0, 0.7169812f, 0.06459286f);
     [SerializeField] static private Color red = new Color(0.9056604f, 0.09061617f, 0);
     [SerializeField] static private Color white = new Color(1f, 1f, 1f);
-    static public float speed = 0.003f;
+    static private float speed = 0.01f;
     public float con = 0;
     static public void AspectLightSol(int army, int money, int religion, int people)
     {

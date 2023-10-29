@@ -11,19 +11,19 @@ public class AspectSetter : MonoBehaviour
 {
     static public void AspectLeftSolution()
     {
-        MainStorage.army += MainStorage.thisCard.ArmyL;
-        MainStorage.money += MainStorage.thisCard.MoneyL;
-        MainStorage.religion += MainStorage.thisCard.ReligionL;
-        MainStorage.people += MainStorage.thisCard.PeopleEffectL;
+        MainStorage.Army += MainStorage.thisCard.ArmyL;
+        MainStorage.Money += MainStorage.thisCard.MoneyL;
+        MainStorage.Religion += MainStorage.thisCard.ReligionL;
+        MainStorage.People += MainStorage.thisCard.PeopleEffectL;
         AspectGreenRed.AspectLightSol(MainStorage.thisCard.ArmyL, MainStorage.thisCard.MoneyL, MainStorage.thisCard.ReligionL, MainStorage.thisCard.PeopleEffectL);
     }
 
     static public void AspectRightSolution()
     {
-        MainStorage.army += MainStorage.thisCard.ArmyR;
-        MainStorage.money += MainStorage.thisCard.MoneyR;
-        MainStorage.religion += MainStorage.thisCard.ReligionR;
-        MainStorage.people += MainStorage.thisCard.PeopleEffectR;
+        MainStorage.Army += MainStorage.thisCard.ArmyR;
+        MainStorage.Money += MainStorage.thisCard.MoneyR;
+        MainStorage.Religion += MainStorage.thisCard.ReligionR;
+        MainStorage.People += MainStorage.thisCard.PeopleEffectR;
         AspectGreenRed.AspectLightSol(MainStorage.thisCard.ArmyR, MainStorage.thisCard.MoneyR, MainStorage.thisCard.ReligionR, MainStorage.thisCard.PeopleEffectR);
     }
 
