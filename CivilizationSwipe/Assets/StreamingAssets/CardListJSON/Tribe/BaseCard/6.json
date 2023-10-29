@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Глава, многие устали работать дни напролет, может стоит сократить время работы?",
+
+  "TextLeft": "Ни за что",
+  "MoneyL": 10,
+  "ArmyL": -5,
+  "ReligionL": 0,
+  "PeopleEffectL": -15,
+
+  "TextRight": "Согласен",
+  "MoneyR": -10,
+  "ArmyR": 3,
+  "ReligionR": 0,
+  "PeopleEffectR": 12,
+
+  "Era": "Tribe",
+  "ImageHero": "Служанка",
+  "TextHero": "Ваша служанка"
+}
