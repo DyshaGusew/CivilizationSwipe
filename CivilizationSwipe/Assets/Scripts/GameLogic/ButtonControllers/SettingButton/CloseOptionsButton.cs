@@ -8,5 +8,6 @@ public class CloseOptionsButton : MonoBehaviour
     public void Click()
     {
         canvasSetting.SetActive(false);
+        EscapeScript.active = false;
     }
 }

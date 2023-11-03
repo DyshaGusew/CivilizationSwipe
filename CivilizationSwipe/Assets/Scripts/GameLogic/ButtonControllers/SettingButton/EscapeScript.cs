@@ -3,7 +3,7 @@ using UnityEngine;
 public class EscapeScript : MonoBehaviour
 {
     public GameObject canvasSetting;
-    bool active = false;
+    public static bool active = false;
     void Update()
     {
 
