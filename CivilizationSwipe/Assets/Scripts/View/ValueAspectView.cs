@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class ValueAspectView : MonoBehaviour
 {
     private float Value;
-    [SerializeField]static private float speed = 0.2f;
+    [SerializeField]static private float speed = 0.3f;
 
     //¬ зависимости от названи€ ассета на котором этот скрипт, устанавливаетс€ значение(Value)
     private float GetValueAspect(string name)
@@ -34,12 +34,12 @@ public class ValueAspectView : MonoBehaviour
         GetComponent<Image>().transform.localScale = new Vector3(1, Value / 100, 1);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Value = GetValueAspect(name);
         if(GetComponent<Image>().transform.localScale.y < Value / 100)
         {
-            GetComponent<Image>().transform.localScale += new Vector3(0, Time.deltaTime* speed, 0);
+            GetComponent<Image>().transform.localScale += new Vector3(0, Time.deltaTime * speed, 0);
         }
         if (GetComponent<Image>().transform.localScale.y > Value / 100)
         {
