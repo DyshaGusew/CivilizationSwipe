@@ -2200,6 +2200,7 @@ GameObject:
   - component: {fileID: 644624948}
   - component: {fileID: 644624953}
   - component: {fileID: 644624952}
+  - component: {fileID: 644624954}
   m_Layer: 5
   m_Name: ButtonLeft
   m_TagString: Untagged
@@ -2349,13 +2350,13 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: ButtonControle, Assembly-CSharp
-          m_MethodName: 
+        - m_Target: {fileID: 644624954}
+          m_TargetAssemblyTypeName: SwipeLeft, Assembly-CSharp
+          m_MethodName: Startuem
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2368,6 +2369,18 @@ MonoBehaviour:
         - m_Target: {fileID: 644624953}
           m_TargetAssemblyTypeName: ButtonControle, Assembly-CSharp
           m_MethodName: ButNotMove
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 644624954}
+          m_TargetAssemblyTypeName: SwipeLeft, Assembly-CSharp
+          m_MethodName: Finish
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2390,6 +2403,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameCard: {fileID: 5676389771441446470, guid: f5fbc280cc4133848b203b9b03f2707f, type: 3}
+--- !u!114 &644624954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644624946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad6fa808686bdf43b232a3ceffced98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &656413147
 GameObject:
   m_ObjectHideFlags: 0
@@ -4733,6 +4758,7 @@ GameObject:
   - component: {fileID: 1765962196}
   - component: {fileID: 1765962199}
   - component: {fileID: 1765962200}
+  - component: {fileID: 1765962201}
   m_Layer: 5
   m_Name: ButtonRight
   m_TagString: Untagged
@@ -4895,6 +4921,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1765962201}
+          m_TargetAssemblyTypeName: SwipeRight2, Assembly-CSharp
+          m_MethodName: Startuem
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -4911,6 +4949,30 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1765962201}
+          m_TargetAssemblyTypeName: SwipeRight2, Assembly-CSharp
+          m_MethodName: Finish
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1765962201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765962194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cb762b01b339e49afe3483887d73b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1768945543
 GameObject:
   m_ObjectHideFlags: 0
