@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonSettings : MonoBehaviour
+public class CloseWarning : MonoBehaviour
 {
-    public GameObject canvasSetting;
     public GameObject warning;
 
-    public void Click()
+    public void Close(GameObject warning)
     {
-        canvasSetting.SetActive(true);
         warning.SetActive(false);
     }
 }
