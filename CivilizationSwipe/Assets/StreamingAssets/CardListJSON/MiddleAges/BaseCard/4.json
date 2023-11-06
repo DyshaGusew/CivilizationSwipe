@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Люди все меньше молятся, надо построить больше храмов",
+
+  "TextLeft": "Так тому и быть",
+  "MoneyL": -10,
+  "ArmyL": 10,
+  "ReligionL": 10,
+  "PeopleEffectL": 10,
+
+  "TextRight": "Нет",
+  "MoneyR": 15,
+  "ArmyR": 0,
+  "ReligionR": -10,
+  "PeopleEffectR": 5,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Поп",
+  "TextHero": "Поп"
+}

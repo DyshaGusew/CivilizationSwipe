@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Ха-ха, после взетов бывают падения, ха-ха",
+
+  "TextLeft": "Да",
+  "MoneyL": 10,
+  "ArmyL": -10,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "Нет",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 10,
+  "PeopleEffectR": -10,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Шут",
+  "TextHero": "Ваш шут"
+}

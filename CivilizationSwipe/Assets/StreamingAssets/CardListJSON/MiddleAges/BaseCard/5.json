@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Король, позвольте нам закупить более качественое вооружение",
+
+  "TextLeft": "Добро",
+  "MoneyL": -10,
+  "ArmyL": 15,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "Вам и это сойдет",
+  "MoneyR": 10,
+  "ArmyR": -20,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Рыцарь",
+  "TextHero": "Королевский рыцарь"
+}

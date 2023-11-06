@@ -19,6 +19,9 @@ public class MainGameController : MonoBehaviour
                 }
                 else
                 {
+                    string thisEra = MainStorage.era;
+                    MainStorage.LoadNormalValue();
+                    MainStorage.era = thisEra;
                     //Устанавливаю следущую эру
                     for (int i = 0; i < MainStorage.eras.Length; i++)
                     {
@@ -32,12 +35,13 @@ public class MainGameController : MonoBehaviour
                     MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\BaseCard\\", "*.json").Length;
                     MainStorage.maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\StartCard\\", "*.json").Length;
                     MainStorage.counterCard = 1;
-
+                    
                     MainStorage.Save();
 
                     MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
                     CardConstructor.CreatePlayCardOfBase();
                     TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
+                    
                 }
             }
 

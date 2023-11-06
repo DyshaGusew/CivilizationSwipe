@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Сегодня была отличная охота, может стоит устроить пир?",
+
+  "TextLeft": "Естественно",
+  "MoneyL": -5,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 15,
+
+  "TextRight": "Есть дела и поважнее",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": -10,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Охотник",
+  "TextHero": "Егерь"
+}

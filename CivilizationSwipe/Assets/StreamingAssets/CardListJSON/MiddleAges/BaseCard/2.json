@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Звезды говорят о бедах, необходимо принести дары богам",
+
+  "TextLeft": "Это вздор!",
+  "MoneyL": 10,
+  "ArmyL": 0,
+  "ReligionL": -20,
+  "PeopleEffectL": 0,
+
+  "TextRight": "Конечно",
+  "MoneyR": -15,
+  "ArmyR": 0,
+  "ReligionR": 20,
+  "PeopleEffectR": 0,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Звездочет",
+  "TextHero": "Звездочет"
+}

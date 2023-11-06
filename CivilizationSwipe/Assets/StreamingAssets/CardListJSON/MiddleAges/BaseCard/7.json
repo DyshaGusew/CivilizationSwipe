@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Началась неизвестная ранее болезнь, люди погибают пачками",
+
+  "TextLeft": "Выделить денег на изучение",
+  "MoneyL": -10,
+  "ArmyL": -5,
+  "ReligionL": -5,
+  "PeopleEffectL": -15,
+
+  "TextRight": "Само закночится",
+  "MoneyR": 0,
+  "ArmyR": -5,
+  "ReligionR": -5,
+  "PeopleEffectR": -35,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Эпидемия",
+  "TextHero": "Событие"
+}

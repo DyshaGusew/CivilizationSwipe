@@ -10,7 +10,7 @@ public class MainStorage : MonoBehaviour
     private static float army;
     private static float religion;
     private static float people;
-
+    public static GameObject thisGameCard;
     public static float Money
     {
         get { return money; }

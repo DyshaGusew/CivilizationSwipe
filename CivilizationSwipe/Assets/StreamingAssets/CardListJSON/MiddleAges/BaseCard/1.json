@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Покорми меня хозяин, я голоден, я умираю..",
+  "TextEvent": "У вас во дворе нашли закопанный сундук золота",
 
-  "TextLeft": "Бедняга, ладно",
-  "MoneyL": -10,
-  "ArmyL": 10,
-  "ReligionL": 10,
-  "PeopleEffectL": 10,
+  "TextLeft": "Я богат!",
+  "MoneyL": 40,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
 
-  "TextRight": "Нет, хы",
-  "MoneyR": 5,
-  "ArmyR": -10,
-  "ReligionR": -10,
-  "PeopleEffectR": -10,
+  "TextRight": "Страна богата!",
+  "MoneyR": 10,
+  "ArmyR": 10,
+  "ReligionR": 10,
+  "PeopleEffectR": 10,
 
   "Era": "MiddleAges",
-  "ImageHero": "Cat",
-  "TextHero": "Ваш котик"
+  "ImageHero": "Сундук",
+  "TextHero": "Событие"
 }

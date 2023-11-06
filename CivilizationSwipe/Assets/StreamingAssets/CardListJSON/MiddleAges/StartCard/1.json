@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Началась новая эра, сученька, ты крут",
+  "TextEvent": "Да здравствует король!",
 
-  "TextLeft": "Да, я знаю",
-  "MoneyL": 30,
-  "ArmyL": 30,
-  "ReligionL": 30,
-  "PeopleEffectL": 30,
+  "TextLeft": "...",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
 
-  "TextRight": "Я крут",
-  "MoneyR": 30,
-  "ArmyR": 30,
-  "ReligionR": 30,
-  "PeopleEffectR": 30,
+  "TextRight": "...",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
 
   "Era": "MiddleAges",
-  "ImageHero": "Culturolog",
-  "TextHero": "Сущность"
+  "ImageHero": "Crown",
+  "TextHero": "Новая эра"
 }

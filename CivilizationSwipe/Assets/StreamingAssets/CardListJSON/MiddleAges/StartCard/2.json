@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Ты наверно задаешься вопросом кто я",
+  "TextEvent": "Вы перешли средневековую эру, вас ждет множество новых испытаний",
 
-  "TextLeft": "Да",
-  "MoneyL": -30,
-  "ArmyL": -30,
-  "ReligionL": -30,
-  "PeopleEffectL": -30,
+  "TextLeft": "Ура, начнем",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
 
-  "TextRight": "Нет",
-  "MoneyR": -30,
-  "ArmyR": -30,
-  "ReligionR": -30,
-  "PeopleEffectR": -30,
+  "TextRight": "Слава королю",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
 
   "Era": "MiddleAges",
-  "ImageHero": "Culturolog",
-  "TextHero": "Сущность"
+  "ImageHero": "Crown",
+  "TextHero": "Средневековье"
 }
