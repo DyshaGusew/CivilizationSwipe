@@ -1650,7 +1650,7 @@ GameObject:
   - component: {fileID: 362857946}
   - component: {fileID: 362857945}
   m_Layer: 0
-  m_Name: Square
+  m_Name: UpLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3248,7 +3248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &927107400
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4091,7 +4091,7 @@ GameObject:
   - component: {fileID: 1130293927}
   - component: {fileID: 1130293928}
   m_Layer: 0
-  m_Name: AspectsTride
+  m_Name: Aspects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5371,7 +5371,7 @@ GameObject:
   - component: {fileID: 1719444454}
   - component: {fileID: 1719444455}
   m_Layer: 0
-  m_Name: Ancient Background
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

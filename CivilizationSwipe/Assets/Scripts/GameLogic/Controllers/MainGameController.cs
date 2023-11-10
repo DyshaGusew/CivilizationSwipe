@@ -41,7 +41,8 @@ public class MainGameController : MonoBehaviour
                     MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
                     CardConstructor.CreatePlayCardOfBase();
                     TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
-                    
+                    FoneAspectSetter.FoneSet();
+                    FoneAspectSetter.AspecSet();
                 }
             }
 
@@ -93,4 +94,6 @@ public class MainGameController : MonoBehaviour
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
         AspectGreenRed.AspectLightSol(0,0,0,0);
     }
+
+    
 }

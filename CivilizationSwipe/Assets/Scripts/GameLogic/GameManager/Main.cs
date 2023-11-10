@@ -26,6 +26,8 @@ public class Main : MonoBehaviour
         CardConstructor.CreatePlayCardOfBase();
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
         AspectGreenRed.AspectLightSol(0, 0, 0, 0);
+        FoneAspectSetter.FoneSet();
+        FoneAspectSetter.AspecSet();
     }
 
     void OnApplicationQuit()
@@ -37,6 +39,7 @@ public class Main : MonoBehaviour
         else
         {
             MainStorage.LoadNormalValue();
+            
             MainStorage.Save();
         }
     }

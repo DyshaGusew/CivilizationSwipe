@@ -133,6 +133,10 @@ public class MainStorage : MonoBehaviour
         era = eras[0];
         maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\BaseCard\\", "*.json").Length;
         maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\StartCard\\", "*.json").Length;
+
+        FoneAspectSetter.FoneSet();
+        FoneAspectSetter.AspecSet();
+
         Save();
     }
 }
