@@ -28,6 +28,14 @@ public class Main : MonoBehaviour
         AspectGreenRed.AspectLightSol(0, 0, 0, 0);
         FoneAspectSetter.FoneSet();
         FoneAspectSetter.AspecSet();
+
+        if(MainStorage.learning == 0)
+        {
+           GameObject.Find("CanvasLearning").GetComponent<LearningController>().StartLerning();
+           MainStorage.learning = 1;
+        }
+        MainStorage.Save();
+
     }
 
     void OnApplicationQuit()

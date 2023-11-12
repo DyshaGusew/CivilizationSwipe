@@ -16,6 +16,9 @@ public class ReturnGame : MonoBehaviour
         CardConstructor.CreatePlayCardOfBase();
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
         AspectGreenRed.AspectLightSol(0, 0, 0, 0);
+
+        GameObject.Find("CanvasLearning").GetComponent<LearningController>().StartLerning();
+        MainStorage.learning = 1;
     }
 
 }

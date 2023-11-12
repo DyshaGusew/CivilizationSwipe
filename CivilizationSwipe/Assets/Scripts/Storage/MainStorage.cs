@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //Это хранилище всей общей информации
@@ -10,6 +11,7 @@ public class MainStorage : MonoBehaviour
     private static float army;
     private static float religion;
     private static float people;
+    public static int learning = 0;    //Переменная, хранящая информацию о прохождении первого обучения
     public static GameObject thisGameCard;
     public static float Money
     {
@@ -87,8 +89,8 @@ public class MainStorage : MonoBehaviour
 
     //Здесь все выгружается в хранилище
     public static void LoadSaves()
-    {
-        if (PlayerPrefs.HasKey("money"))
+    { 
+        if (PlayerPrefs.HasKey("money") && PlayerPrefs.HasKey("counterCard") && PlayerPrefs.HasKey("era") && PlayerPrefs.HasKey("maxCountCardOfThisEra") && PlayerPrefs.HasKey("maxCountCardOfStartEra") && PlayerPrefs.HasKey("learning"))
         {
             Money = PlayerPrefs.GetFloat("money");
             Army = PlayerPrefs.GetFloat("army");
@@ -98,6 +100,8 @@ public class MainStorage : MonoBehaviour
             era = PlayerPrefs.GetString("era");
             maxCountCardOfThisEra = PlayerPrefs.GetInt("maxCountCardOfThisEra");
             maxCountCardOfStartEra = PlayerPrefs.GetInt("maxCountCardOfStartEra");
+
+            learning = PlayerPrefs.GetInt("learning");
         }
         else
         {
@@ -115,7 +119,7 @@ public class MainStorage : MonoBehaviour
         PlayerPrefs.SetString("era", era);
         PlayerPrefs.SetInt("maxCountCardOfThisEra", maxCountCardOfThisEra);
         PlayerPrefs.SetInt("maxCountCardOfStartEra", maxCountCardOfStartEra);
-
+        PlayerPrefs.SetInt("learning", learning);
         //Тк после создания карточки он прибавляет 1
         if (counterCard != 1)
             PlayerPrefs.SetInt("counterCard", counterCard - 1);  
@@ -125,15 +129,15 @@ public class MainStorage : MonoBehaviour
 
     public static void LoadNormalValue() 
     {
-        Money = 50;
-        Army = 50;
-        Religion = 50;
-        People = 50;
+        Money = 3;
+        Army = 3;
+        Religion = 3;
+        People = 3;
         counterCard = 1;
         era = eras[0];
         maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\BaseCard\\", "*.json").Length;
         maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\StartCard\\", "*.json").Length;
-
+        learning = 0;
         FoneAspectSetter.FoneSet();
         FoneAspectSetter.AspecSet();
 

@@ -10,6 +10,8 @@ public class ReturnGameYes : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         MainStorage.LoadNormalValue();
+        MainStorage.learning = 1;
+        MainStorage.Save();
         MainGameController.gameOver = false;
 
 
