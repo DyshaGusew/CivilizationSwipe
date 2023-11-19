@@ -8,11 +8,7 @@ public class SwipeLeft : MonoBehaviour
 
     private void FindAnimat()
     {
-       // GameObject obj = GameObject.Find("NormalCard(Clone)"); // находим объект по имени
-       // if (obj != null)
-        //{
             animator = MainStorage.thisGameCard.GetComponent<Animator>(); // получаем компонент Animator
-      //  }
     }
 
     public void Startuem()
@@ -58,6 +54,8 @@ public class SwipeLeft : MonoBehaviour
     {
         // Находим объект по имени   
         GameObject obj = GameObject.Find("Card");
+
+        
 
         // Получаем компонент аниматора объекта   
         Animator Animarotlocal = obj.GetComponent<Animator>();

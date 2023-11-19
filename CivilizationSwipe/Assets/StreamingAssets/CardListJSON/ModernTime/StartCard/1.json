@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Новейшее время!",
+
+  "TextLeft": "...",
+  "MoneyL": 50,
+  "ArmyL": 50,
+  "ReligionL": 50,
+  "PeopleEffectL": 50,
+
+  "TextRight": "...",
+  "MoneyR": 50,
+  "ArmyR": 50,
+  "ReligionR": 50,
+  "PeopleEffectR": 50,
+
+  "Era": "ModernTime",
+  "ImageHero": "Тест",
+  "TextHero": "Новая эра"
+}

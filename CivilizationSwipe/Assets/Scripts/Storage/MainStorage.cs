@@ -80,7 +80,7 @@ public class MainStorage : MonoBehaviour
     public static int maxCountCardOfThisEra;
     public static int maxCountCardOfStartEra;
 
-    public static string[] eras = {"Tribe", "MiddleAges", "NewTime", "ModernTimes", "CyberTimes"};
+    public static string[] eras = {"Tribe", "MiddleAges", "NewTime", "ModernTime", "CyberTime", "EndGame"};
     public static string era;
 
     public static NormalCard[] ThisCardMassive;
@@ -129,10 +129,10 @@ public class MainStorage : MonoBehaviour
 
     public static void LoadNormalValue() 
     {
-        Money = 3;
-        Army = 3;
-        Religion = 3;
-        People = 3;
+        Money = 2;
+        Army = 2;
+        Religion = 2;
+        People = 2;
         counterCard = 1;
         era = eras[0];
         maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\BaseCard\\", "*.json").Length;

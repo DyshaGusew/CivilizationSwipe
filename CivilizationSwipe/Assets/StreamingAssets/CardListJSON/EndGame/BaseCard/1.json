@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Теперь Вам пора отохнуть, всю работу за Вас выполнит ИИ",
+
+  "TextLeft": "Спасибо",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "Наконец-то",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "EndGame",
+  "ImageHero": "4",
+  "TextHero": "Поздравляем"
+}

@@ -20,6 +20,7 @@ public class CardConstructor : MonoBehaviour
 
         MainStorage.counterCard++;   //Увеличиваю этот номер
         MainStorage.thisGameCard = newGameCard;
+        
     }
 
     static public void CreatePlayCardOfDied(string diedAspect)
@@ -51,6 +52,8 @@ public class CardConstructor : MonoBehaviour
         GameObject newGameCard = Instantiate(gameCard, gameCard.transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;  //Собственно создание
         newGameCard.GetComponent<SpriteRenderer>().sprite = LoadSprite(infoCard, "DiedIcon");
         MainStorage.thisGameCard = newGameCard;
+        
+
     }
 
     //Удаление карточки с экрана

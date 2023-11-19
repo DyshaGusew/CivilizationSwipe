@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Привет!",
+
+  "TextLeft": "...",
+  "MoneyL": 20,
+  "ArmyL": 20,
+  "ReligionL": 20,
+  "PeopleEffectL": 20,
+
+  "TextRight": "...",
+  "MoneyR": 20,
+  "ArmyR": 20,
+  "ReligionR": 20,
+  "PeopleEffectR": 20,
+
+  "Era": "CyberTime",
+  "ImageHero": "Служанка",
+  "TextHero": "Новая эра"
+}

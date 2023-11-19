@@ -10,6 +10,7 @@ public class Main : MonoBehaviour
     //Загрузка всего должна происходить здесь
     private void Awake()
     {
+        //PlayerPrefs.DeleteAll();
         //Инициализация объектов на сценеzcxv
         TextSetterView.InicializeText();
         LightMarkerMove.InicializeLightMarker();

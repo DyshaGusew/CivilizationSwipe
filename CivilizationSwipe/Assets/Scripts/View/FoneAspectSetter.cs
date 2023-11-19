@@ -22,16 +22,20 @@ public class FoneAspectSetter : MonoBehaviour
                 GameObject.Find("UpLine").GetComponent<SpriteRenderer>().color = color;
                 break;
             case "MiddleAges":
-                Color color1 = new Color(0.1843137f, 0.854902f, 0.4509804f);
+                Color color1 = new Color(0.4f, 0.4f, 0.4f);
                 GameObject.Find("UpLine").GetComponent<SpriteRenderer>().color = color1;
                 break;
             case "NewTime":
-                Color color2 = new Color(0.3803922f, 0.2156863f, 0.09019608f);
+                Color color2 = new Color(0.8f, 0.8f, 0.8f);
                 GameObject.Find("UpLine").GetComponent<SpriteRenderer>().color = color2;
                 break;
-            case "ModernTimes":
-                Color color3 = new Color(0.3803922f, 0.2156863f, 0.09019608f);
+            case "ModernTime":
+                Color color3 = new Color(0.1f, 0.1f, 0.1f);
                 GameObject.Find("UpLine").GetComponent<SpriteRenderer>().color = color3;
+                break;
+            case "CyberTime":
+                Color color4 = new Color(0.6f, 0.6f, 0.6f);
+                GameObject.Find("UpLine").GetComponent<SpriteRenderer>().color = color4;
                 break;
             default:
                 

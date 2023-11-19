@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class NewGame : MonoBehaviour
 {
-    public GameObject gameOverMenu; 
+    public GameObject gameOverMenu;
+    public GameObject gameWinMenu;
     public void AtiveExitMenu()
     {
         gameOverMenu.SetActive(true);
@@ -12,5 +13,10 @@ public class NewGame : MonoBehaviour
     public void ClickNewGame()
     {
         gameObject.SetActive(false);
+    }
+
+    public void AtiveWinMenu()
+    {
+        gameWinMenu.SetActive(true);
     }
 }

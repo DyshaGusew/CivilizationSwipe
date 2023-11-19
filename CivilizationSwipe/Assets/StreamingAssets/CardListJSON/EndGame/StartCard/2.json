@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Человечество смогло преобразовать всю энергию солнца для своих нужд",
+
+  "TextLeft": "Удивительно",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "Невероятно",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "EndGame",
+  "ImageHero": "2",
+  "TextHero": "Поздравляем"
+}

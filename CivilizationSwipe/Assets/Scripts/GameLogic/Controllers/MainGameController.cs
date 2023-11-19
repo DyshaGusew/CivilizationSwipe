@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MainGameController : MonoBehaviour
@@ -16,33 +18,44 @@ public class MainGameController : MonoBehaviour
                 {
                     CardConstructor.CreatePlayCardOfBase();
                     TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
+                    
                 }
                 else
                 {
-                    string thisEra = MainStorage.era;
-                    MainStorage.LoadNormalValue();
-                    MainStorage.era = thisEra;
-                    //Устанавливаю следущую эру
-                    for (int i = 0; i < MainStorage.eras.Length; i++)
+                    if (MainStorage.era == MainStorage.eras[5])
                     {
-                        if (MainStorage.eras[i] == MainStorage.era)
-                        {
-                            MainStorage.era = MainStorage.eras[i + 1];
-                            break;
-                        }
+                        GameObject.Find("Main Camera").GetComponent<NewGame>().AtiveWinMenu();
+                        GameOver();
+                        
                     }
+                    else
+                    {
+                        string thisEra = MainStorage.era;
+                        MainStorage.LoadNormalValue();
+                        MainStorage.learning = 1;
+                        MainStorage.era = thisEra;
+                        //Устанавливаю следущую эру
+                        for (int i = 0; i < MainStorage.eras.Length; i++)
+                        {
+                            if (MainStorage.eras[i] == MainStorage.era)
+                            {
+                                MainStorage.era = MainStorage.eras[i + 1];
+                                break;
+                            }
+                        }
 
-                    MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\BaseCard\\", "*.json").Length;
-                    MainStorage.maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\StartCard\\", "*.json").Length;
-                    MainStorage.counterCard = 1;
-                    
-                    MainStorage.Save();
+                        MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\BaseCard\\", "*.json").Length;
+                        MainStorage.maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\StartCard\\", "*.json").Length;
+                        MainStorage.counterCard = 1;
 
-                    MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
-                    CardConstructor.CreatePlayCardOfBase();
-                    TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
-                    FoneAspectSetter.FoneSet();
-                    FoneAspectSetter.AspecSet();
+                        MainStorage.Save();
+
+                        MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
+                        CardConstructor.CreatePlayCardOfBase();
+                        TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
+                        FoneAspectSetter.FoneSet();
+                        FoneAspectSetter.AspecSet();
+                    }
                 }
             }
 
@@ -66,6 +79,7 @@ public class MainGameController : MonoBehaviour
                     CardConstructor.CreatePlayCardOfDied("people");
                 }
                 TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
+                
             }
         }
         else
@@ -79,16 +93,10 @@ public class MainGameController : MonoBehaviour
 
     static void GameOver()
     {
-        MainStorage.Money = 50;
-        MainStorage.Army = 50;
-        MainStorage.Religion = 50;
-        MainStorage.People = 50;
-        MainStorage.counterCard = 1;
-        MainStorage.era = "Tribe";
         gameOver = false;
-
+        MainStorage.LoadNormalValue();
+        MainStorage.learning = 1;
         MainStorage.Save();
-
         MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
         CardConstructor.CreatePlayCardOfBase();
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);

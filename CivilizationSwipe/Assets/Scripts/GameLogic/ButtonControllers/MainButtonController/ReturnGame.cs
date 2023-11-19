@@ -11,7 +11,9 @@ public class ReturnGame : MonoBehaviour
         MainGameController.gameOver = false;
 
 
-        CardConstructor.DeletePlayCard();
+        Destroy(GameObject.Find("NormalCard(Clone)"));
+        MainStorage.thisCard = null;
+
         MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
         CardConstructor.CreatePlayCardOfBase();
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
