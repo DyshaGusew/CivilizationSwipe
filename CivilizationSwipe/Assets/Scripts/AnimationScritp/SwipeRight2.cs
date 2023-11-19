@@ -33,4 +33,52 @@ public class SwipeRight2 : MonoBehaviour
             animator.SetBool("Right", false); // изменение значения переменной в аниматоре
         }
     }
+
+    public void SwipeRightCard()
+    {
+        // Находим объект по имени
+        GameObject obj = GameObject.Find("NormalCard(Clone)");
+
+        // Проверяем, найден ли объект
+        if (obj != null)
+        {
+            obj.name = "Card";
+
+            // Получить компонент SpriteRenderer
+            SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
+
+            // Если компонент найден, установить order layer
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.sortingOrder = 10;
+            }
+
+            FindAnimat();
+        }
+    }
+    public void SwipeRightDelete()
+    {
+        // Находим объект по имени   
+        GameObject obj = GameObject.Find("Card");
+
+        // Получаем компонент аниматора объекта   
+        Animator Animarotlocal = obj.GetComponent<Animator>();
+
+        // Меняем значение переменной DropLeft на true   
+        Animarotlocal.SetBool("DropRight", true);
+
+        // Запускаем анимацию   
+        StartCoroutine(WaitForAnimation(Animarotlocal, "DropRight"));
+    }
+
+    private IEnumerator WaitForAnimation(Animator animator, string animationName)
+    {
+        animator.Play(animationName);
+
+        // Задержка в пол секунды   
+        yield return new WaitForSeconds(0.5f);
+
+        // Удаляем объект после окончания анимации  
+        Destroy(animator.gameObject);
+    }
 }
