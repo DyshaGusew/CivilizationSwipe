@@ -56,7 +56,7 @@ public class CardConstructor : MonoBehaviour
     //Удаление карточки с экрана
     static public void DeletePlayCard()
     {
-        Destroy(GameObject.Find("NormalCard(Clone)"));
+        //Destroy(GameObject.Find("NormalCard(Clone)"));
         MainStorage.thisCard = null;
     }
 
