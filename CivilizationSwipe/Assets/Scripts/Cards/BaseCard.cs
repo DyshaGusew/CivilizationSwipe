@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseCard : MonoBehaviour    //Базовый класс от которого наследуются все остальные классы карточек
+//Базовый класс от которого наследуются все остальные классы карточек (если они будут)
+public abstract class BaseCard : MonoBehaviour    
 {
-    public string TextEvent;           //Все эти прараметры должны быть в любой карточке
+    //Все эти прараметры должны быть в любой карточке
+    public string TextEvent { get; set; } 
+    
+    public string TextLeft { get; set; }
+    public string TextRight { get; set; }
 
-    public string TextLeft;
-
-    public string TextRight;
-
-    public string Era;
-    public string Image;
+    public string Era { get; set; }
+    public string Image { get; set; }
 }

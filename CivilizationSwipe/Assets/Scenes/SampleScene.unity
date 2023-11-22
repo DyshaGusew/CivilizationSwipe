@@ -4474,7 +4474,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 644624954}
         m_TargetAssemblyTypeName: SwipeLeft, Assembly-CSharp
-        m_MethodName: Startuem
+        m_MethodName: StartInclineAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4577,7 +4577,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 644624954}
           m_TargetAssemblyTypeName: SwipeLeft, Assembly-CSharp
-          m_MethodName: Startuem
+          m_MethodName: StartInclineAnimation
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4605,7 +4605,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 644624954}
           m_TargetAssemblyTypeName: SwipeLeft, Assembly-CSharp
-          m_MethodName: Finish
+          m_MethodName: FinishInclineAnimation
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11301,8 +11301,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
       - m_Target: {fileID: 1765962201}
-        m_TargetAssemblyTypeName: SwipeRight2, Assembly-CSharp
-        m_MethodName: Startuem
+        m_TargetAssemblyTypeName: SwipeRight, Assembly-CSharp
+        m_MethodName: StartInclineAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11417,8 +11417,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1765962201}
-          m_TargetAssemblyTypeName: SwipeRight2, Assembly-CSharp
-          m_MethodName: Startuem
+          m_TargetAssemblyTypeName: SwipeRight, Assembly-CSharp
+          m_MethodName: StartInclineAnimation
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11445,8 +11445,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1765962201}
-          m_TargetAssemblyTypeName: SwipeRight2, Assembly-CSharp
-          m_MethodName: Finish
+          m_TargetAssemblyTypeName: SwipeRight, Assembly-CSharp
+          m_MethodName: FinishInclineAnimation
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

@@ -14,7 +14,7 @@ public class Main : MonoBehaviour
         //Инициализация объектов на сценеzcxv
         TextSetterView.InicializeText();
         LightMarkerMove.InicializeLightMarker();
-        CardConstructor.gameCard = Resources.Load<GameObject>("GameModels\\NormalCard");
+        CardConstructor.gameCardModel = Resources.Load<GameObject>("GameModels\\NormalCard");
 
         //Загрузка всех сохранений при загрузки и установка нового массива карточек
         MainStorage.LoadSaves();

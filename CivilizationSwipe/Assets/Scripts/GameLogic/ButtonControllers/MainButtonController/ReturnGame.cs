@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Программная кнопка перезапуска игры (для тестов)
 public class ReturnGame : MonoBehaviour
 {
     public void Return()

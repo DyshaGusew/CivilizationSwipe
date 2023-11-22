@@ -2,32 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Скрипт отвечающий за анимации карточек при выборе(наведении или нажатии) ЛЕВОГО решения
 public class SwipeLeft : MonoBehaviour
 {
-    private Animator animator; // ссылка на компонент Animator
+    private Animator animator; // ссылка на компонент Animator, находится на самой карточке
 
-    private void FindAnimat()
+    //Получаем компонент Animator у текущей карточки
+    private void FindAnimation()
     {
-            animator = MainStorage.thisGameCard.GetComponent<Animator>(); // получаем компонент Animator
+        animator = MainStorage.thisGameCard.GetComponent<Animator>();
     }
 
-    public void Startuem()
+    //Запуск анимации наклона
+    public void StartInclineAnimation()
     {
-        FindAnimat();
+        FindAnimation();
         if (animator != null)
         {
-            animator.SetBool("Left", true); // изменение значения переменной в аниматоре
+            animator.SetBool("Left", true);
         }
     }
 
-    public void Finish()
+    //Остановка анимации наклона
+    public void FinishInclineAnimation()
     {
-        FindAnimat();
+        FindAnimation();
         if (animator != null)
         {
-            animator.SetBool("Left", false); // изменение значения переменной в аниматоре
+            animator.SetBool("Left", false);
         }
     }
+
+    //Запус увеличения слоя новосозданной карточки(тк под ней создается еще одна)
     public void SwipeLeftCard()
     {
         // Находим объект по имени
@@ -37,27 +43,18 @@ public class SwipeLeft : MonoBehaviour
         if (obj != null)
         {
             obj.name = "Card";
-
-            // Получить компонент SpriteRenderer
             SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
 
-            // Если компонент найден, установить order layer
+            // Если компонент найден, установить слой повыше
             if (spriteRenderer != null)
             {
                 spriteRenderer.sortingOrder = 10;
             }
-
-            FindAnimat();
         }
     }
     public void SwipeLeftDelete()
-    {
-        // Находим объект по имени   
+    { 
         GameObject obj = GameObject.Find("Card");
-
-        
-
-        // Получаем компонент аниматора объекта   
         Animator Animarotlocal = obj.GetComponent<Animator>();
 
         // Меняем значение переменной DropLeft на true   
@@ -67,6 +64,7 @@ public class SwipeLeft : MonoBehaviour
         StartCoroutine(WaitForAnimation(Animarotlocal, "DropLeft"));
     }
 
+    //Задежка всех процессов, для проигрывания анимации
     private IEnumerator WaitForAnimation(Animator animator, string animationName)
     {
         animator.Play(animationName);

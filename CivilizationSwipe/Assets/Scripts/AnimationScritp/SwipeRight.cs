@@ -2,38 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwipeRight2 : MonoBehaviour
+//Скрипт отвечающий за анимации карточек при выборе(наведении или нажатии) ПРАВОГО решения
+public class SwipeRight : MonoBehaviour
 {
-    private Animator animator; // ссылка на компонент Animator
+    private Animator animator; // ссылка на компонент Animator, находится на самой карточке
 
-    private void FindAnimat()
+    //Получаем компонент Animator у текущей карточки
+    private void FindAnimation()
     {
-       // GameObject obj = GameObject.Find("NormalCard(Clone)"); // находим объект по имени
-        //if (obj != null)
-        //{
-            animator = MainStorage.thisGameCard.GetComponent<Animator>(); // получаем компонент Animator
-       // }
+        animator = MainStorage.thisGameCard.GetComponent<Animator>();
     }
 
-    public void Startuem()
+    //Запуск анимации наклона
+    public void StartInclineAnimation()
     {
-        Finish();
-        FindAnimat();
+        FinishInclineAnimation();
+        FindAnimation();
         if (animator != null)
         {
-            animator.SetBool("Right", true); // изменение значения переменной в аниматоре
+            animator.SetBool("Right", true);
         }
     }
 
-    public void Finish()
+    //Остановка анимации наклона
+    public void FinishInclineAnimation()
     {
-        FindAnimat();
+        FindAnimation();
         if (animator != null)
         {
-            animator.SetBool("Right", false); // изменение значения переменной в аниматоре
+            animator.SetBool("Right", false);
         }
     }
 
+    //Запус увеличения слоя текущей карточки(тк под ней создается еще одна)
     public void SwipeRightCard()
     {
         // Находим объект по имени
@@ -43,34 +44,30 @@ public class SwipeRight2 : MonoBehaviour
         if (obj != null)
         {
             obj.name = "Card";
-
-            // Получить компонент SpriteRenderer
             SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
 
-            // Если компонент найден, установить order layer
+            // Если компонент найден, установить слой повыше
             if (spriteRenderer != null)
             {
                 spriteRenderer.sortingOrder = 10;
             }
-
-            FindAnimat();
         }
     }
+
+    //Запуск анимации убирания верхней карточки
     public void SwipeRightDelete()
     {
-        // Находим объект по имени   
         GameObject obj = GameObject.Find("Card");
-
-        // Получаем компонент аниматора объекта   
         Animator Animarotlocal = obj.GetComponent<Animator>();
 
-        // Меняем значение переменной DropLeft на true   
+        // Меняем значение переменной DropRight на true   
         Animarotlocal.SetBool("DropRight", true);
 
         // Запускаем анимацию   
         StartCoroutine(WaitForAnimation(Animarotlocal, "DropRight"));
     }
 
+    //Задежка всех процессов, для проигрывания анимации
     private IEnumerator WaitForAnimation(Animator animator, string animationName)
     {
         animator.Play(animationName);

@@ -1,28 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using System.IO;
-using System;
 using static JSONCardReader;
-using Unity.VisualScripting;
 
-public class NormalCard : BaseCard       //Это уже карточка со значениями и методами
+//Это уже обычная(их большинство, герой, событие, влияние на аспекты) карточка со значениями и методами 
+public class NormalCard : BaseCard       
 {
-    public int MoneyL;
-    public int ArmyL;
-    public int ReligionL;
-    public int PeopleEffectL;
+    public int MoneyL { get; set; }
+    public int ArmyL { get; set; }
+    public int ReligionL { get; set; }
+    public int PeopleEffectL { get; set; }
 
-    public int MoneyR;
-    public int ArmyR;
-    public int ReligionR;
-    public int PeopleEffectR;
+    public int MoneyR { get; set; }
+    public int ArmyR { get; set; }
+    public int ReligionR { get; set; }
+    public int PeopleEffectR { get; set; }
 
-    public string ImageHero;
-    public string TextHero;
+    public string ImageHero { get; set; }
+    public string TextHero { get; set; }
 
-    public NormalCard(ReadingCard ReadCard)    //Конструктор карты, создающий новую из Считываемой JSON карты
+    //Конструктор карты, создающий новую карту из считываемой JSON карты
+    public NormalCard(ReadingCard ReadCard)    
     {
         TextEvent = ReadCard.TextEvent; 
 

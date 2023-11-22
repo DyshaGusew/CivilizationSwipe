@@ -5,24 +5,29 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Windows;
 
+//Класс работающий с карточкой как игровой моделью
 public class CardConstructor : MonoBehaviour
 {
-    public static GameObject gameCard;
+    //Игровая карточка на сцене(берется конкретная модель с пустыми свойствами)
+    public static GameObject gameCardModel;
 
     //Создание карточки как игрового объекта
     static public void CreatePlayCardOfBase() 
     {
+        //Беру последнюю нужну карточку из массива карточек в массиве при помощи счетчика карточек, сохраняю в хранилище
         NormalCard infoCard = MainStorage.ThisCardMassive[MainStorage.counterCard-1];     //Устанавливаю карточку через номер id
         MainStorage.thisCard = infoCard;
 
-        GameObject newGameCard = Instantiate(gameCard, gameCard.transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;  //Собственно создание
+        //Собственно создание
+        GameObject newGameCard = Instantiate(gameCardModel, gameCardModel.transform.position, Quaternion.Euler(0, 0, 0));  
         newGameCard.GetComponent<SpriteRenderer>().sprite = LoadSprite(infoCard, "ProfessionIcon");
 
-        MainStorage.counterCard++;   //Увеличиваю этот номер
+        //Увеличиваю счетчик и заношу текущую игровую карточку в хранилище
+        MainStorage.counterCard++;   
         MainStorage.thisGameCard = newGameCard;
-        
     }
 
+    //Создание карточек смерти в зависимости от переданного на них аспекта
     static public void CreatePlayCardOfDied(string diedAspect)
     {
         NormalCard infoCard;
@@ -45,21 +50,20 @@ public class CardConstructor : MonoBehaviour
                 break;
 
             default:
-                infoCard = new NormalCard(JSONCardReader.GetCard(8, MainStorage.era, "DiedCard"));
+                infoCard = new NormalCard(JSONCardReader.GetCard(7, MainStorage.era, "DiedCard"));
                 break;
         }
+        //Устанавливаю эту карточку в хранилище и создаю на сцене
         MainStorage.thisCard = infoCard;
-        GameObject newGameCard = Instantiate(gameCard, gameCard.transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;  //Собственно создание
+        GameObject newGameCard = Instantiate(gameCardModel, gameCardModel.transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;  //Собственно создание
+        
         newGameCard.GetComponent<SpriteRenderer>().sprite = LoadSprite(infoCard, "DiedIcon");
         MainStorage.thisGameCard = newGameCard;
-        
-
     }
 
-    //Удаление карточки с экрана
+    //Удаление карточки
     static public void DeletePlayCard()
     {
-        //Destroy(GameObject.Find("NormalCard(Clone)"));
         MainStorage.thisCard = null;
     }
 
@@ -72,31 +76,34 @@ public class CardConstructor : MonoBehaviour
     //Создание массива карточек указанной эры
     public static NormalCard[] CardMassSet(string era)
     {
+        //Получаю общее кол-во карточек 
         int countAllCard = MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra + MainStorage.maxCountCardOfEndEra;
-        //MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era).Length / 2;   //Считаю количество карточек исключая их meta дубли
+        
+        //Массив всех карточке
         NormalCard[] CardMassive = new NormalCard[countAllCard];
-        NormalCard[] CardStart = new NormalCard[MainStorage.maxCountCardOfStartEra];
-        NormalCard[] CardBase = new NormalCard[MainStorage.maxCountCardOfThisEra];
-        NormalCard[] CardEnd = new NormalCard[MainStorage.maxCountCardOfEndEra];
 
+        //Массивы отдельных карточек
+        NormalCard[] CardStart = new NormalCard[MainStorage.maxCountCardOfStartEra];  //Начальные карты эры
+        NormalCard[] CardBase = new NormalCard[MainStorage.maxCountCardOfThisEra];    //Обычные карты эры
+        NormalCard[] CardEnd = new NormalCard[MainStorage.maxCountCardOfEndEra];      //Конечные карты эры
+
+        //Считываю все карточки и заношу по порядку в конкретные массивы
         for (int i = 0; i < MainStorage.maxCountCardOfStartEra; i++)
-        {                               //Считываю все карточки и заношу уже как нормальные в массив
+        {                               
             CardStart[i] = new NormalCard(JSONCardReader.GetCard(i+1, era, "StartCard"));
         }
 
         for (int i = 0; i < MainStorage.maxCountCardOfThisEra; i++)
-        {                               //Считываю все карточки и заношу уже как нормальные в массив
+        {                               
             CardBase[i] = new NormalCard(JSONCardReader.GetCard(i+1, era, "BaseCard"));
         }
 
         for (int i = 0; i < MainStorage.maxCountCardOfEndEra; i++)
-        {                               //Считываю все карточки и заношу уже как нормальные в массив
+        {                               
             CardEnd[i] = new NormalCard(JSONCardReader.GetCard(i + 1, era, "EndCard"));
         }
 
-
-
-        //Перемешка массива
+        //Перемешка массива с основными карточками(они должны быть рандомно расположены)
         for (int g = CardBase.Length - 1; g >= 1; g--)
         {
             int j = new System.Random().Next() % (g + 1);
@@ -105,6 +112,7 @@ public class CardConstructor : MonoBehaviour
             CardBase[g] = tmp;
         }
 
+        //Заполнение общего массива
         int f = 0;
         for(; f < MainStorage.maxCountCardOfStartEra; f++)
         {
@@ -125,6 +133,3 @@ public class CardConstructor : MonoBehaviour
         return CardMassive;
     }
 }
-
-    
-
