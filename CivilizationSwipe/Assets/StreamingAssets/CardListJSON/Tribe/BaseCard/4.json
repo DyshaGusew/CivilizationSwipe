@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Господин, можно мне взять выходной? Похоже у меня проблемы со здоровьем",
+  "TextEvent": "Из-за сезона засухи, большая часть урожая погибла, люди голодают",
 
-  "TextLeft": "Мне не нужны твои отговорки",
-  "MoneyL": 3,
+  "TextLeft": "...",
+  "MoneyL": -10,
   "ArmyL": 0,
   "ReligionL": 0,
-  "PeopleEffectL": -7,
+  "PeopleEffectL": -15,
 
-  "TextRight": "Конечно, сходи к медику",
-  "MoneyR": -5,
+  "TextRight": "...",
+  "MoneyR": -10,
   "ArmyR": 0,
   "ReligionR": 0,
-  "PeopleEffectR": 5,
+  "PeopleEffectR": -15,
 
   "Era": "Tribe",
-  "ImageHero": "Служанка",
-  "TextHero": "Ваша служанка"
+  "ImageHero": "Голод",
+  "TextHero": "Событие"
 }

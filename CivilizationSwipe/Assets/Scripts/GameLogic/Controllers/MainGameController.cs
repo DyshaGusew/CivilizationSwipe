@@ -14,7 +14,7 @@ public class MainGameController : MonoBehaviour
         {
             if (MainStorage.Money > 1 && MainStorage.Army > 1 && MainStorage.Religion > 1 && MainStorage.People > 1)
             {
-                if (MainStorage.counterCard != MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra + 1)
+                if (MainStorage.counterCard != MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra + MainStorage.maxCountCardOfEndEra + 1)
                 {
                     CardConstructor.CreatePlayCardOfBase();
                     TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
@@ -46,6 +46,7 @@ public class MainGameController : MonoBehaviour
 
                         MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\BaseCard\\", "*.json").Length;
                         MainStorage.maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\StartCard\\", "*.json").Length;
+                        MainStorage.maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\EndCard\\", "*.json").Length;
                         MainStorage.counterCard = 1;
 
                         MainStorage.Save();

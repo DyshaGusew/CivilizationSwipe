@@ -79,6 +79,7 @@ public class MainStorage : MonoBehaviour
     public static int counterCard;
     public static int maxCountCardOfThisEra;
     public static int maxCountCardOfStartEra;
+    public static int maxCountCardOfEndEra;
 
     public static string[] eras = {"Tribe", "MiddleAges", "NewTime", "ModernTime", "CyberTime", "EndGame"};
     public static string era;
@@ -90,7 +91,7 @@ public class MainStorage : MonoBehaviour
     //Здесь все выгружается в хранилище
     public static void LoadSaves()
     { 
-        if (PlayerPrefs.HasKey("money") && PlayerPrefs.HasKey("counterCard") && PlayerPrefs.HasKey("era") && PlayerPrefs.HasKey("maxCountCardOfThisEra") && PlayerPrefs.HasKey("maxCountCardOfStartEra") && PlayerPrefs.HasKey("learning"))
+        if (PlayerPrefs.HasKey("money") && PlayerPrefs.HasKey("counterCard") && PlayerPrefs.HasKey("era") && PlayerPrefs.HasKey("maxCountCardOfThisEra") && PlayerPrefs.HasKey("maxCountCardOfStartEra") && PlayerPrefs.HasKey("learning") && PlayerPrefs.HasKey("maxCountCardOfEndEra"))
         {
             Money = PlayerPrefs.GetFloat("money");
             Army = PlayerPrefs.GetFloat("army");
@@ -100,6 +101,7 @@ public class MainStorage : MonoBehaviour
             era = PlayerPrefs.GetString("era");
             maxCountCardOfThisEra = PlayerPrefs.GetInt("maxCountCardOfThisEra");
             maxCountCardOfStartEra = PlayerPrefs.GetInt("maxCountCardOfStartEra");
+            maxCountCardOfEndEra = PlayerPrefs.GetInt("maxCountCardOfEndEra");
 
             learning = PlayerPrefs.GetInt("learning");
         }
@@ -119,6 +121,7 @@ public class MainStorage : MonoBehaviour
         PlayerPrefs.SetString("era", era);
         PlayerPrefs.SetInt("maxCountCardOfThisEra", maxCountCardOfThisEra);
         PlayerPrefs.SetInt("maxCountCardOfStartEra", maxCountCardOfStartEra);
+        PlayerPrefs.SetInt("maxCountCardOfEndEra", maxCountCardOfEndEra);
         PlayerPrefs.SetInt("learning", learning);
         //Тк после создания карточки он прибавляет 1
         if (counterCard != 1)
@@ -137,6 +140,7 @@ public class MainStorage : MonoBehaviour
         era = eras[0];
         maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\BaseCard\\", "*.json").Length;
         maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\StartCard\\", "*.json").Length;
+        maxCountCardOfEndEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\EndCard\\", "*.json").Length;
         learning = 0;
         FoneAspectSetter.FoneSet();
         FoneAspectSetter.AspecSet();

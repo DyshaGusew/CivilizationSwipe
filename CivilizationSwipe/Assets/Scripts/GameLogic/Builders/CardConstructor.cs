@@ -72,11 +72,12 @@ public class CardConstructor : MonoBehaviour
     //—оздание массива карточек указанной эры
     public static NormalCard[] CardMassSet(string era)
     {
-        int countAllCard = MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra;
+        int countAllCard = MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra + MainStorage.maxCountCardOfEndEra;
         //MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era).Length / 2;   //—читаю количество карточек исключа€ их meta дубли
         NormalCard[] CardMassive = new NormalCard[countAllCard];
         NormalCard[] CardStart = new NormalCard[MainStorage.maxCountCardOfStartEra];
         NormalCard[] CardBase = new NormalCard[MainStorage.maxCountCardOfThisEra];
+        NormalCard[] CardEnd = new NormalCard[MainStorage.maxCountCardOfEndEra];
 
         for (int i = 0; i < MainStorage.maxCountCardOfStartEra; i++)
         {                               //—читываю все карточки и заношу уже как нормальные в массив
@@ -88,7 +89,12 @@ public class CardConstructor : MonoBehaviour
             CardBase[i] = new NormalCard(JSONCardReader.GetCard(i+1, era, "BaseCard"));
         }
 
-        
+        for (int i = 0; i < MainStorage.maxCountCardOfEndEra; i++)
+        {                               //—читываю все карточки и заношу уже как нормальные в массив
+            CardEnd[i] = new NormalCard(JSONCardReader.GetCard(i + 1, era, "EndCard"));
+        }
+
+
 
         //ѕеремешка массива
         for (int g = CardBase.Length - 1; g >= 1; g--)
@@ -108,6 +114,11 @@ public class CardConstructor : MonoBehaviour
         for (int i = 0; i < MainStorage.maxCountCardOfThisEra; f++, i++)
         {
             CardMassive[f] = CardBase[i];
+        }
+
+        for (int j = 0; j < MainStorage.maxCountCardOfEndEra; f++, j++)
+        {
+            CardMassive[f] = CardEnd[j];
         }
 
 

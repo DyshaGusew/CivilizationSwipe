@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Наш народ не молится, надо сделать публичные наказания за инокомыслие",
+  "TextEvent": "Глава, в любой момент на нас могут напасть соседи, надо усилить армию",
 
-  "TextLeft": "Это перебор",
-  "MoneyL": 0,
-  "ArmyL": 5,
-  "ReligionL": -10,
-  "PeopleEffectL": 15,
+  "TextLeft": "Берите рабочих",
+  "MoneyL": -5,
+  "ArmyL": 15,
+  "ReligionL": 0,
+  "PeopleEffectL": -10,
 
-  "TextRight": "Почему бы и нет",
+  "TextRight": "Берите церковнослужащих",
   "MoneyR": 0,
-  "ArmyR": 0,
-  "ReligionR": 20,
-  "PeopleEffectR": -10,
+  "ArmyR": 15,
+  "ReligionR": -20,
+  "PeopleEffectR": 0,
 
   "Era": "Tribe",
-  "ImageHero": "Шаман",
-  "TextHero": "Шаман"
+  "ImageHero": "Солдат",
+  "TextHero": "Воевода"
 }

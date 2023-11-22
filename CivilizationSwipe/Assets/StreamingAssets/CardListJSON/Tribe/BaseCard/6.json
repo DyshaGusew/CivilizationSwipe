@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Глава, многие устали работать дни напролет, может стоит сократить время работы?",
+  "TextEvent": "Господин, люди хотят развлечений, давайте устроим пляски вокруг огромного костра",
 
-  "TextLeft": "Ни за что",
+  "TextLeft": "Мне не до этого",
   "MoneyL": 10,
-  "ArmyL": -5,
-  "ReligionL": 0,
-  "PeopleEffectL": -15,
+  "ArmyL": 0,
+  "ReligionL": -5,
+  "PeopleEffectL": -20,
 
-  "TextRight": "Согласен",
-  "MoneyR": -10,
-  "ArmyR": 3,
+  "TextRight": "Давай",
+  "MoneyR": -7,
+  "ArmyR": 10,
   "ReligionR": 0,
-  "PeopleEffectR": 12,
+  "PeopleEffectR": 20,
 
   "Era": "Tribe",
-  "ImageHero": "Служанка",
-  "TextHero": "Ваша служанка"
+  "ImageHero": "ПомощникГлавы",
+  "TextHero": "Помощник главы поселения"
 }

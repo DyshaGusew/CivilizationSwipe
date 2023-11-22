@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Господин, у нас в стране открыли печать рукописей, это выведет нас на абсолютно новый уровень",
+
+  "TextLeft": "Ура!",
+  "MoneyL": 10,
+  "ArmyL": 10,
+  "ReligionL": 10,
+  "PeopleEffectL": 10,
+
+  "TextRight": "Да здравствует наука!",
+  "MoneyR": 10,
+  "ArmyR": 10,
+  "ReligionR": 10,
+  "PeopleEffectR": 10,
+
+  "Era": "Tribe",
+  "ImageHero": "ПомощникГлавы",
+  "TextHero": "Ваш помощник"
+}
