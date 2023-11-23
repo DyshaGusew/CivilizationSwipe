@@ -13,7 +13,7 @@ public class MainGameController : MonoBehaviour
         if(gameOver == false)
         {
             //Если после нажатия все параметры нормальные, то смотрим
-            if (MainStorage.Money >= 0 && MainStorage.Army >= 0 && MainStorage.Religion >= 0 && MainStorage.People >= 0)
+            if (MainStorage.Money > 0 && MainStorage.Army > 0 && MainStorage.Religion > 0 && MainStorage.People > 0)
             {
                 //Создаем новую карточку и устанавливаем ей текста если это не выходим за пределы данной эры
                 if (MainStorage.counterCard != MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra + MainStorage.maxCountCardOfEndEra + 1)
@@ -28,7 +28,10 @@ public class MainGameController : MonoBehaviour
                     if (MainStorage.era == MainStorage.eras[5])
                     {
                         GameObject.Find("Main Camera").GetComponent<OpenWindowWinOrFail>().AtiveWinMenu();
-                        NewGameCreate();  
+                        MainStorage.LoadNormalValue();
+                        return;
+                        //NewGameCreate();
+                        //GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.eras[5]);
                     }
                     //Переключение эры и установка начальных значений(начальных для данной эры)
                     else
@@ -60,6 +63,7 @@ public class MainGameController : MonoBehaviour
                         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
                         FoneAspectSetter.FoneSet();
                         FoneAspectSetter.AspecSet();
+                        GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
                     }
                 }
             }
@@ -69,19 +73,19 @@ public class MainGameController : MonoBehaviour
             {
                 //Определяю какую карточку смерти выводить
                 gameOver = true;
-                if (MainStorage.Money < 0)
+                if (MainStorage.Money <= 0)
                 {
                     CardConstructor.CreatePlayCardOfDied("money");
                 }
-                else if (MainStorage.Army < 0)
+                else if (MainStorage.Army <= 0)
                 {
                     CardConstructor.CreatePlayCardOfDied("army");
                 }
-                else if (MainStorage.Religion < 0)
+                else if (MainStorage.Religion <= 0)
                 {
                     CardConstructor.CreatePlayCardOfDied("religion");
                 }
-                else if (MainStorage.People < 0)
+                else if (MainStorage.People <= 0)
                 {
                     CardConstructor.CreatePlayCardOfDied("people");
                 }
@@ -92,13 +96,15 @@ public class MainGameController : MonoBehaviour
         else
         {
             GameObject.Find("Main Camera").GetComponent<OpenWindowWinOrFail>().AtiveExitMenu();
-            NewGameCreate();
+            MainStorage.LoadNormalValue();
+            return;
+           // NewGameCreate();
         }
         
     }
 
     //Создание новой игры, все с нуля
-    static void NewGameCreate()
+    public static void NewGameCreate()
     {
         gameOver = false;
         MainStorage.LoadNormalValue();

@@ -30,6 +30,7 @@ public class ReturnGameYes : MonoBehaviour
         warning.SetActive(false);
         settings.SetActive(false);
         EscapeScript.active = false;
+        GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
     }
 
 }

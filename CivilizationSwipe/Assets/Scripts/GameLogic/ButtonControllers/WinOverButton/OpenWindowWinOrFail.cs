@@ -19,6 +19,8 @@ public class OpenWindowWinOrFail : MonoBehaviour
     public void ClickNewGame()
     {
         gameObject.SetActive(false);
+        Destroy(GameObject.Find("NormalCard(Clone)"));
+        MainGameController.NewGameCreate();
     }
 
     //Активация меню победы

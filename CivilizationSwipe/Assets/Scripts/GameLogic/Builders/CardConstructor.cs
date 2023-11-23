@@ -37,7 +37,7 @@ public class CardConstructor : MonoBehaviour
             "army" => new NormalCard(JSONCardReader.GetCard("army", MainStorage.era, "DiedCard")),
             "religion" => new NormalCard(JSONCardReader.GetCard("religion", MainStorage.era, "DiedCard")),
             "people" => new NormalCard(JSONCardReader.GetCard("people", MainStorage.era, "DiedCard")),
-            _ => new NormalCard(JSONCardReader.GetCard(7, MainStorage.era, "DiedCard")),
+            //_ => new NormalCard(JSONCardReader.GetCard(7, MainStorage.era, "DiedCard")),
         };
 
         //Устанавливаю эту карточку в хранилище и создаю на сцене

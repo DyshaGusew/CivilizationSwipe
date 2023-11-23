@@ -38,6 +38,7 @@ public class StarterGame : MonoBehaviour
         }
 
         MainStorage.Save();
+        GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
     }
     
     //Условия при выходе

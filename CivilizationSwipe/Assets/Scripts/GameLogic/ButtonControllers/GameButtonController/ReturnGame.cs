@@ -21,6 +21,7 @@ public class ReturnGame : MonoBehaviour
 
         GameObject.Find("CanvasLearning").GetComponent<LearningController>().StartLerning();
         MainStorage.learning = 1;
+        GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
     }
 
 }

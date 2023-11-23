@@ -120,6 +120,7 @@ public class MainStorage : MonoBehaviour
         else
         {
             LoadNormalValue();
+            GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
         }
     }
 
@@ -146,10 +147,10 @@ public class MainStorage : MonoBehaviour
     //Установка начальных значений в это хранилище карточек
     public static void LoadNormalValue() 
     {
-        Money = 1;
-        Army = 1;
-        Religion = 1;
-        People = 1;
+        Money = 2;
+        Army = 2;
+        Religion = 2;
+        People = 2;
         counterCard = 1;
         era = eras[0];
         maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\BaseCard\\", "*.json").Length;
@@ -158,6 +159,7 @@ public class MainStorage : MonoBehaviour
         learning = 0;
         FoneAspectSetter.FoneSet();
         FoneAspectSetter.AspecSet();
+        
 
         Save();
     }
