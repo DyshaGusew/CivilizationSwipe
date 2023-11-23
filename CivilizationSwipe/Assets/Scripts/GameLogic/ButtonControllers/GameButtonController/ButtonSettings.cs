@@ -8,7 +8,7 @@ public class ButtonSettings : MonoBehaviour
     public GameObject canvasSetting;
     public GameObject warning;
 
-    //Тут все понятно
+    //Тут при нажатии открывается меню настроек
     public void Click()
     {
         canvasSetting.SetActive(true);

@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Наш народ не молится, надо сделать публичные наказания за инокомыслие",
+  "TextEvent": "Киберпанк время",
 
-  "TextLeft": "Это перебор",
-  "MoneyL": 0,
-  "ArmyL": 5,
-  "ReligionL": -10,
-  "PeopleEffectL": 15,
+  "TextLeft": "...",
+  "MoneyL": 50,
+  "ArmyL": 50,
+  "ReligionL": 50,
+  "PeopleEffectL": 50,
 
-  "TextRight": "Почему бы и нет",
-  "MoneyR": 0,
-  "ArmyR": 0,
-  "ReligionR": 20,
-  "PeopleEffectR": -10,
+  "TextRight": "...",
+  "MoneyR": 50,
+  "ArmyR": 50,
+  "ReligionR": 50,
+  "PeopleEffectR": 50,
 
-  "Era": "Tribe",
-  "ImageHero": "Шаман",
-  "TextHero": "Шаман"
+  "Era": "CyberTime",
+  "ImageHero": "Тест",
+  "TextHero": "Новая эра"
 }

@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Кнопка сброса настроек
-public class ReturnGameYes : MonoBehaviour
+public class SettingButton : MonoBehaviour
 {
-    //Предупреждение о стирании данных и само меню настроек
     public GameObject warning;
     public GameObject settings;
-
-    //Все удаляю и создаю занаво
     public void Return()
     {
         PlayerPrefs.DeleteAll();
@@ -31,6 +27,4 @@ public class ReturnGameYes : MonoBehaviour
         settings.SetActive(false);
         EscapeScript.active = false;
     }
-
 }
-

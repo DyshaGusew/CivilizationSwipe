@@ -7,8 +7,10 @@ using UnityEngine.UIElements;
 using UnityEngine.UI;
 using UnityEngine.Windows;
 
+//Установщик значений аспектам
 public class AspectSetter : MonoBehaviour
 {
+    //Установить при выборе левого решения
     static public void AspectLeftSolution()
     {
         MainStorage.Army += MainStorage.thisCard.ArmyL;
@@ -18,6 +20,7 @@ public class AspectSetter : MonoBehaviour
         AspectGreenRed.AspectLightSol(MainStorage.thisCard.ArmyL, MainStorage.thisCard.MoneyL, MainStorage.thisCard.ReligionL, MainStorage.thisCard.PeopleEffectL);
     }
 
+    //Установить при выборе прового решения
     static public void AspectRightSolution()
     {
         MainStorage.Army += MainStorage.thisCard.ArmyR;

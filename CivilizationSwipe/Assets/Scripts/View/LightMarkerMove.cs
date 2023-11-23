@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
+//Контроль загорания маркеров аспектов
 public class LightMarkerMove : MonoBehaviour
 {
     static public GameObject moneyMarker;
     static public GameObject armyMarker;
     static public GameObject religionMarker;
     static public GameObject peopleMarker;
+
+    //Загорание маркеров в зависимости от переданного решения и влияния текущей карточки
     public static void LightMarker(string name)
     {
         if(name == "ButtonLeft")
@@ -51,6 +54,8 @@ public class LightMarkerMove : MonoBehaviour
             }
         }
     }
+
+    //Обнуление цвета маркеров
     public static void LightMarkerNotMove()
     {
        armyMarker.SetActive(false);
@@ -59,6 +64,7 @@ public class LightMarkerMove : MonoBehaviour
        peopleMarker.SetActive(false);
     }
 
+    //Инициализация маркеров
     public static void InicializeLightMarker()
     {
         moneyMarker = GameObject.Find("LightMoney");

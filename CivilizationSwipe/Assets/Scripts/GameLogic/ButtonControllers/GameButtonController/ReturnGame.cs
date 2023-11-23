@@ -11,7 +11,6 @@ public class ReturnGame : MonoBehaviour
         MainStorage.LoadNormalValue();
         MainGameController.gameOver = false;
 
-
         Destroy(GameObject.Find("NormalCard(Clone)"));
         MainStorage.thisCard = null;
 

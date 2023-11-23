@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Открытие предупреждения
 public class OpenWarning : MonoBehaviour
 {
     public GameObject warning;

@@ -30,29 +30,16 @@ public class CardConstructor : MonoBehaviour
     //Создание карточек смерти в зависимости от переданного на них аспекта
     static public void CreatePlayCardOfDied(string diedAspect)
     {
-        NormalCard infoCard;
-        switch (diedAspect)
+        //В зависимость от вида смерти беру из ресурсов карточку
+        NormalCard infoCard = diedAspect switch
         {
-            case "money":
-                infoCard = new NormalCard(JSONCardReader.GetCard("money", MainStorage.era, "DiedCard"));
-                break;
+            "money" => new NormalCard(JSONCardReader.GetCard("money", MainStorage.era, "DiedCard")),
+            "army" => new NormalCard(JSONCardReader.GetCard("army", MainStorage.era, "DiedCard")),
+            "religion" => new NormalCard(JSONCardReader.GetCard("religion", MainStorage.era, "DiedCard")),
+            "people" => new NormalCard(JSONCardReader.GetCard("people", MainStorage.era, "DiedCard")),
+            _ => new NormalCard(JSONCardReader.GetCard(7, MainStorage.era, "DiedCard")),
+        };
 
-            case "army":
-                infoCard = new NormalCard(JSONCardReader.GetCard("army", MainStorage.era, "DiedCard"));
-                break;
-
-            case "religion":
-                infoCard = new NormalCard(JSONCardReader.GetCard("religion", MainStorage.era, "DiedCard"));
-                break;
-
-            case "people":
-                infoCard = new NormalCard(JSONCardReader.GetCard("people", MainStorage.era, "DiedCard"));
-                break;
-
-            default:
-                infoCard = new NormalCard(JSONCardReader.GetCard(7, MainStorage.era, "DiedCard"));
-                break;
-        }
         //Устанавливаю эту карточку в хранилище и создаю на сцене
         MainStorage.thisCard = infoCard;
         GameObject newGameCard = Instantiate(gameCardModel, gameCardModel.transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;  //Собственно создание
@@ -70,7 +57,7 @@ public class CardConstructor : MonoBehaviour
     //Загрузка спрайта карточки из ресурсов
     static private Sprite LoadSprite(NormalCard infoCard, string typeCard)
     {
-        return Resources.Load<Sprite>(infoCard.Era + "/" + typeCard + "/" + infoCard.Image);       
+        return Resources.Load<Sprite>("CardSprites/" + infoCard.Era + "/" + typeCard + "/" + infoCard.Image);       
     }
 
     //Создание массива карточек указанной эры
@@ -107,9 +94,7 @@ public class CardConstructor : MonoBehaviour
         for (int g = CardBase.Length - 1; g >= 1; g--)
         {
             int j = new System.Random().Next() % (g + 1);
-            NormalCard tmp = CardBase[j];
-            CardBase[j] = CardBase[g];
-            CardBase[g] = tmp;
+            (CardBase[g], CardBase[j]) = (CardBase[j], CardBase[g]);
         }
 
         //Заполнение общего массива

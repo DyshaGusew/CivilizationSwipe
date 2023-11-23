@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-//Это хранилище всей общей информации
+//Это хранилище всей информации об игре
 public class MainStorage : MonoBehaviour
 {
-    //Все эти значения будут приниматься из json файла при загрузке
+    //Текущие значения аспектов 
     private static float money;
     private static float army;
     private static float religion;
     private static float people;
-    public static int learning = 0;    //Переменная, хранящая информацию о прохождении первого обучения
-    public static GameObject thisGameCard;
+
+    //Геттеры и сеттеры текущих параметров
     public static float Money
     {
         get { return money; }
-        set { 
-            money = value; 
-            if(money > 100)
+        set
+        {
+            money = value;
+            if (money > 100)
             {
                 money = 100;
             }
@@ -27,13 +28,13 @@ public class MainStorage : MonoBehaviour
                 money = 0;
             }
 
-        }  
+        }
     }
-
     public static float Army
     {
         get { return army; }
-        set { 
+        set
+        {
             army = value;
             if (army > 100)
             {
@@ -48,7 +49,8 @@ public class MainStorage : MonoBehaviour
     public static float People
     {
         get { return people; }
-        set { 
+        set
+        {
             people = value;
             if (people > 100)
             {
@@ -63,7 +65,8 @@ public class MainStorage : MonoBehaviour
     public static float Religion
     {
         get { return religion; }
-        set { 
+        set
+        {
             religion = value;
             if (religion > 100)
             {
@@ -76,21 +79,30 @@ public class MainStorage : MonoBehaviour
         }
     }
 
+    //Переменная, хранящая информацию о прохождении первого обучения
+    public static int learning = 0;    
+    
+    //Счетчик карт данной эры и блоки количества карт определенной эры
     public static int counterCard;
     public static int maxCountCardOfThisEra;
     public static int maxCountCardOfStartEra;
     public static int maxCountCardOfEndEra;
 
-    public static string[] eras = {"Tribe", "MiddleAges", "NewTime", "ModernTime", "CyberTime", "EndGame"};
+    //Список всех эр и текущая эра
+    readonly public static string[] eras = {"Tribe", "MiddleAges", "NewTime", "ModernTime", "CyberTime", "EndGame"};
     public static string era;
 
+    //Массив всех карт данной эры
     public static NormalCard[] ThisCardMassive;
 
+    //Текущая игровая карточка и обычная карточка
+    public static GameObject thisGameCard;
     public static NormalCard thisCard;
 
-    //Здесь все выгружается в хранилище
+    //Здесь все загружается из хранилища (которое внутри юнити) 
     public static void LoadSaves()
     { 
+        //Если что-либо не сохранено в хранилище(то есть не было первого запуска игры), то устанавливаем начальные значения
         if (PlayerPrefs.HasKey("money") && PlayerPrefs.HasKey("counterCard") && PlayerPrefs.HasKey("era") && PlayerPrefs.HasKey("maxCountCardOfThisEra") && PlayerPrefs.HasKey("maxCountCardOfStartEra") && PlayerPrefs.HasKey("learning") && PlayerPrefs.HasKey("maxCountCardOfEndEra"))
         {
             Money = PlayerPrefs.GetFloat("money");
@@ -123,6 +135,7 @@ public class MainStorage : MonoBehaviour
         PlayerPrefs.SetInt("maxCountCardOfStartEra", maxCountCardOfStartEra);
         PlayerPrefs.SetInt("maxCountCardOfEndEra", maxCountCardOfEndEra);
         PlayerPrefs.SetInt("learning", learning);
+
         //Тк после создания карточки он прибавляет 1
         if (counterCard != 1)
             PlayerPrefs.SetInt("counterCard", counterCard - 1);  
@@ -130,12 +143,13 @@ public class MainStorage : MonoBehaviour
             PlayerPrefs.SetInt("counterCard", 1);
     }
 
+    //Установка начальных значений в это хранилище карточек
     public static void LoadNormalValue() 
     {
-        Money = 2;
-        Army = 2;
-        Religion = 2;
-        People = 2;
+        Money = 1;
+        Army = 1;
+        Religion = 1;
+        People = 1;
         counterCard = 1;
         era = eras[0];
         maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\BaseCard\\", "*.json").Length;

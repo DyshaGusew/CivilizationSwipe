@@ -16,8 +16,7 @@ public class ButStartMenu : MonoBehaviour
     public void MoveOn()
     {
         //÷вет темнее
-        Color col1;
-        ColorUtility.TryParseHtmlString("#919191", out col1);
+        ColorUtility.TryParseHtmlString("#919191", out Color col1);
         text.GetComponent<Text>().color = col1;
         moveControle = true;
     }
@@ -25,8 +24,7 @@ public class ButStartMenu : MonoBehaviour
     public void MoveOff()
     {
         //÷вет светлее
-        Color col1;
-        ColorUtility.TryParseHtmlString("#FFFFFF", out col1);
+        ColorUtility.TryParseHtmlString("#FFFFFF", out Color col1);
         text.GetComponent<Text>().color = col1;
         moveControle = false;
     }

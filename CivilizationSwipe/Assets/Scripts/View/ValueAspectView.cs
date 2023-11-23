@@ -1,13 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.U2D;
 using UnityEngine.UI;
 
-//–абота с каждым отдельным аспектом
+//–абота с каждым отдельным аспектом их отображение и установка видимых значений
 public class ValueAspectView : MonoBehaviour
 {
+    //„исленное значение аспекта и скорость изменени€ высоты при решении
     private float Value;
     [SerializeField]static private float speed = 0.3f;
 
@@ -24,16 +21,19 @@ public class ValueAspectView : MonoBehaviour
                 return MainStorage.Religion;
             case "AtributPeople":
                 return MainStorage.People;
+            default:
+                return 0;
         }
-        return 200;
     }
 
+    //”станавливаю при запуске значение каждому аспекту
     private void Start()
     {
         Value = GetValueAspect(name);
         GetComponent<Image>().transform.localScale = new Vector3(1, Value / 100, 1);
     }
 
+    // аждый фиксированный кадр плавно увеличиваю или уменьшаю значение аспекта
     void FixedUpdate()
     {
         Value = GetValueAspect(name);
@@ -41,7 +41,8 @@ public class ValueAspectView : MonoBehaviour
         {
             GetComponent<Image>().transform.localScale += new Vector3(0, Time.deltaTime * speed, 0);
         }
-        if (GetComponent<Image>().transform.localScale.y > Value / 100)
+
+        if (GetComponent<Image>().transform.localScale.y > (Value / 100))
         {
             GetComponent<Image>().transform.localScale -= new Vector3(0, Time.deltaTime * speed, 0);
         }

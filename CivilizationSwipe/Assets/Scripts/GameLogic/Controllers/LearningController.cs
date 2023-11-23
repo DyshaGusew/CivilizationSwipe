@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Обучение в игре
 public class LearningController : MonoBehaviour
 {
+    //Все советы и переменная, активно ли обучение в данный момент
     public GameObject top1;
     public GameObject top2;
     public GameObject top3;
@@ -14,14 +16,18 @@ public class LearningController : MonoBehaviour
     public GameObject top8;
     private static bool activeLearning;
     
+    //Начало обучения
     public void StartLerning()
     {
         CloseAll();
         activeLearning = true;
         top1.SetActive(true);
     }
+
+    //Проверка на активацию обучения и его запуск
     void Update()
     {
+        //Проверка нажатийй и переключение карточек обучения
         if (activeLearning)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -116,6 +122,7 @@ public class LearningController : MonoBehaviour
         }
     }
 
+    //Закрытие всех карточек обучения
     public void CloseAll()
     {
         top1.SetActive(false);

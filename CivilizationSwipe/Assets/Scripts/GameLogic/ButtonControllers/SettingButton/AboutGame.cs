@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+//Кнопка об игре
 public class AboutGame : MonoBehaviour
 {
     public GameObject Canvas;

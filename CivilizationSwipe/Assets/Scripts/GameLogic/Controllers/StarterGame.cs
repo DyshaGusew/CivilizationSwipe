@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Main : MonoBehaviour
+//Точка входя в программу, все действия при запуске игры
+public class StarterGame : MonoBehaviour
 {
-    public GameObject gameCard;
-
     //Загрузка всего должна происходить здесь
     private void Awake()
     {
-        //PlayerPrefs.DeleteAll();
-        //Инициализация объектов на сценеzcxv
+        //Инициализация объектов на сцене
         TextSetterView.InicializeText();
         LightMarkerMove.InicializeLightMarker();
         CardConstructor.gameCardModel = Resources.Load<GameObject>("GameModels\\NormalCard");
 
-        //Загрузка всех сохранений при загрузки и установка нового массива карточек
+        //Загрузка всех сохранений и установка нового массива карточек
         MainStorage.LoadSaves();
         MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
     }
@@ -26,21 +24,26 @@ public class Main : MonoBehaviour
         //Создаю карту и тут же указываю ее текста
         CardConstructor.CreatePlayCardOfBase();
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
+
+        //Устанавливаю окружение игры
         AspectGreenRed.AspectLightSol(0, 0, 0, 0);
         FoneAspectSetter.FoneSet();
         FoneAspectSetter.AspecSet();
 
+        //Открытие обучение если игрок впервые входит в игру
         if(MainStorage.learning == 0)
         {
            GameObject.Find("CanvasLearning").GetComponent<LearningController>().StartLerning();
            MainStorage.learning = 1;
         }
+
         MainStorage.Save();
-
     }
-
+    
+    //Условия при выходе
     void OnApplicationQuit()
     {
+        //Если все с параметрами нормально, то сохраняю, иначе устанавливаю начальные значения
         if (MainStorage.Money > 0 && MainStorage.Army > 0 && MainStorage.Religion > 0 && MainStorage.People > 0)
         {
             MainStorage.Save();
@@ -48,7 +51,6 @@ public class Main : MonoBehaviour
         else
         {
             MainStorage.LoadNormalValue();
-            
             MainStorage.Save();
         }
     }
