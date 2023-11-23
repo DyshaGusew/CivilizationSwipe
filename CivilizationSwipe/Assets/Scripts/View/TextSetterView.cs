@@ -19,15 +19,21 @@ public class TextSetterView : MonoBehaviour
     //Установка и активация текста левого решения
     public static void SetTextLeft()
     {
-        leftEventText.GetComponent<Text>().text = MainStorage.thisCard.TextLeft;
-        leftEventText.SetActive(true);
+        if(!MainStorage.thisCard.TextLeft.Equals(""))
+        {
+            leftEventText.GetComponent<Text>().text = MainStorage.thisCard.TextLeft;
+            leftEventText.SetActive(true);
+        }
     }
 
     //Установка и активация текста правого решения
     public static void SetTextRight()
     {
-        rightEventText.GetComponent<Text>().text = MainStorage.thisCard.TextRight;
-        rightEventText.SetActive(true);
+        if (!MainStorage.thisCard.TextRight.Equals(""))
+        {
+            rightEventText.GetComponent<Text>().text = MainStorage.thisCard.TextRight;
+            rightEventText.SetActive(true);
+        }
     }
 
     //Обнуление текстов

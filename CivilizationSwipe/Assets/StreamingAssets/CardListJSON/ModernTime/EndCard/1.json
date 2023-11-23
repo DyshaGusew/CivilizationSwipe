@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Наш народ не молится, надо сделать публичные наказания за инокомыслие",
+  "TextEvent": "Да начнется же эра имплантов, вы круты",
 
-  "TextLeft": "Это перебор",
-  "MoneyL": 0,
-  "ArmyL": 5,
-  "ReligionL": -10,
-  "PeopleEffectL": 15,
+  "TextLeft": "Yeeeess",
+  "MoneyL": 20,
+  "ArmyL": 20,
+  "ReligionL": 20,
+  "PeopleEffectL": 20,
 
-  "TextRight": "Почему бы и нет",
-  "MoneyR": 0,
-  "ArmyR": 0,
+  "TextRight": "Конечно",
+  "MoneyR": 20,
+  "ArmyR": 20,
   "ReligionR": 20,
-  "PeopleEffectR": -10,
+  "PeopleEffectR": 20,
 
-  "Era": "Tribe",
-  "ImageHero": "Шаман",
-  "TextHero": "Шаман"
+  "Era": "ModernTime",
+  "ImageHero": "anime",
+  "TextHero": "Тяночка"
 }

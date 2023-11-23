@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Теперь Вам пора отохнуть, всю работу за Вас выполнит ИИ",
+  "TextEvent": "Люди решили не ограничиваться Землей и начали покорять новые планеты",
 
-  "TextLeft": "Спасибо",
+  "TextLeft": "Ура",
   "MoneyL": 0,
   "ArmyL": 0,
   "ReligionL": 0,
   "PeopleEffectL": 0,
 
-  "TextRight": "Наконец-то",
+  "TextRight": "Прекрасно",
   "MoneyR": 0,
   "ArmyR": 0,
   "ReligionR": 0,
   "PeopleEffectR": 0,
 
   "Era": "EndGame",
-  "ImageHero": "4",
+  "ImageHero": "3",
   "TextHero": "Поздравляем"
 }

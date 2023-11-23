@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Наш народ не молится, надо сделать публичные наказания за инокомыслие",
+  "TextEvent": "Теперь Вам пора отохнуть, всю работу за Вас выполнит ИИ",
 
-  "TextLeft": "Это перебор",
-  "MoneyL": 10,
-  "ArmyL": 10,
-  "ReligionL": 10,
-  "PeopleEffectL": 10,
+  "TextLeft": "Спасибо",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
 
-  "TextRight": "Почему бы и нет",
-  "MoneyR": 10,
-  "ArmyR": 10,
-  "ReligionR": 10,
-  "PeopleEffectR": 10,
+  "TextRight": "Наконец-то",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
 
-  "Era": "Tribe",
-  "ImageHero": "Шаман",
-  "TextHero": "Шаман"
+  "Era": "EndGame",
+  "ImageHero": "4",
+  "TextHero": "Поздравляем"
 }

@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Киберпанк время",
+  "TextEvent": "Хозяин, нашей планеты нам мало, пора бы покорять галактику",
 
   "TextLeft": "...",
-  "MoneyL": 50,
-  "ArmyL": 50,
-  "ReligionL": 50,
-  "PeopleEffectL": 50,
+  "MoneyL": 20,
+  "ArmyL": 20,
+  "ReligionL": 20,
+  "PeopleEffectL": 20,
 
   "TextRight": "...",
-  "MoneyR": 50,
-  "ArmyR": 50,
-  "ReligionR": 50,
-  "PeopleEffectR": 50,
+  "MoneyR": 20,
+  "ArmyR": 20,
+  "ReligionR": 20,
+  "PeopleEffectR": 20,
 
   "Era": "CyberTime",
-  "ImageHero": "Тест",
-  "TextHero": "Новая эра"
+  "ImageHero": "anime",
+  "TextHero": "Тяночка"
 }

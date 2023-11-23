@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Наш народ не молится, надо сделать публичные наказания за инокомыслие",
+  "TextEvent": "Мы создали первый компьютер!!",
 
-  "TextLeft": "Это перебор",
-  "MoneyL": 0,
-  "ArmyL": 5,
-  "ReligionL": -10,
-  "PeopleEffectL": 15,
+  "TextLeft": "Мы крутые",
+  "MoneyL": 20,
+  "ArmyL": 20,
+  "ReligionL": 20,
+  "PeopleEffectL": 20,
 
-  "TextRight": "Почему бы и нет",
-  "MoneyR": 0,
-  "ArmyR": 0,
+  "TextRight": "Нормально так",
+  "MoneyR": 20,
+  "ArmyR": 20,
   "ReligionR": 20,
-  "PeopleEffectR": -10,
+  "PeopleEffectR": 20,
 
-  "Era": "Tribe",
-  "ImageHero": "Шаман",
-  "TextHero": "Шаман"
+  "Era": "NewTime",
+  "ImageHero": "anime",
+  "TextHero": "Тяночка"
 }
