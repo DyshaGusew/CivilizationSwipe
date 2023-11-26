@@ -58,12 +58,9 @@ public class SwipeRight : MonoBehaviour
     public void SwipeRightDelete()
     {
         GameObject obj = GameObject.Find("Card");
+        obj.tag = "Card"; // Установка тега объекту
         Animator Animarotlocal = obj.GetComponent<Animator>();
-
-        // Меняем значение переменной DropRight на true   
-        Animarotlocal.SetBool("DropRight", true);
-
-        // Запускаем анимацию   
+        // Запускаем анимацию     
         StartCoroutine(WaitForAnimation(Animarotlocal, "DropRight"));
     }
 
@@ -71,11 +68,17 @@ public class SwipeRight : MonoBehaviour
     private IEnumerator WaitForAnimation(Animator animator, string animationName)
     {
         animator.Play(animationName);
+        // Задержка в пол секунды              
+        yield return new WaitForSeconds(0.35f);
 
-        // Задержка в пол секунды   
-        yield return new WaitForSeconds(0.5f);
-
-        // Удаляем объект после окончания анимации  
-        Destroy(animator.gameObject);
+        // Удаляем все объекты с именем "Card" после окончания анимации     
+        GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
+        foreach (GameObject card in cards)
+        {
+            if (card.name == "Card")
+            {
+                Destroy(card);
+            }
+        }
     }
 }

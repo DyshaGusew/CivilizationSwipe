@@ -53,26 +53,29 @@ public class SwipeLeft : MonoBehaviour
         }
     }
     public void SwipeLeftDelete()
-    { 
+    {
         GameObject obj = GameObject.Find("Card");
+        obj.tag = "Card"; // Установка тега объекту
         Animator Animarotlocal = obj.GetComponent<Animator>();
-
-        // Меняем значение переменной DropLeft на true   
-        Animarotlocal.SetBool("DropLeft", true);
-
-        // Запускаем анимацию   
+        // Запускаем анимацию     
         StartCoroutine(WaitForAnimation(Animarotlocal, "DropLeft"));
     }
 
-    //Задежка всех процессов, для проигрывания анимации
+    //Задержка всех процессов, для проигрывания анимации  
     private IEnumerator WaitForAnimation(Animator animator, string animationName)
     {
         animator.Play(animationName);
+        // Задержка в пол секунды              
+        yield return new WaitForSeconds(0.35f);
 
-        // Задержка в пол секунды   
-        yield return new WaitForSeconds(0.5f);
-
-        // Удаляем объект после окончания анимации  
-        Destroy(animator.gameObject);
+        // Удаляем все объекты с именем "Card" после окончания анимации     
+        GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
+        foreach (GameObject card in cards)
+        {
+            if (card.name == "Card")
+            {
+                Destroy(card);
+            }
+        }
     }
 }

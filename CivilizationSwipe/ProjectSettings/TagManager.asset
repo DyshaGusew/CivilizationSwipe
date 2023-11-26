@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - gameOverMenuTag
+  - Card
   layers:
   - Default
   - TransparentFX
