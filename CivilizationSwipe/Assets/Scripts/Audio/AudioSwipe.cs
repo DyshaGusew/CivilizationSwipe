@@ -6,7 +6,7 @@ public class AudioSwipe : MonoBehaviour
 {
     public AudioSource Sound;
 
-    void Play_Sound()
+    public void Play_Sound()
     {
         Sound.Play();
     }
