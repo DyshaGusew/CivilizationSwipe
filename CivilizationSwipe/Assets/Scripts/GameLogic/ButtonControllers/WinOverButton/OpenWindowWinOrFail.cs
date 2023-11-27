@@ -21,6 +21,7 @@ public class OpenWindowWinOrFail : MonoBehaviour
         gameObject.SetActive(false);
         Destroy(GameObject.Find("NormalCard(Clone)"));
         MainGameController.NewGameCreate();
+        GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
     }
 
     //Активация меню победы
