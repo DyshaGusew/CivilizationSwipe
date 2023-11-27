@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Церковь посчитала вас колдуном и решила сжечь на костре",
+
+  "TextLeft": "Чтооо?",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "О, нет",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "Tribe",
+  "ImageHero": "DiedReligion",
+  "TextHero": ""
+}

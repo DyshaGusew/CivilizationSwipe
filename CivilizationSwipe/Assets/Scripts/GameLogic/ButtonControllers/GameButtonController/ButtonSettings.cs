@@ -11,6 +11,7 @@ public class ButtonSettings : MonoBehaviour
     //Тут при нажатии открывается меню настроек
     public void Click()
     {
+        EscapeScript.active = true;
         canvasSetting.SetActive(true);
         warning.SetActive(false);
     }

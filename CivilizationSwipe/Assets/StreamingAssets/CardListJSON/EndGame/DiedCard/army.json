@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Армия была слаба и не выдержала настиск врага, копье с вашей коловой красуется в центре города",
+
+  "TextLeft": "Чего?",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "А?",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "Tribe",
+  "ImageHero": "DiedArmy",
+  "TextHero": ""
+}

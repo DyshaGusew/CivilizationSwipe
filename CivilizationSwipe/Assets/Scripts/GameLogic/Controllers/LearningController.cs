@@ -14,12 +14,14 @@ public class LearningController : MonoBehaviour
     public GameObject top6;
     public GameObject top7;
     public GameObject top8;
+    public GameObject SoundClick;
     private static bool activeLearning;
     
     //Начало обучения
     public void StartLerning()
     {
         CloseAll();
+        SoundClick.SetActive(true);
         activeLearning = true;
         top1.SetActive(true);
     }
@@ -32,7 +34,8 @@ public class LearningController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if(top1.activeSelf)
+                SoundClick.GetComponent<AudioSource>().Play();
+                if (top1.activeSelf)
                 {
                     top1.SetActive(false);
                     top2.SetActive(true);
@@ -70,14 +73,18 @@ public class LearningController : MonoBehaviour
                 else if (top8.activeSelf)
                 {
                     top8.SetActive(false);
+                    SoundClick.GetComponent<AudioSource>().Play();
+                    SoundClick.SetActive(false);//dd
                 }
 
             }
             if (Input.GetKeyDown(KeyCode.Q))
             {
+                SoundClick.GetComponent<AudioSource>().Play();
                 if (top1.activeSelf)
                 {
                     top1.SetActive(false);
+                    SoundClick.SetActive(false);
                 }
                 else if (top2.activeSelf)
                 {
@@ -117,6 +124,7 @@ public class LearningController : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                SoundClick.GetComponent<AudioSource>().Play();
                 CloseAll();
             }
         }
@@ -133,5 +141,6 @@ public class LearningController : MonoBehaviour
         top6.SetActive(false);
         top7.SetActive(false);
         top8.SetActive(false);
+        SoundClick.SetActive(false);
     }
 }

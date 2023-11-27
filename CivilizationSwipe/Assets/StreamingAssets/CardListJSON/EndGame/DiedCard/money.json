@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Из-за упадка финансового положения вашу голову продали в соседнее государство",
+
+  "TextLeft": "Что?",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "Что?",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "Tribe",
+  "ImageHero": "DiedMoney",
+  "TextHero": ""
+}

@@ -27,6 +27,7 @@ public class MainGameController : MonoBehaviour
                     //≈сли это последн€€ эра, то вывожу финальное окно
                     if (MainStorage.era == MainStorage.eras[5])
                     {
+                        CardConstructor.CreatePlayCardOfDied("people");
                         GameObject.Find("Main Camera").GetComponent<OpenWindowWinOrFail>().AtiveWinMenu();
                         MainStorage.LoadNormalValue();
                         return;
@@ -95,10 +96,11 @@ public class MainGameController : MonoBehaviour
         //≈сли параметр gameOver = true, то выведенна€ карточка уже карточка смерти и после ее слистывани€ вывожу окно проигрыша
         else
         {
+            //—оздаю рандомную карточку, чтобы при наведении на ее кнопки, но перед созданием меню не было ошибок
+            CardConstructor.CreatePlayCardOfDied("people");
             GameObject.Find("Main Camera").GetComponent<OpenWindowWinOrFail>().AtiveExitMenu();
             MainStorage.LoadNormalValue();
             return;
-           // NewGameCreate();
         }
         
     }
