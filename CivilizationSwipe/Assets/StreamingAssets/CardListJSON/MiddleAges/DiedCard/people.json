@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Народ считает вас ужасным правителем, поэтому ваше тело красуется на главной площади",
+
+  "TextLeft": "ЧТО?",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "ЧТО?",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "MiddleAges",
+  "ImageHero": "DiedPeople",
+  "TextHero": ""
+}

@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Господин, я изобрел механизм для автоматического дробления зерна, необходимо немного денег на реализацию",
+
+  "TextLeft": "Выделить денег на изучение",
+  "MoneyL": -15,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 25,
+
+  "TextRight": "Мне не до этого",
+  "MoneyR": 10,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": -15,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Ученый",
+  "TextHero": "Придворный химик"
+}

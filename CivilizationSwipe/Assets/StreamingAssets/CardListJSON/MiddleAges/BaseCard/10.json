@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Король мой, необходимо выделить денег на исбавление от крыс в городе",
+
+  "TextLeft": "Выделить денег",
+  "MoneyL": -15,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 15,
+
+  "TextRight": "Они не мешают",
+  "MoneyR": 15,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": -20,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Советник",
+  "TextHero": "Ваш советник"
+}

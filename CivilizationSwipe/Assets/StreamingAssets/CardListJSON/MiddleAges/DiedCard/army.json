@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Армия была слаба и не выдержала настиск врага, воины ворвались в столицу и кроваво убили вас",
+
+  "TextLeft": "...",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "...",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "MiddleAges",
+  "ImageHero": "DiedArmy",
+  "TextHero": ""
+}

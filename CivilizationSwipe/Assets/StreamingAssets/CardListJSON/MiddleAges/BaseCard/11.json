@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Мне кажется, мы слишком ного тратим на благотворительность, стоит экономить",
+
+  "TextLeft": "Брысь",
+  "MoneyL": 0,
+  "ArmyL": 5,
+  "ReligionL": 5,
+  "PeopleEffectL": 10,
+
+  "TextRight": "Ты права",
+  "MoneyR": 10,
+  "ArmyR": -5,
+  "ReligionR": -5,
+  "PeopleEffectR": -10,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Королева",
+  "TextHero": "Королева"
+}

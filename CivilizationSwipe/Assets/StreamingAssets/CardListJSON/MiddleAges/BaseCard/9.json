@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Добрый день, ваша страна агрессивно расширят границы, наш правитель требует прекрать это",
+
+  "TextLeft": "На за что",
+  "MoneyL": 5,
+  "ArmyL": 15,
+  "ReligionL": 0,
+  "PeopleEffectL": -20,
+
+  "TextRight": "Да, конечно",
+  "MoneyR": -5,
+  "ArmyR": -15,
+  "ReligionR": 0,
+  "PeopleEffectR": 10,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Иностранец",
+  "TextHero": "Посол"
+}

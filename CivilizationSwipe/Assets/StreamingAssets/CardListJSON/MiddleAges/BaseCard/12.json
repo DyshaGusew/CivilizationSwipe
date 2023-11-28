@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Нам нужны средства для поимки нечести в нашей стране",
+
+  "TextLeft": "Конечно",
+  "MoneyL": -10,
+  "ArmyL": 0,
+  "ReligionL": 10,
+  "PeopleEffectL": -5,
+
+  "TextRight": "Еще чего",
+  "MoneyR": 5,
+  "ArmyR": 0,
+  "ReligionR": -15,
+  "PeopleEffectR": 0,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Инквезитор",
+  "TextHero": "Глава ордена Святого огня"
+}
