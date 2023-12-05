@@ -84,6 +84,7 @@ public class LearningController : MonoBehaviour
                 if (top1.activeSelf)
                 {
                     top1.SetActive(false);
+                    SoundClick.GetComponent<AudioSource>().Play();
                     SoundClick.SetActive(false);
                 }
                 else if (top2.activeSelf)
