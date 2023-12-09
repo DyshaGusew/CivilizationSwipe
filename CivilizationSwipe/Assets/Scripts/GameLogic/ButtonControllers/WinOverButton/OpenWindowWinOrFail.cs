@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Открытие окна победы или проигрыша
+//Opening a win or loss window
 public class OpenWindowWinOrFail : MonoBehaviour
 {
-    //Ссылка на сами окна
+    //Link to the windows themselves
     public GameObject gameOverMenu;
     public GameObject gameWinMenu;
 
-    //Открыть окно выхода
+    //Open the exit window
     public void AtiveExitMenu()
     {
         gameOverMenu.SetActive(true);
     }
 
-    //Создание новой игры
+    //Creating a new game
     public void ClickNewGame()
     {
         gameObject.SetActive(false);
@@ -24,7 +24,7 @@ public class OpenWindowWinOrFail : MonoBehaviour
         GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
     }
 
-    //Активация меню победы
+    //Activating the victory menu
     public void AtiveWinMenu()
     {
         gameWinMenu.SetActive(true);

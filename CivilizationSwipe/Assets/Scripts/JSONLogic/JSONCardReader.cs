@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-//ѕолучение данных карточек из Json
+//Getting card data from Json
 public class JSONCardReader
 {
-    //—оздаю класс дл€ указани€ того, что именно считывать Json
+    //Creating a class to specify exactly what to read Json
     public class ReadingCard                
     {
         public string TextEvent;
@@ -28,7 +28,8 @@ public class JSONCardReader
         public string TextHero;
     }
 
-    //ѕолучаю указанную карточку (по эре, id и типу (начальна€, обычна€, финальна€)) по факту в виде просnого текста в классе 
+    //I receive the specified card (by era, id and type (initial, regular, final))
+    //in fact, in the form of a simple text in the classroom
     public static ReadingCard GetCard(int id, string era, string typeCard) 
     {     
         string path = Application.streamingAssetsPath + "/CardListJSON/" + era + "/" + typeCard + "/" + id.ToString() + ".json";
@@ -36,7 +37,8 @@ public class JSONCardReader
         return getCard;
     }
 
-    //ѕолучаю указанную карточку (по эре, имени и типу (начальна€, обычна€, финальна€)) по факту в виде просnого текста в классе 
+    //I receive the specified card (by era, name and type (initial, regular, final))
+    //in fact, in the form of a simple text in the classroom
     public static ReadingCard GetCard(string name, string era, string typeCard)
     {
         string path = Application.streamingAssetsPath + "/CardListJSON/" + era + "/" + typeCard + "/" + name + ".json";

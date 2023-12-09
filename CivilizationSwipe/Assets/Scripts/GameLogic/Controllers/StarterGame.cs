@@ -3,35 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Точка входя в программу, все действия при запуске игры
+//The point of entering the program is all actions when starting the game
 public class StarterGame : MonoBehaviour
 {
-    //Загрузка всего должна происходить здесь
+    //Everything should be uploaded here
     private void Awake()
     {
-        //Инициализация объектов на сцене
+        //Initializing objects on the scene
         TextSetterView.InicializeText();
         LightMarkerMove.InicializeLightMarker();
         CardConstructor.gameCardModel = Resources.Load<GameObject>("GameModels\\NormalCard");
 
-        //Загрузка всех сохранений и установка нового массива карточек
+        //Downloading all the saves and installing a new array of cards
         MainStorage.LoadSaves();
         MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
     }
 
     void Start()
     {
-        //Создаю карту и тут же указываю ее текста
+        //I create a map and immediately specify its text
         CardConstructor.CreatePlayCardOfBase();
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
 
-        //Устанавливаю окружение игры
+        //Setting up the game environment
         AspectGreenRed.AspectLightSol(0, 0, 0, 0);
         FoneAspectSetter.FoneSet();
         FoneAspectSetter.AspecSet();
 
-        //Открытие обучение если игрок впервые входит в игру
-        if(MainStorage.learning == 0)
+        //Opening training if the player enters the game for the first time
+        if (MainStorage.learning == 0)
         {
            GameObject.Find("CanvasLearning").GetComponent<LearningController>().StartLerning();
            MainStorage.learning = 1;
@@ -40,11 +40,11 @@ public class StarterGame : MonoBehaviour
         MainStorage.Save();
         GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
     }
-    
-    //Условия при выходе
+
+    //Exit conditions
     void OnApplicationQuit()
     {
-        //Если все с параметрами нормально, то сохраняю, иначе устанавливаю начальные значения
+        //If everything is fine with the parameters, then I save them, otherwise I set the initial values
         if (MainStorage.Money > 0 && MainStorage.Army > 0 && MainStorage.Religion > 0 && MainStorage.People > 0)
         {
             MainStorage.Save();

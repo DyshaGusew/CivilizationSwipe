@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Скрипт для обработки звуков
+//A script for processing sounds
 public class AudioController : MonoBehaviour
 {
-    //Установка фонового звука в зависимости от переданной эры
+    //Setting the background sound depending on the transmitted era
     public void SetFoneAudio(string era)
     {
         gameObject.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/FoneAudio/" + era);

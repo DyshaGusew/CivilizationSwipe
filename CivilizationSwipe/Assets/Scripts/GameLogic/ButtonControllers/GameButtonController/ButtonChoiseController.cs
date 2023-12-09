@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Контроллер взаимодействия с кнопками решения (которые правое или левое)
+//The controller interacts with the solution buttons (which are right or left)
 public class ButtonControle : MonoBehaviour
 {
-    //Модель игровой карточкой
+    //The model is a game card
     public GameObject gameCard;
 
-    //Действие при нажатии
+    //Click action
     public void ButClick()
     {
-        //В зависимости от имени кнопки(правая она или левая) устанавливаются правые аспекты решения или же левые (типо +5 денег левое решение, -2 правое)
+        //Depending on the name of the button (right or left),
+        //the right aspects of the solution are set or the
+        //left ones (like +5 money left solution, -2 right)
         if (name == "ButtonLeft")
         {
             AspectSetter.AspectLeftSolution();
@@ -23,20 +25,21 @@ public class ButtonControle : MonoBehaviour
             AspectSetter.AspectRightSolution();
         }
 
-        //Удаляем карточку
+        //Deleting the card
         CardConstructor.DeletePlayCard();
 
-        //Действие после нажатии на кнопку
+        //Action after clicking on the button
         MainGameController.ControleAfterBut();
 
         ButNotMove();
         ButMove();
     }
 
-    //Действия при наведении на кнопку
+    //Actions when hovering over the button
     public void ButMove()
     {
-        //В зависимость от того на какую кнопку навели подсвечиваются нужные аспекты и высвечивается текст решения
+        //Depending on which button is pointed at, the necessary aspects
+        //are highlighted and the text of the decision is highlighted
         if (name == "ButtonLeft")
         {
             TextSetterView.SetTextLeft();
@@ -50,7 +53,7 @@ public class ButtonControle : MonoBehaviour
         }
     }
 
-    //Если не наводять на кнопку то все убирается
+    //If you do not point at the button, then everything is removed
     public void ButNotMove()
     {
         TextSetterView.NullTextRightLeft();

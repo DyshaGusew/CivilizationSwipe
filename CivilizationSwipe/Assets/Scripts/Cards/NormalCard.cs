@@ -1,6 +1,7 @@
 using static JSONCardReader;
 
-//Это уже обычная(их большинство, герой, событие, влияние на аспекты) карточка со значениями и методами 
+//This is already a common (most of them, the hero, the event, the impact on aspects)
+//card with values and methods
 public class NormalCard : BaseCard       
 {
     public int MoneyL { get; set; }
@@ -16,7 +17,7 @@ public class NormalCard : BaseCard
     public string ImageHero { get; set; }
     public string TextHero { get; set; }
 
-    //Конструктор карты, создающий новую карту из считываемой JSON карты
+    //A map constructor that creates a new map from a readable JSON map
     public NormalCard(ReadingCard ReadCard)    
     {
         TextEvent = ReadCard.TextEvent; 
@@ -38,7 +39,7 @@ public class NormalCard : BaseCard
         TextHero = ReadCard.TextHero;
     }
 
-    //Устанавливаю этой карте значение в зависимосте от переданной карточки
+    //I set the value of this card depending on the transferred card
     public void DownloadNormalCard(NormalCard ReadCard)
     { 
         TextEvent = ReadCard.TextEvent;
@@ -60,7 +61,8 @@ public class NormalCard : BaseCard
         TextHero = ReadCard.TextHero;
     }
 
-    //Когда объект с этим скриптом создается, то устанавливаю ей значения в зависимости от текущей карточки из массива и эры
+    //When an object with this script is created, I set its values depending on
+    //the current card from the array and the era
     private void OnEnable()
     {   
         DownloadNormalCard(MainStorage.thisCard);

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Кнопка сброса настроек
+//Reset settings button
 public class ReturnGameYes : MonoBehaviour
 {
-    //Предупреждение о стирании данных и само меню настроек
+    //Data erasure warning and the settings menu itself
     public GameObject warning;
     public GameObject settings;
 
-    //Все удаляю и создаю занаво
+    //I delete everything and create a curtain
     public void Return()
     {
         PlayerPrefs.DeleteAll();

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Программная кнопка перезапуска игры (для тестов)
+//Soft button to restart the game (for tests)
 public class ReturnGame : MonoBehaviour
 {
     public void Return()

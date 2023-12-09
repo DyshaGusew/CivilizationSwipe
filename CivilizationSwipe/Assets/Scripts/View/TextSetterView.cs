@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-//Набор общедоступных методов для установки значений текстам решения, имени героя и самого события
+//A set of publicly available methods for setting values for the texts of the decision,
+//the name of the hero and the event itself
 public class TextSetterView : MonoBehaviour
 {
     public static GameObject mainEventText;
@@ -9,14 +10,14 @@ public class TextSetterView : MonoBehaviour
     public static GameObject rightEventText;
     public static GameObject heroNameText;
 
-    //Установка текста героя и события
+    //Setting the text of the hero and the event
     public static void SetTextEvent(string eventText, string heroText)
     {
         mainEventText.GetComponent<Text>().text = eventText;
         heroNameText.GetComponent<Text>().text = heroText;
     }
 
-    //Установка и активация текста левого решения
+    //Installing and activating the text of the left solution
     public static void SetTextLeft()
     {
         if(!MainStorage.thisCard.TextLeft.Equals(""))
@@ -26,7 +27,7 @@ public class TextSetterView : MonoBehaviour
         }
     }
 
-    //Установка и активация текста правого решения
+    //Installing and activating the text of the right solution
     public static void SetTextRight()
     {
         if (!MainStorage.thisCard.TextRight.Equals(""))
@@ -36,14 +37,14 @@ public class TextSetterView : MonoBehaviour
         }
     }
 
-    //Обнуление текстов
+    //Zeroing out texts
     public static void NullTextRightLeft()
     {
         rightEventText.SetActive(false);
         leftEventText.SetActive(false);
     }
 
-    //Инициализация всех объектов
+    //Initializing all objects
     public static void InicializeText()
     {
         mainEventText = GameObject.Find("EventCardText");

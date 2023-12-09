@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-//Кнопка об игре
+//About the game button
 public class AboutGame : MonoBehaviour
 {
     public GameObject Canvas;
     public static bool active = false;
+
+    //Activating the window about the game
     public void Aboutgame()
     {
         active = true;
         EscapeScript.active = false;
         Canvas.SetActive(true);
     }
+
+    //Сlick verification
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

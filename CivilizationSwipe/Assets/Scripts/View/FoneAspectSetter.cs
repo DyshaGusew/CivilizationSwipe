@@ -2,25 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Контроль отображения фона игры и стиля аспектов
+//Control of the display of the background of the game
+//and the style of the aspects
 public class FoneAspectSetter : MonoBehaviour
 {
-    //Установка фона
+    //Setting the background
     static public void FoneSet()
     {
         GameObject.Find("Background").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Fones/" + MainStorage.era);
     }
 
-    //Установка аспектов в зависимости от переданной эры
+    //Setting aspects depending on the transmitted era
     static public void AspecSet()
     {
-        //Устанавливаю сами аспекты (их вид)
+        //I set the aspects themselves (their type)
         GameObject.Find("Aspects").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Aspects/" + MainStorage.era);
-       
-        //Установка цвета верхней линии
+
+        //Setting the color of the top line
         switch (MainStorage.era)
         {
-            //Для каждой эры свой цвет
+            //Each era has its own color
             case "Tribe":
                 Color color = new Color(0.3803922f, 0.2156863f, 0.09019608f);
                 GameObject.Find("UpLine").GetComponent<SpriteRenderer>().color = color;

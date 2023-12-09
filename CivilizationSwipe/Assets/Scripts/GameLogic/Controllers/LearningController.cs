@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Обучение в игре
+//Learning in the game
 public class LearningController : MonoBehaviour
 {
-    //Все советы и переменная, активно ли обучение в данный момент
+    //All tips and variable, is learning active at the moment
     public GameObject top1;
     public GameObject top2;
     public GameObject top3;
@@ -16,8 +16,8 @@ public class LearningController : MonoBehaviour
     public GameObject top8;
     public GameObject SoundClick;
     private static bool activeLearning;
-    
-    //Начало обучения
+
+    //The beginning of training
     public void StartLerning()
     {
         CloseAll();
@@ -26,10 +26,10 @@ public class LearningController : MonoBehaviour
         top1.SetActive(true);
     }
 
-    //Проверка на активацию обучения и его запуск
+    //Checking for activation of training and its launch
     void Update()
     {
-        //Проверка нажатийй и переключение карточек обучения
+        //Checking clicks and switching training cards
         if (activeLearning)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -131,7 +131,7 @@ public class LearningController : MonoBehaviour
         }
     }
 
-    //Закрытие всех карточек обучения
+    //Closing all study cards
     public void CloseAll()
     {
         top1.SetActive(false);

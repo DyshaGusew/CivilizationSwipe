@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Закрытие окна
+//Closing the window
 public class CloseCanvas : MonoBehaviour
 {
     public GameObject canvasSetting;

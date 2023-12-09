@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Настройка цвета текста кнопок при наведении
+//Setting the text color of the buttons on hover
 public class ButLightMove : MonoBehaviour
 {
     public GameObject text;
 
-    //Навел - цвет темнее
+    //Pointed - the color is darker
     public void MoveOn()
     {
         ColorUtility.TryParseHtmlString("#919191", out Color col1);
         text.GetComponent<Text>().color = col1;
     }
 
-    //Убрал - цвет белый
+    //Removed - the color is white
     public void MoveOff()
     {
         ColorUtility.TryParseHtmlString("#FFFFFF", out Color col1);
         text.GetComponent<Text>().color = col1;
     }
 
-    //При активации цвет белый
+    //When activated, the color is white
     private void OnEnable()
     {
         MoveOff();    

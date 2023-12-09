@@ -1,47 +1,47 @@
 using UnityEngine;
 
-//Контроллер оснывных событий игры
+//Controller of the main events of the game
 public class MainGameController : MonoBehaviour
 {
-    //Общедуступная переменная конца игры
+    //The general access variable of the end of the game
     static public bool gameOver = false;
 
-    //Метод для срабатывания после нажатия
+    //The method for triggering after pressing
     static public void ControleAfterBut()
     {
-        //Когда конец игр ыне наступил входим
-        if(gameOver == false)
+        //When the end of the games has already come, we enter
+        if (gameOver == false)
         {
-            //Если после нажатия все параметры нормальные, то смотрим
+            //If all the parameters are normal after clicking, then look at
             if (MainStorage.Money > 0 && MainStorage.Army > 0 && MainStorage.Religion > 0 && MainStorage.People > 0)
             {
-                //Создаем новую карточку и устанавливаем ей текста если это не выходим за пределы данной эры
+                //We create a new card and set the text for it if it does not go beyond this era
                 if (MainStorage.counterCard != MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra + MainStorage.maxCountCardOfEndEra + 1)
                 {
                     CardConstructor.CreatePlayCardOfBase();
                     TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
                 }
-                //Если в текущей эре больше нет карт, то входим
+                //If there are no more cards in the current era, then enter
                 else
                 {
-                    //Если это последняя эра, то вывожу финальное окно
+                    //If this is the last era, then I'm bringing out the final window
                     if (MainStorage.era == MainStorage.eras[5])
                     {
                         CardConstructor.CreatePlayCardOfDied("people");
                         GameObject.Find("Main Camera").GetComponent<OpenWindowWinOrFail>().AtiveWinMenu();
                         MainStorage.LoadNormalValue();
                         return;
-                        //NewGameCreate();
-                        //GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.eras[5]);
                     }
-                    //Переключение эры и установка начальных значений(начальных для данной эры)
+
+                    //Switching the era and setting the initial values (initial for this era)
                     else
                     {
                         string thisEra = MainStorage.era;
                         MainStorage.LoadNormalValue();
                         MainStorage.learning = 1;
                         MainStorage.era = thisEra;
-                        //Устанавливаю следущую эру
+
+                        //Setting the next era
                         for (int i = 0; i < MainStorage.eras.Length; i++)
                         {
                             if (MainStorage.eras[i] == MainStorage.era)
@@ -50,7 +50,8 @@ public class MainGameController : MonoBehaviour
                                 break;
                             }
                         }
-                        //Устанавливаю все в mainStorage и сохраняю
+
+                        //I install everything in the mainStorage and save it
                         MainStorage.maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\BaseCard\\", "*.json").Length;
                         MainStorage.maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\StartCard\\", "*.json").Length;
                         MainStorage.maxCountCardOfEndEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\EndCard\\", "*.json").Length;
@@ -58,7 +59,7 @@ public class MainGameController : MonoBehaviour
 
                         MainStorage.Save();
 
-                        //Создаю массивы, выожу карточку и устанавливаю окружение
+                        //I create arrays, take out the card and set the environment
                         MainStorage.ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
                         CardConstructor.CreatePlayCardOfBase();
                         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
@@ -69,10 +70,11 @@ public class MainGameController : MonoBehaviour
                 }
             }
 
-            //Если один из параметров упал до 0, то вывожу карточку смерти, устанавливаю game over true и при следующем листании выведится окно проигрыша
+            //If one of the parameters has dropped to 0, then I display the death card,
+            //set game over true and the next time I scroll, the loss window will be displayed
             else
             {
-                //Определяю какую карточку смерти выводить
+                //I'm determining which death card to display
                 gameOver = true;
                 if (MainStorage.Money <= 0)
                 {
@@ -93,10 +95,13 @@ public class MainGameController : MonoBehaviour
                 TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero); 
             }
         }
-        //Если параметр gameOver = true, то выведенная карточка уже карточка смерти и после ее слистывания вывожу окно проигрыша
+
+        //If the gameOver parameter = true, then the displayed card is already
+        //a death card and after merging it, I display the loss window
         else
         {
-            //Создаю рандомную карточку, чтобы при наведении на ее кнопки, но перед созданием меню не было ошибок
+            //I create a random card so that when hovering over its buttons,
+            //but before creating the menu, there are no errors
             CardConstructor.CreatePlayCardOfDied("people");
             GameObject.Find("Main Camera").GetComponent<OpenWindowWinOrFail>().AtiveExitMenu();
             MainStorage.LoadNormalValue();
@@ -105,7 +110,7 @@ public class MainGameController : MonoBehaviour
         
     }
 
-    //Создание новой игры, все с нуля
+    //Creating a new game, all from scratch
     public static void NewGameCreate()
     {
         gameOver = false;

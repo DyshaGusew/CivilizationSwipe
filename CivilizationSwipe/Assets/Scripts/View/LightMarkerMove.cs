@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
-//Контроль загорания маркеров аспектов
+//Control of the burning of aspect markers
 public class LightMarkerMove : MonoBehaviour
 {
     static public GameObject moneyMarker;
@@ -11,7 +11,8 @@ public class LightMarkerMove : MonoBehaviour
     static public GameObject religionMarker;
     static public GameObject peopleMarker;
 
-    //Загорание маркеров в зависимости от переданного решения и влияния текущей карточки
+    //The markers light up depending on the transmitted decision and the influence
+    //of the current card
     public static void LightMarker(string name)
     {
         if(name == "ButtonLeft")
@@ -55,7 +56,7 @@ public class LightMarkerMove : MonoBehaviour
         }
     }
 
-    //Обнуление цвета маркеров
+    //Zeroing the marker color
     public static void LightMarkerNotMove()
     {
        armyMarker.SetActive(false);
@@ -64,7 +65,7 @@ public class LightMarkerMove : MonoBehaviour
        peopleMarker.SetActive(false);
     }
 
-    //Инициализация маркеров
+    //Initializing tokens
     public static void InicializeLightMarker()
     {
         moneyMarker = GameObject.Find("LightMoney");

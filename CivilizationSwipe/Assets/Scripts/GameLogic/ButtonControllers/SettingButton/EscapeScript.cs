@@ -1,16 +1,17 @@
 using UnityEngine;
 
-//Выход из игры по клавише
+//Exit the game by pressing the key
 public class EscapeScript : MonoBehaviour
 {
     public GameObject canvasSetting;
     public GameObject warning;
     public AudioSource Sound;
-    //Переменная состояния выхода
+
+    //Output status variable
     public static bool active = false;
     void Update()
     {
-        //Проверка нажати я каждый кадр
+        //Checking the click every frame
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (active == false)

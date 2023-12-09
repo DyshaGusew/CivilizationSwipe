@@ -4,26 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-//Настройка цвета текста кнопок при наведении
+//Setting the text color of the buttons on hover
 public class ButLightMoveTMP : MonoBehaviour
 {
     public TMP_Text text;
 
-    //Навел - цвет темнее
+    //Pointed - the color is darker
     public void MoveOn()
     {
         ColorUtility.TryParseHtmlString("#919191", out Color col1);
         text.color = col1;
     }
 
-    //Убрал - цвет белый
+    //Removed - the color is white
     public void MoveOff()
     {
         ColorUtility.TryParseHtmlString("#FFFFFF", out Color col1);
         text.color = col1;
     }
 
-    //При активации цвет белый
+    //When activated, the color is white
     private void OnEnable()
     {
         MoveOff();    

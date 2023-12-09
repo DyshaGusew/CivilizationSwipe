@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-//Это хранилище всей информации об игре
+//This is a repository of all information about the game
 public class MainStorage : MonoBehaviour
 {
-    //Текущие значения аспектов 
+    //Current values of the aspects
     private static float money;
     private static float army;
     private static float religion;
     private static float people;
 
-    //Геттеры и сеттеры текущих параметров
+    //Getters and setters of current parameters
     public static float Money
     {
         get { return money; }
@@ -79,30 +79,31 @@ public class MainStorage : MonoBehaviour
         }
     }
 
-    //Переменная, хранящая информацию о прохождении первого обучения
-    public static int learning = 0;    
-    
-    //Счетчик карт данной эры и блоки количества карт определенной эры
+    //A variable that stores information about the completion of the first training
+    public static int learning = 0;
+
+    //The card counter of a given era and the blocks of the number of cards of a certain era
     public static int counterCard;
     public static int maxCountCardOfThisEra;
     public static int maxCountCardOfStartEra;
     public static int maxCountCardOfEndEra;
 
-    //Список всех эр и текущая эра
+    //List of all eras and current era
     readonly public static string[] eras = {"Tribe", "MiddleAges", "NewTime", "ModernTime", "CyberTime", "EndGame"};
     public static string era;
 
-    //Массив всех карт данной эры
+    //An array of all maps of a given era
     public static NormalCard[] ThisCardMassive;
 
-    //Текущая игровая карточка и обычная карточка
+    //Current game card and regular card
     public static GameObject thisGameCard;
     public static NormalCard thisCard;
 
-    //Здесь все загружается из хранилища (которое внутри юнити) 
+    //Here everything is loaded from the storage (which is inside unity)
     public static void LoadSaves()
-    { 
-        //Если что-либо не сохранено в хранилище(то есть не было первого запуска игры), то устанавливаем начальные значения
+    {
+        //If something is not saved in the storage (that is, there was no first launch of the game),
+        //then set the initial values
         if (PlayerPrefs.HasKey("money") && PlayerPrefs.HasKey("counterCard") && PlayerPrefs.HasKey("era") && PlayerPrefs.HasKey("maxCountCardOfThisEra") && PlayerPrefs.HasKey("maxCountCardOfStartEra") && PlayerPrefs.HasKey("learning") && PlayerPrefs.HasKey("maxCountCardOfEndEra"))
         {
             Money = PlayerPrefs.GetFloat("money");
@@ -124,7 +125,7 @@ public class MainStorage : MonoBehaviour
         }
     }
 
-    //Все сохраняется в хранилище
+    //Everything is saved in the storage
     public static void Save()
     {
         PlayerPrefs.SetFloat("money", Money);
@@ -137,14 +138,14 @@ public class MainStorage : MonoBehaviour
         PlayerPrefs.SetInt("maxCountCardOfEndEra", maxCountCardOfEndEra);
         PlayerPrefs.SetInt("learning", learning);
 
-        //Тк после создания карточки он прибавляет 1
+        //After creating the card, he adds 1
         if (counterCard != 1)
             PlayerPrefs.SetInt("counterCard", counterCard - 1);  
         else
             PlayerPrefs.SetInt("counterCard", 1);
     }
 
-    //Установка начальных значений в это хранилище карточек
+    //Setting initial values in this card store
     public static void LoadNormalValue() 
     {
         Money = 2;

@@ -1,14 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-//Работа с каждым отдельным аспектом их отображение и установка видимых значений
+//Working with each individual aspect, displaying them and setting
+//visible values
 public class ValueAspectView : MonoBehaviour
 {
-    //Численное значение аспекта и скорость изменения высоты при решении
+    //The numerical value of the aspect and the rate of
+    //change in height when solving
     private float Value;
     [SerializeField]static private float speed = 0.3f;
 
-    //В зависимости от названия ассета на котором этот скрипт, устанавливается значение(Value)
+    //Depending on the name of the asset on which this script is based,
+    //the value is set
     private float GetValueAspect(string name)
     {
         switch (name)
@@ -26,14 +29,14 @@ public class ValueAspectView : MonoBehaviour
         }
     }
 
-    //Устанавливаю при запуске значение каждому аспекту
+    //I set the value of each aspect at startup
     private void Start()
     {
         Value = GetValueAspect(name);
         GetComponent<Image>().transform.localScale = new Vector3(1, Value / 100, 1);
     }
 
-    //Каждый фиксированный кадр плавно увеличиваю или уменьшаю значение аспекта
+    //Each fixed frame I smoothly increase or decrease the aspect value
     void FixedUpdate()
     {
         Value = GetValueAspect(name);

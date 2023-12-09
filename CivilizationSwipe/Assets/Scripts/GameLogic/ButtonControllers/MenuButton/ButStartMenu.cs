@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-//Отображение и действие кнопки меню начать игру
+//Display and action of the start game menu button
 public class ButStartMenu : MonoBehaviour
 {
     public GameObject text;
@@ -12,10 +12,10 @@ public class ButStartMenu : MonoBehaviour
     private bool upLight = false;
     public float timer = 2.5f;
 
-    //Методы при наведении
+    //Hover methods
     public void MoveOn()
     {
-        //Цвет темнее
+        //The color is darker
         ColorUtility.TryParseHtmlString("#919191", out Color col1);
         text.GetComponent<Text>().color = col1;
         moveControle = true;
@@ -23,19 +23,19 @@ public class ButStartMenu : MonoBehaviour
 
     public void MoveOff()
     {
-        //Цвет светлее
+        //The color is lighter
         ColorUtility.TryParseHtmlString("#FFFFFF", out Color col1);
         text.GetComponent<Text>().color = col1;
         moveControle = false;
     }
 
-    //Условие запуска следующей сцены
+    //The condition for starting the next scene
     public void OnPlayBut()
     {
         SceneManager.LoadScene(1);
     }
 
-    //Так же присутствует постоянное мигание кнопки
+    //There is also a constant flashing of the button
     public void Update()
     {
         if(!moveControle)

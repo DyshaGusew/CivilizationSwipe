@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//the button for a full restart of the game
 public class SettingButton : MonoBehaviour
 {
     public GameObject warning;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Закрытие предупреждения о сбросе данных
+//Closing the data reset warning
 public class CloseWarning : MonoBehaviour
 {
     public GameObject warning;

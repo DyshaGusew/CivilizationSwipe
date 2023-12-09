@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Кнопка открытия обучения
+//The learning opening button
 public class LearningButton : MonoBehaviour
 {
     public GameObject setings;

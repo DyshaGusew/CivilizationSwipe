@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Скрипт отвечающий за анимации карточек при выборе(наведении или нажатии) ЛЕВОГО решения
+//The script responsible for the animation of the cards when selected (hovering or clicking) THE LEFT-HAND solution
 public class SwipeLeft : MonoBehaviour
 {
-    private Animator animator; // ссылка на компонент Animator, находится на самой карточке
+    private Animator animator; //The link to the Animator component is located on the card itself
 
-    //Получаем компонент Animator у текущей карточки
+    //Getting the Animator component from the current card
     private void FindAnimation()
     {
         animator = MainStorage.thisGameCard.GetComponent<Animator>();
     }
 
-    //Запуск анимации наклона
+    //Starting the tilt animation
     public void StartInclineAnimation()
     {
         FindAnimation();
@@ -23,7 +23,7 @@ public class SwipeLeft : MonoBehaviour
         }
     }
 
-    //Остановка анимации наклона
+    //Stoping the tilt animation
     public void FinishInclineAnimation()
     {
         FindAnimation();
@@ -33,19 +33,19 @@ public class SwipeLeft : MonoBehaviour
         }
     }
 
-    //Запус увеличения слоя новосозданной карточки(тк под ней создается еще одна)
+    //The start of increasing the layer of the newly created card (because another one is being created under it)
     public void SwipeLeftCard()
     {
-        // Находим объект по имени
+        // Finding an object by name
         GameObject obj = GameObject.Find("NormalCard(Clone)");
 
-        // Проверяем, найден ли объект
+        // Checking if the object has been found
         if (obj != null)
         {
             obj.name = "Card";
             SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
 
-            // Если компонент найден, установить слой повыше
+            // If the component is found, set the layer higher
             if (spriteRenderer != null)
             {
                 spriteRenderer.sortingOrder = 10;
@@ -55,20 +55,20 @@ public class SwipeLeft : MonoBehaviour
     public void SwipeLeftDelete()
     {
         GameObject obj = GameObject.Find("Card");
-        obj.tag = "Card"; // Установка тега объекту
+        obj.tag = "Card"; // Setting a tag for an object
         Animator Animarotlocal = obj.GetComponent<Animator>();
-        // Запускаем анимацию     
+        //  Starting the animation
         StartCoroutine(WaitForAnimation(Animarotlocal, "DropLeft"));
     }
 
-    //Задержка всех процессов, для проигрывания анимации  
+    //Delay of all processes to play the animation
     private IEnumerator WaitForAnimation(Animator animator, string animationName)
     {
         animator.Play(animationName);
-        // Задержка в пол секунды              
+        //Half a second delay       
         yield return new WaitForSeconds(0.35f);
 
-        // Удаляем все объекты с именем "Card" после окончания анимации     
+        //We delete all objects named "Card" after the end of the animation     
         GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
         foreach (GameObject card in cards)
         {

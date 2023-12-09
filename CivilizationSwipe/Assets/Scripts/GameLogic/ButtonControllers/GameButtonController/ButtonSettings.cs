@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Кнопка открытия меню настроек
+//The button to open the settings menu
 public class ButtonSettings : MonoBehaviour
 {
     public GameObject canvasSetting;
     public GameObject warning;
 
-    //Тут при нажатии открывается меню настроек
+    //Here, when clicked, the settings menu opens
     public void Click()
     {
         EscapeScript.active = true;
