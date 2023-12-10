@@ -400,7 +400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &40348373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7275,6 +7275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource1: {fileID: 1926132634}
   audioSource2: {fileID: 727397949}
+  audioSource3: {fileID: 1637421469}
   obj: {fileID: 292130196}
 --- !u!1 &927107399
 GameObject:
@@ -7982,8 +7983,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.79, y: -0.66}
-  m_SizeDelta: {x: 1937.58, y: 1098.22}
+  m_AnchoredPosition: {x: -6.06, y: -0.66}
+  m_SizeDelta: {x: 1943.04, y: 1098.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1064287760
 MonoBehaviour:
@@ -14825,6 +14826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasSetting: {fileID: 40348372}
   warning: {fileID: 927107399}
+  audioSource: {fileID: 727397949}
 --- !u!114 &2032896496
 MonoBehaviour:
   m_ObjectHideFlags: 0
