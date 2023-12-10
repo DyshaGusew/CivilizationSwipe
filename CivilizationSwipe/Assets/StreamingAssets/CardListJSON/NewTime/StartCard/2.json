@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Теперь мы достигним более высоких вершин, ура!!!",
+
+  "TextLeft": "...",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "...",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "NewTime",
+  "ImageHero": "Советник",
+  "TextHero": "Новая эра"
+}

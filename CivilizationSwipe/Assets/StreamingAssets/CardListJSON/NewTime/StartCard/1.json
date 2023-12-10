@@ -1,5 +1,5 @@
 {
-  "TextEvent": "Новое время!",
+  "TextEvent": "Правитель, мы перешли в новое время",
 
   "TextLeft": "...",
   "MoneyL": 50,
@@ -14,6 +14,6 @@
   "PeopleEffectR": 50,
 
   "Era": "NewTime",
-  "ImageHero": "Тест",
+  "ImageHero": "Советник",
   "TextHero": "Новая эра"
 }

@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Привет!",
+  "TextEvent": "Дорогой, нам надо задуматься над вопросами безработицы",
 
-  "TextLeft": "...",
-  "MoneyL": 20,
-  "ArmyL": 20,
-  "ReligionL": 20,
+  "TextLeft": "Ты абсолютно права",
+  "MoneyL": -30,
+  "ArmyL": 0,
+  "ReligionL": 0,
   "PeopleEffectL": 20,
 
-  "TextRight": "...",
+  "TextRight": "Есть дела поважнее",
   "MoneyR": 20,
-  "ArmyR": 20,
-  "ReligionR": 20,
-  "PeopleEffectR": 20,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": -30,
 
   "Era": "NewTime",
-  "ImageHero": "Служанка",
-  "TextHero": "Новая эра"
+  "ImageHero": "Жена",
+  "TextHero": "Первая леди"
 }

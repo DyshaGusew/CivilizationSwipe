@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Государь, люди неовольны вашей политико, зарплаты слижком низкие",
+
+  "TextLeft": "Забрать золото из храмов",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": -30,
+  "PeopleEffectL": 20,
+
+  "TextRight": "Продать часть вооружения",
+  "MoneyR": 0,
+  "ArmyR": -30,
+  "ReligionR": 0,
+  "PeopleEffectR": 20,
+
+  "Era": "NewTime",
+  "ImageHero": "Советник",
+  "TextHero": "Советник"
+}

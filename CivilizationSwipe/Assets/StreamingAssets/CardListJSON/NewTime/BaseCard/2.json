@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Один из военослужащих осквернил двери храма и это попало на камеру, надо его наказать",
+
+  "TextLeft": "Мы накажем его",
+  "MoneyL": 0,
+  "ArmyL": -25,
+  "ReligionL": 25,
+  "PeopleEffectL": 10,
+
+  "TextRight": "Наплевать",
+  "MoneyR": 0,
+  "ArmyR": 20,
+  "ReligionR": -30,
+  "PeopleEffectR": -5,
+
+  "Era": "NewTime",
+  "ImageHero": "Поп",
+  "TextHero": "Отец Лантионус"
+}

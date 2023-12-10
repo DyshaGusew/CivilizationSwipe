@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Людям нужны новые открытия, выделите немного средств на исследования атомов",
+
+  "TextLeft": "Это бред",
+  "MoneyL": 10,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": -20,
+
+  "TextRight": "Сила в знании!",
+  "MoneyR": -20,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 20,
+
+  "Era": "NewTime",
+  "ImageHero": "Ученый",
+  "TextHero": "Ученый Эрнштейн"
+}
