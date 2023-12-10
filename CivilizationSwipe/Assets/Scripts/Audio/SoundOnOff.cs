@@ -4,33 +4,28 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MusicOnOff : MonoBehaviour
+public class SoundOnOff : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioSource audioSource1;
+    public AudioSource audioSource2;
     private bool isMusicEnabled = true;
     public Object obj;
-    float loud;
-    private void Start()
-    {
-        loud = audioSource.volume;
-    }
     public void Music()
     {
         Text textComponent = obj.GetComponent<Text>();
-        
         if (isMusicEnabled)
         {
             isMusicEnabled = false;
-            //audioSource.Pause();
-            audioSource.volume = 0;
-            textComponent.text = "Музыка выкл.";
+            audioSource1.volume = 0;
+            audioSource2.volume = 0;
+            textComponent.text = "Звуки выкл.";
         }
         else
         {
             isMusicEnabled = true;
-            //audioSource.Play();
-            audioSource.volume = loud;
-            textComponent.text = "Музыка вкл.";
+            audioSource1.volume = 1;
+            audioSource2.volume = 1;
+            textComponent.text = "Звуки вкл.";
         }
     }
 }
