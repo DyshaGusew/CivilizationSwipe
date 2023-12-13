@@ -153,7 +153,7 @@ public class MainStorage : MonoBehaviour
         Religion = 2;
         People = 2;
         counterCard = 1;
-        era = eras[1];
+        era = eras[0];
         maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\BaseCard\\", "*.json").Length;
         maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\StartCard\\", "*.json").Length;
         maxCountCardOfEndEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + era + "\\EndCard\\", "*.json").Length;

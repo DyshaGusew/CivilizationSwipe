@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Мне необходимы 100 душ для обряда, иначе твоим полям придет конец",
+
+  "TextLeft": "Ты кто такой, стража!",
+  "MoneyL": -20,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "Ч-ч-ч-то, ладно, я выделю тебе людей",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": -20,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Тыквоголовый",
+  "TextHero": "Тыквоголовый"
+}
