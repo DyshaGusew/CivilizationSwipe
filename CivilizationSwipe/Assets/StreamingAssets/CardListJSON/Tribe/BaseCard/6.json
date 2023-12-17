@@ -5,13 +5,13 @@
   "MoneyL": 10,
   "ArmyL": 0,
   "ReligionL": -5,
-  "PeopleEffectL": -20,
+  "PeopleEffectL": -15,
 
   "TextRight": "Давай",
   "MoneyR": -7,
   "ArmyR": 10,
   "ReligionR": 0,
-  "PeopleEffectR": 20,
+  "PeopleEffectR": 15,
 
   "Era": "Tribe",
   "ImageHero": "ПомощникГлавы",

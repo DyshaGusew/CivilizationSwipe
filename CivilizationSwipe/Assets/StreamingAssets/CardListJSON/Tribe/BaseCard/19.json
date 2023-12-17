@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Я слышала, что ваш помощник ворует деньги из казны",
+
+  "TextLeft": "Как он посмел?! Казнить наглеца!",
+  "MoneyL": 5,
+  "ArmyL": -5,
+  "ReligionL": 0,
+  "PeopleEffectL": 5,
+
+  "TextRight": "Не может быть, я его знаю столько лет и полностью ему доверяю",
+  "MoneyR": -10,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "Tribe",
+  "ImageHero": "Служанка",
+  "TextHero": "Служанка"
+}

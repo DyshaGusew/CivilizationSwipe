@@ -3,14 +3,14 @@
 
   "TextLeft": "Призовите простых людей",
   "MoneyL": -5,
-  "ArmyL": 15,
+  "ArmyL": 10,
   "ReligionL": 0,
-  "PeopleEffectL": -10,
+  "PeopleEffectL": -5,
 
   "TextRight": "Призовите верующих",
   "MoneyR": 0,
-  "ArmyR": 15,
-  "ReligionR": -20,
+  "ArmyR": 10,
+  "ReligionR": -15,
   "PeopleEffectR": 0,
 
   "Era": "Tribe",

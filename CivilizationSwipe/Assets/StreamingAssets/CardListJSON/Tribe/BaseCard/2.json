@@ -5,13 +5,13 @@
   "MoneyL": 15,
   "ArmyL": 0,
   "ReligionL": 0,
-  "PeopleEffectL": -20,
+  "PeopleEffectL": -15,
 
   "TextRight": "Действительно, людям нужно больше отдыхать",
-  "MoneyR": -10,
+  "MoneyR": -5,
   "ArmyR": 0,
   "ReligionR": 0,
-  "PeopleEffectR": 15,
+  "PeopleEffectR": 10,
 
   "Era": "Tribe",
   "ImageHero": "ПомощникГлавы",
