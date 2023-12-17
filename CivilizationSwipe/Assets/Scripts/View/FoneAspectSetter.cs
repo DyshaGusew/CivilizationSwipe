@@ -38,7 +38,7 @@ public class FoneAspectSetter : MonoBehaviour
                 break;
 
             case "ModernTime":
-                Color color3 = new Color(0.1f, 0.1f, 0.1f);
+                Color color3 = new Color(0.4156863f, 0.6313726f, 0.3921569f);
                 GameObject.Find("UpLine").GetComponent<SpriteRenderer>().color = color3;
                 break;
 
