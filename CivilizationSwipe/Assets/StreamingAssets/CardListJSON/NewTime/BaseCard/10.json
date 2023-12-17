@@ -1,0 +1,19 @@
+{
+  "TextEvent": "В чем смысл смысла...",
+
+  "TextLeft": "Сяу",
+  "MoneyL": 1,
+  "ArmyL": 1,
+  "ReligionL": 1,
+  "PeopleEffectL": 1,
+
+  "TextRight": "Доровче",
+  "MoneyR": 1,
+  "ArmyR": 1,
+  "ReligionR": 1,
+  "PeopleEffectR": 1,
+
+  "Era": "NewTime",
+  "ImageHero": "Философ",
+  "TextHero": "Философ"
+}

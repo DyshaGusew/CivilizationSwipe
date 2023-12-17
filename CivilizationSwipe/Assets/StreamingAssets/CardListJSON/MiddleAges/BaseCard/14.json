@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Что есть жизнь для рабов, поменьше наказывайте их, пожалуйста",
+
+  "TextLeft": "Пфф, не до этого",
+  "MoneyL": 10,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": -20,
+
+  "TextRight": "Ты прав, надо быть добобрее",
+  "MoneyR": -20,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 20,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Философ",
+  "TextHero": "Глатон"
+}

@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Нам необходимо расширять военную мощь, наши соседи ведут себя все более агрессивно",
+
+  "TextLeft": "От соседей не стоит ждать ничего хорошего",
+  "MoneyL": -30,
+  "ArmyL": 20,
+  "ReligionL": 0,
+  "PeopleEffectL": -10,
+
+  "TextRight": "Мы с ними сможем договориться",
+  "MoneyR": 20,
+  "ArmyR": -25,
+  "ReligionR": 0,
+  "PeopleEffectR": 10,
+
+  "Era": "NewTime",
+  "ImageHero": "Глава армии",
+  "TextHero": "Товарищ генерал"
+}

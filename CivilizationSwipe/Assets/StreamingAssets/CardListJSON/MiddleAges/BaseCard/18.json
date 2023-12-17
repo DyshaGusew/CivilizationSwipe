@@ -1,0 +1,19 @@
+{
+  "TextEvent": "4",
+
+  "TextLeft": "Да",
+  "MoneyL": 1,
+  "ArmyL": 1,
+  "ReligionL": 1,
+  "PeopleEffectL": 1,
+
+  "TextRight": "Нет",
+  "MoneyR": -1,
+  "ArmyR": -1,
+  "ReligionR": -1,
+  "PeopleEffectR": -1,
+
+  "Era": "MiddleAges",
+  "ImageHero": "Оккультист",
+  "TextHero": "Оккультист"
+}

@@ -161,7 +161,41 @@ public class MainStorage : MonoBehaviour
         FoneAspectSetter.FoneSet();
         FoneAspectSetter.AspecSet();
         
+        Save();
+    }
+
+
+    public static void SetNextEra()
+    {
+        CardConstructor.DeletePlayCard();
+        Destroy(GameObject.Find("NormalCard(Clone)"));
+        string thisEra = era;
+        LoadNormalValue();
+        learning = 1;
+        era = thisEra;
+
+        for (int i = 0; i < eras.Length; i++)
+        {
+            if(thisEra == eras[i])
+            {
+                era = eras[i+1];
+                break;
+            }
+        }
+        //I install everything in the mainStorage and save it
+        maxCountCardOfThisEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\BaseCard\\", "*.json").Length;
+        maxCountCardOfStartEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\StartCard\\", "*.json").Length;
+        maxCountCardOfEndEra = System.IO.Directory.GetFiles(Application.streamingAssetsPath + "\\CardListJSON\\" + MainStorage.era + "\\EndCard\\", "*.json").Length;
+        counterCard = 1;
 
         Save();
+
+        //I create arrays, take out the card and set the environment
+        ThisCardMassive = CardConstructor.CardMassSet(MainStorage.era);
+        CardConstructor.CreatePlayCardOfBase();
+        TextSetterView.SetTextEvent(thisCard.TextEvent, thisCard.TextHero);
+        FoneAspectSetter.FoneSet();
+        FoneAspectSetter.AspecSet();
+        GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
     }
 }

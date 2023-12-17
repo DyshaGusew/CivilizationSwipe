@@ -37,6 +37,7 @@ public class CardConstructor : MonoBehaviour
             "army" => new NormalCard(JSONCardReader.GetCard("army", MainStorage.era, "DiedCard")),
             "religion" => new NormalCard(JSONCardReader.GetCard("religion", MainStorage.era, "DiedCard")),
             "people" => new NormalCard(JSONCardReader.GetCard("people", MainStorage.era, "DiedCard")),
+            _ => throw new System.NotImplementedException(),
         };
 
         //I install this card in the storage and create it on the stage
