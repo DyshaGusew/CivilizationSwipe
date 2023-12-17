@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Господин, выше одеяние уже изношено, давайте купим новое",
+
+  "TextLeft": "Да, действительно, пора бы уже обновить одежду",
+  "MoneyL": -5,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 0,
+
+  "TextRight": "Мне и в старом комфортно",
+  "MoneyR": 5,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 0,
+
+  "Era": "Tribe",
+  "ImageHero": "Служанка",
+  "TextHero": "Ваша служанка"
+}

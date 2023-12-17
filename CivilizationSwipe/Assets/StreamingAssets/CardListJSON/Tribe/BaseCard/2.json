@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Глава, многие устали работать дни напролет, может стоит сократить время работы?",
+  "TextEvent": "Люди работают слишком много, нужно сократить рабочий день",
 
-  "TextLeft": "Ни за что",
-  "MoneyL": 10,
-  "ArmyL": -5,
+  "TextLeft": "Мало работают, раз есть время жаловаться",
+  "MoneyL": 15,
+  "ArmyL": 0,
   "ReligionL": 0,
-  "PeopleEffectL": -15,
+  "PeopleEffectL": -20,
 
-  "TextRight": "Согласен",
+  "TextRight": "Действительно, людям нужно больше отдыхать",
   "MoneyR": -10,
-  "ArmyR": 3,
+  "ArmyR": 0,
   "ReligionR": 0,
-  "PeopleEffectR": 12,
+  "PeopleEffectR": 15,
 
   "Era": "Tribe",
-  "ImageHero": "Служанка",
-  "TextHero": "Ваша служанка"
+  "ImageHero": "ПомощникГлавы",
+  "TextHero": "Помощник главы поселения"
 }
