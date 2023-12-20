@@ -6,12 +6,14 @@
   "ArmyL": 0,
   "ReligionL": 0,
   "PeopleEffectL": -15,
+  "NextCardL": 1,
 
   "TextRight": "Действительно, людям нужно больше отдыхать",
   "MoneyR": -5,
   "ArmyR": 0,
   "ReligionR": 0,
   "PeopleEffectR": 10,
+  "NextCardR": 2,
 
   "Era": "Tribe",
   "ImageHero": "ПомощникГлавы",

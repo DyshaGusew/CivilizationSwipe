@@ -10,5 +10,4 @@ public abstract class BaseCard : MonoBehaviour
     public string TextRight { get; set; }
 
     public string Era { get; set; }
-    public string Image { get; set; }
 }

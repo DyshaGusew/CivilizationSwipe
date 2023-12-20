@@ -12,24 +12,28 @@ public class ButtonControle : MonoBehaviour
     //Click action
     public void ButClick()
     {
+        //Deleting the card
+        
+
         //Depending on the name of the button (right or left),
         //the right aspects of the solution are set or the
         //left ones (like +5 money left solution, -2 right)
         if (name == "ButtonLeft")
         {
             AspectSetter.AspectLeftSolution();
+            MainStorage.thisCard = MainStorage.thisCard;
+            //CardConstructor.DeletePlayCard();
+            MainGameController.ControleAfterBut("left");
         }
 
         else if(name == "ButtonRight")
         {
+            //Action after clicking on the button
             AspectSetter.AspectRightSolution();
+            //CardConstructor.DeletePlayCard();
+            MainGameController.ControleAfterBut("right");
         }
 
-        //Deleting the card
-        CardConstructor.DeletePlayCard();
-
-        //Action after clicking on the button
-        MainGameController.ControleAfterBut();
 
         ButNotMove();
         ButMove();

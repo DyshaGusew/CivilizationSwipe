@@ -16,12 +16,14 @@ public class JSONCardReader
         public int ArmyL;
         public int ReligionL;
         public int PeopleEffectL;
+        public int NextCardL;
 
         public string TextRight;
         public int MoneyR;
         public int ArmyR;
         public int ReligionR;
         public int PeopleEffectR;
+        public int NextCardR;
 
         public string Era;
         public string ImageHero;

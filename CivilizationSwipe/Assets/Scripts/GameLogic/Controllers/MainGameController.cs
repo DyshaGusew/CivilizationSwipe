@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 //Controller of the main events of the game
@@ -7,9 +8,9 @@ public class MainGameController : MonoBehaviour
     static public bool gameOver = false;
 
     //The method for triggering after pressing
-    static public void ControleAfterBut()
+    static public void ControleAfterBut(string solution)
     {
-        //When the end of the games has already come, we enter
+        //When the end of the games has already come, we enterà
         if (gameOver == false)
         {
             //If all the parameters are normal after clicking, then look at
@@ -18,7 +19,36 @@ public class MainGameController : MonoBehaviour
                 //We create a new card and set the text for it if it does not go beyond this era
                 if (MainStorage.counterCard != MainStorage.maxCountCardOfThisEra + MainStorage.maxCountCardOfStartEra + MainStorage.maxCountCardOfEndEra + 1)
                 {
-                    CardConstructor.CreatePlayCardOfBase();
+                    if(MainStorage.thisCard.TextEvent == null)
+                    {
+                        Debug.Log(MainStorage.thisCard.TextEvent);
+                        CardConstructor.CreatePlayCardOfBase();
+                    }
+                    else
+                    {
+                        if ((MainStorage.thisCard.NextCardL == 0 && MainStorage.thisCard.NextCardR == 0))
+                        {
+                            CardConstructor.CreatePlayCardOfBase();
+                            Debug.Log(MainStorage.thisCard.TextEvent);
+                        }
+                        else
+                        {
+                            if (solution == "left")
+                            {
+                                if (MainStorage.thisCard.NextCardL != 0)
+                                    CardConstructor.CreatePlayCardOfNext(MainStorage.thisCard.NextCardL);
+                                else
+                                    CardConstructor.CreatePlayCardOfBase();
+                            }
+                            else
+                            {
+                                if(MainStorage.thisCard.NextCardR != 0)                                {
+                                    CardConstructor.CreatePlayCardOfNext(MainStorage.thisCard.NextCardR);                                }
+                                else                                {
+                                    CardConstructor.CreatePlayCardOfBase();                                }
+                            }
+                        }          
+                    }    
                     TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
                 }
                 //If there are no more cards in the current era, then enter

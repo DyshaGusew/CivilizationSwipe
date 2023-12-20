@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Кто-то распространяет другую религию, что нам делать?",
+
+  "TextLeft": "Ничего",
+  "MoneyL": 0,
+  "ArmyL": 5,
+  "ReligionL": -10,
+  "PeopleEffectL": 5,
+
+  "TextRight": "Наказать тех, кто это делает",
+  "MoneyR": 0,
+  "ArmyR": -5,
+  "ReligionR": 20,
+  "PeopleEffectR": -5,
+
+  "Era": "Tribe",
+  "ImageHero": "Шаман",
+  "TextHero": "Шаман"
+}

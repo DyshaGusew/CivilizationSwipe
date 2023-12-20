@@ -6,12 +6,14 @@
   "ArmyL": 47,
   "ReligionL": 47,
   "PeopleEffectL": 47,
+  "NextCardL": 0,
 
   "TextRight": "Я готов",
   "MoneyR": 47,
   "ArmyR": 47,
   "ReligionR": 47,
   "PeopleEffectR": 47,
+  "NextCardR": 0,
 
   "Era": "Tribe",
   "ImageHero": "ПомощникГлавы",

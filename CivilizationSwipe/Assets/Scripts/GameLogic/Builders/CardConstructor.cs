@@ -27,6 +27,20 @@ public class CardConstructor : MonoBehaviour
         MainStorage.thisGameCard = newGameCard;
     }
 
+    static public void CreatePlayCardOfNext(int idNextCard)
+    {
+        //I take the last card I need from the array of cards in the array using the card counter, save it to the storage
+        NormalCard infoCard = new NormalCard(JSONCardReader.GetCard(idNextCard, MainStorage.era, "NextCard"));     //I install the card through the id number
+        MainStorage.thisCard = infoCard;
+
+        //The actual creation
+        GameObject newGameCard = Instantiate(gameCardModel, gameCardModel.transform.position, Quaternion.Euler(0, 0, 0));
+        newGameCard.GetComponent<SpriteRenderer>().sprite = LoadSprite(infoCard, "ProfessionIcon");
+
+        //I increase the counter and put the current game card in the vault
+        MainStorage.thisGameCard = newGameCard;
+    }
+
     //Creation of death cards depending on the aspect transferred to them
     static public void CreatePlayCardOfDied(string diedAspect)
     {

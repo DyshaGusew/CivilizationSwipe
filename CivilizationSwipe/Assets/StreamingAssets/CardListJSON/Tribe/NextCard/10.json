@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Ваше превосходительство, мне нужно пойти навестить больную мать. Могу ли я взять выходной?",
+
+  "TextLeft": "Конечно, сходи навестить свою мать",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 5,
+
+  "TextRight": "Нет",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": -5,
+
+  "Era": "Tribe",
+  "ImageHero": "Служанка",
+  "TextHero": "Служанка"
+}

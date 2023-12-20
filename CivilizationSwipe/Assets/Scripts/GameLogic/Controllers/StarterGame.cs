@@ -22,7 +22,7 @@ public class StarterGame : MonoBehaviour
     void Start()
     {
         //I create a map and immediately specify its text
-        CardConstructor.CreatePlayCardOfBase();
+        CardConstructor.CreatePlayCardOfBase(); //dfs
         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
 
         //Setting up the game environment

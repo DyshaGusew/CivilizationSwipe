@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Слишком много больных, мне не хватает трав, чтобы всех вылечить",
+
+  "TextLeft": "Мне нет дела до этого",
+  "MoneyL": 10,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": -15,
+
+  "TextRight": "Хорошо, я выделю средства",
+  "MoneyR": -15,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 10,
+
+  "Era": "Tribe",
+  "ImageHero": "Лекарь",
+  "TextHero": "Травник-лекарь"
+}

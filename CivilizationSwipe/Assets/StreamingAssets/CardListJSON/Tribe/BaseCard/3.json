@@ -6,12 +6,14 @@
   "ArmyL": 10,
   "ReligionL": 0,
   "PeopleEffectL": -5,
+  "NextCardL": 3,
 
   "TextRight": "Призовите верующих",
   "MoneyR": 0,
   "ArmyR": 10,
   "ReligionR": -15,
   "PeopleEffectR": 0,
+  "NextCardR": 0,
 
   "Era": "Tribe",
   "ImageHero": "Солдат",

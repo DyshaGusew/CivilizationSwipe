@@ -6,12 +6,14 @@
   "ArmyL": 0,
   "ReligionL": 0,
   "PeopleEffectL": -15,
+  "NextCardL": 1,
 
   "TextRight": "Да, конечно",
   "MoneyR": -10,
   "ArmyR": 0,
   "ReligionR": 0,
   "PeopleEffectR": 10,
+  "NextCardR": 0,
 
   "Era": "Tribe",
   "ImageHero": "ПомощникГлавы",
