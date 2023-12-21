@@ -9,6 +9,7 @@ public class StarterGame : MonoBehaviour
     //Everything should be uploaded here
     private void Awake()
     {
+        MainStorage.LoadNormalValue();   //Удалить
         //Initializing objects on the scene
         TextSetterView.InicializeText();
         LightMarkerMove.InicializeLightMarker();
