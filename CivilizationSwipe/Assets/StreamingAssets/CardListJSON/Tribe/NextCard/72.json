@@ -1,0 +1,21 @@
+{
+  "TextEvent": "Это религия призывала людей убивать друг друга, но ваше своевременное реагирование, не допустило жертв",
+
+  "TextLeft": "...",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 10,
+  "PeopleEffectL": 10,
+  "NextCardL": 0,
+
+  "TextRight": "...",
+  "MoneyR": 0,
+  "ArmyR": 0,
+  "ReligionR": 10,
+  "PeopleEffectR": 10,
+  "NextCardR": 0,
+
+  "Era": "Tribe",
+  "ImageHero": "Шаман",
+  "TextHero": "Шаман"
+}

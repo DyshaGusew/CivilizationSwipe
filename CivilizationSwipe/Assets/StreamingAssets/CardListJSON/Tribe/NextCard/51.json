@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Каждый пятый в вашем поселении умер",
+
+  "TextLeft": "...",
+  "MoneyL": -9,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": -14,
+
+  "TextRight": "...",
+  "MoneyR": -9,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": -14,
+
+  "Era": "Tribe",
+  "ImageHero": "Лекарь",
+  "TextHero": "Травник-лекарь"
+}

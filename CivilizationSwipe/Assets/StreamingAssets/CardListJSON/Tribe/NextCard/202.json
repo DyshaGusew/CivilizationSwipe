@@ -1,0 +1,21 @@
+{
+  "TextEvent": "Отношения между вашими поселениями ухудшилось, возможно нападение с их стороны",
+
+  "TextLeft": "...",
+  "MoneyL": 0,
+  "ArmyL": -5,
+  "ReligionL": 0,
+  "PeopleEffectL": -5,
+  "NextCardL": 0,
+
+  "TextRight": "...",
+  "MoneyR": 0,
+  "ArmyR": -5,
+  "ReligionR": 0,
+  "PeopleEffectR": -5,
+  "NextCardR": 0,
+
+  "Era": "Tribe",
+  "ImageHero": "ПомощникГлавы",
+  "TextHero": "Помощник Главы"
+}

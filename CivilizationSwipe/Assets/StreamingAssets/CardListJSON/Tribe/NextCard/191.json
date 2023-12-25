@@ -1,0 +1,21 @@
+{
+  "TextEvent": "Слухи окалазись лживы, вы казнили невинного человека",
+
+  "TextLeft": "...",
+  "MoneyL": 0,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": -10,
+  "NextCardL": 0,
+
+  "TextRight": "...",
+  "MoneyR": -10,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": -10,
+  "NextCardR": 0,
+
+  "Era": "Tribe",
+  "ImageHero": "Служанка",
+  "TextHero": "Служанка"
+}

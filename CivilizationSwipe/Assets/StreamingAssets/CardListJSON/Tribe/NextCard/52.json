@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Нам удалось все вылечить, слава богу никто не умер, народ вам благодарен",
+
+  "TextLeft": "...",
+  "MoneyL": -14,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": 9,
+
+  "TextRight": "...",
+  "MoneyR": -0,
+  "ArmyR": 0,
+  "ReligionR": 0,
+  "PeopleEffectR": 9,
+
+  "Era": "Tribe",
+  "ImageHero": "Лекарь",
+  "TextHero": "Травник-лекарь"
+}

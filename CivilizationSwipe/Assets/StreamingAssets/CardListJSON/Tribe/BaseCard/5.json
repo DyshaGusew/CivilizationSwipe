@@ -2,16 +2,18 @@
   "TextEvent": "Слишком много больных, мне не хватает трав, чтобы всех вылечить",
 
   "TextLeft": "Мне нет дела до этого",
-  "MoneyL": 10,
+  "MoneyL": -1,
   "ArmyL": 0,
   "ReligionL": 0,
-  "PeopleEffectL": -15,
+  "PeopleEffectL": -1,
+  "NextCardL": 51,
 
   "TextRight": "Хорошо, я выделю средства",
-  "MoneyR": -15,
+  "MoneyR": -1,
   "ArmyR": 0,
   "ReligionR": 0,
-  "PeopleEffectR": 10,
+  "PeopleEffectR": 1,
+  "NextCardR": 52,
 
   "Era": "Tribe",
   "ImageHero": "Лекарь",

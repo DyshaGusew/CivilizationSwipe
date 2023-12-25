@@ -2,16 +2,18 @@
   "TextEvent": "Я слышала, что ваш помощник ворует деньги из казны",
 
   "TextLeft": "Как он посмел?! Казнить наглеца!",
-  "MoneyL": 5,
-  "ArmyL": -5,
+  "MoneyL": 0,
+  "ArmyL": 0,
   "ReligionL": 0,
-  "PeopleEffectL": 5,
+  "PeopleEffectL": -1,
+  "NextCardL": 191,
 
   "TextRight": "Не может быть, я его знаю столько лет и полностью ему доверяю",
-  "MoneyR": -10,
+  "MoneyR": 1,
   "ArmyR": 0,
   "ReligionR": 0,
-  "PeopleEffectR": 0,
+  "PeopleEffectR": 1,
+  "NextCardR": 192,
 
   "Era": "Tribe",
   "ImageHero": "Служанка",
