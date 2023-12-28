@@ -30,12 +30,12 @@ public class AnimationManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
+    //void Start()
+    //{
         // Removed extra PlayNextAnimation() call
-        StartCoroutine(PlayAnimationsWithDelay());  // Changed method name to match IEnumerator name
+      //  StartCoroutine(PlayAnimationsWithDelay());  // Changed method name to match IEnumerator name
 
-    }
+   // }
 
     public void StartAnimations()  // Added public method for button click
     {

@@ -43,7 +43,7 @@ public class FoneAspectSetter : MonoBehaviour
                 break;
 
             case "CyberTime":
-                Color color4 = new Color(0.6f, 0.6f, 0.6f);
+                Color color4 = new Color(0.3607843f, 0.02745098f, 0.345098f);
                 GameObject.Find("UpLine").GetComponent<SpriteRenderer>().color = color4;
                 break;
             default:

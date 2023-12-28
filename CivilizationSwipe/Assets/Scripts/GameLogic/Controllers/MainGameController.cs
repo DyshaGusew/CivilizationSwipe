@@ -95,6 +95,7 @@ public class MainGameController : MonoBehaviour
                         TextSetterView.SetTextEvent(MainStorage.thisCard.TextEvent, MainStorage.thisCard.TextHero);
                         FoneAspectSetter.FoneSet();
                         FoneAspectSetter.AspecSet();
+                        GameObject.Find("CanvasAnimation").GetComponent<AnimationManager>().StartAnimations();
                         GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
                     }
                 }

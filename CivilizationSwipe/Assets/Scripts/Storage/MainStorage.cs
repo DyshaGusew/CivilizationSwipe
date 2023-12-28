@@ -196,6 +196,7 @@ public class MainStorage : MonoBehaviour
         TextSetterView.SetTextEvent(thisCard.TextEvent, thisCard.TextHero);
         FoneAspectSetter.FoneSet();
         FoneAspectSetter.AspecSet();
+        GameObject.Find("CanvasAnimation").GetComponent<AnimationManager>().StartAnimations();
         GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
     }
 }
