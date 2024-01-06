@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Надо перерабатывать пластик!",
+
+  "TextLeft": "Иди отсюда",
+  "MoneyL": 15,
+  "ArmyL": 0,
+  "ReligionL": 0,
+  "PeopleEffectL": -15,
+
+  "TextRight": "Это точно",
+  "MoneyR": -20,
+  "ArmyR": -0,
+  "ReligionR": 0,
+  "PeopleEffectR": 10,
+
+  "Era": "ModernTime",
+  "ImageHero": "гринпис",
+  "TextHero": "Гринписовец"
+}

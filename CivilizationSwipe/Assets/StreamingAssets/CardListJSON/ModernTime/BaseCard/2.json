@@ -1,0 +1,19 @@
+{
+  "TextEvent": "Люди изобрели пеницилин, это очень поможет людям",
+
+  "TextLeft": "Ура",
+  "MoneyL": 10,
+  "ArmyL": 10,
+  "ReligionL": 0,
+  "PeopleEffectL": 20,
+
+  "TextRight": "Круто",
+  "MoneyR": 10,
+  "ArmyR": 10,
+  "ReligionR": 0,
+  "PeopleEffectR": 20,
+
+  "Era": "ModernTime",
+  "ImageHero": "пеницилин",
+  "TextHero": "Событие"
+}

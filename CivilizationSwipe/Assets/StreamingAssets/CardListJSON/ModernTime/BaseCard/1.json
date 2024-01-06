@@ -1,19 +1,19 @@
 {
-  "TextEvent": "Привет!",
+  "TextEvent": "Люди изобрели ядерное оружие",
 
-  "TextLeft": "...",
-  "MoneyL": 20,
-  "ArmyL": 20,
-  "ReligionL": 20,
-  "PeopleEffectL": 20,
+  "TextLeft": "Надо использовать",
+  "MoneyL": -20,
+  "ArmyL": 40,
+  "ReligionL": -20,
+  "PeopleEffectL": -20,
 
-  "TextRight": "...",
-  "MoneyR": 20,
-  "ArmyR": 20,
-  "ReligionR": 20,
-  "PeopleEffectR": 20,
+  "TextRight": "Это зло",
+  "MoneyR": 10,
+  "ArmyR": -30,
+  "ReligionR": 10,
+  "PeopleEffectR": 10,
 
   "Era": "ModernTime",
-  "ImageHero": "Служанка",
-  "TextHero": "Новая эра"
+  "ImageHero": "ядерное",
+  "TextHero": "Событие"
 }

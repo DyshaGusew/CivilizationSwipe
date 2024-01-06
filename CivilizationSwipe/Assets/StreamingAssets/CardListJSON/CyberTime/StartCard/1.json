@@ -1,5 +1,5 @@
 {
-  "TextEvent": "Киберпанк время",
+  "TextEvent": "Настало киберпанковское время",
 
   "TextLeft": "...",
   "MoneyL": 50,
@@ -14,6 +14,6 @@
   "PeopleEffectR": 50,
 
   "Era": "CyberTime",
-  "ImageHero": "Тест",
+  "ImageHero": "Тянка1",
   "TextHero": "Новая эра"
 }

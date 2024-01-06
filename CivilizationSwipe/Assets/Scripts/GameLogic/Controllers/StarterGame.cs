@@ -39,6 +39,7 @@ public class StarterGame : MonoBehaviour
 
         MainStorage.Save();
         GameObject.Find("FoneAudio").GetComponent<AudioController>().SetFoneAudio(MainStorage.era);
+        GameObject.Find("Animation_New_Era").GetComponent<Animation_New_Era>().Anim_Start_New_Era();
     }
 
     //Exit conditions
