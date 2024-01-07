@@ -9,6 +9,7 @@ public class EscapeScript : MonoBehaviour
 
     //Output status variable
     public static bool active = false;
+    public GameObject anime;
     void Update()
     {
         //Checking the click every frame
@@ -17,6 +18,7 @@ public class EscapeScript : MonoBehaviour
             if (active == false)
             {
                 active = true;
+                Pashalka.counter = 0;
                 canvasSetting.SetActive(active);
                 warning.SetActive(false);
             }
@@ -24,6 +26,8 @@ public class EscapeScript : MonoBehaviour
             {
                 active = false;
                 canvasSetting.SetActive(active);
+                Pashalka.counter = 0;
+                anime.SetActive(false);
                 warning.SetActive(false);
             }
             Sound.Play();

@@ -9,6 +9,7 @@ public class CloseWarning : MonoBehaviour
 
     public void Close(GameObject warning)
     {
+        Pashalka.counter = 0;
         warning.SetActive(false);
     }
 }

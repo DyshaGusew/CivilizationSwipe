@@ -9,6 +9,7 @@ public class OpenWarning : MonoBehaviour
 
     public void Open(GameObject warning)
     {
+        Pashalka.counter = 0;
         warning.SetActive(true);
     }
 }
