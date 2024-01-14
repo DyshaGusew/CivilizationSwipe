@@ -47,7 +47,8 @@ public class FoneAspectSetter : MonoBehaviour
                 GameObject.Find("UpLine").GetComponent<SpriteRenderer>().color = color4;
                 break;
             default:
-                
+                Color color5 = new Color(0.627451f, 0.6196079f, 0.6078432f);
+                GameObject.Find("UpLine").GetComponent<SpriteRenderer>().color = color5;
                 break;
         }
     }
